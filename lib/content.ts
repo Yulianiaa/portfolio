@@ -4,7 +4,7 @@ export type Paragraph = Segment[];
 export type Link = { label: string; href: string };
 export type Chip = { label: string; active?: boolean };
 export type Card = { title: string; description: string };
-export type SectionImage = { src: string; alt: string } | "placeholder";
+export type SectionImage = { src: string; alt: string } | { video: string; poster?: string } | "placeholder";
 
 export type ToggleOption = {
   label: string;
