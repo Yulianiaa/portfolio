@@ -265,7 +265,10 @@ const marketingCommunicationsPlatform: CaseSummary = {
               "Убрала сохранение сторис — пользователи не понимали, зачем оно нужно, и путали с лайками. Заменила иконку «Поделиться» на универсальную для iOS и Android. Добавила анимации, чтобы сделать взаимодействие с историями приятнее",
             ],
           ],
-          image: "placeholder",
+          image: {
+            video: "/assets/cases/marketing-communications-platform/emotional.mp4",
+            poster: "/assets/cases/marketing-communications-platform/emotional-poster.jpg",
+          },
         },
         {
           subtitle: "Архитектура & Доступность",
