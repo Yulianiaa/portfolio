@@ -208,7 +208,10 @@ const marketingCommunicationsPlatform: CaseSummary = {
           ],
           quote:
             "Мою инициативу поддержали Head of Marketing и Lead of Mobile Development, после чего я успешно защитила её перед CPO — подход стал основой новой стратегии развития маркетинговых коммуникаций",
-          image: { video: "/assets/cases/marketing-communications-platform/dance.mp4" },
+          image: {
+            video: "/assets/cases/marketing-communications-platform/dance.mp4",
+            poster: "/assets/cases/marketing-communications-platform/dance-poster.jpg",
+          },
         },
       ],
     },
