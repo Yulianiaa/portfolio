@@ -229,7 +229,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
             { label: "Приоритизация", href: "#" },
           ],
           image: {
-            src: "/assets/cases/marketing-communications-platform/decisions-workshop.jpg",
+            src: "/assets/cases/marketing-communications-platform/defence.jpg",
             alt: "Командная встреча по обсуждению принципов работы с инструментами продуктовых коммуникаций",
           },
         },
