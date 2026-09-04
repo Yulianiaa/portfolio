@@ -286,7 +286,10 @@ const marketingCommunicationsPlatform: CaseSummary = {
               "Добавила новые инструменты: видео как фон, бейдж для рекламы, промокоды, ссылки и сноски. Продукт теперь мог предлагать рекламодателям больше форматов для размещения",
             ],
           ],
-          image: "placeholder",
+          image: {
+            video: "/assets/cases/marketing-communications-platform/mechanics.mp4",
+            poster: "/assets/cases/marketing-communications-platform/mechanics-poster.jpg",
+          },
         },
       ],
     },
