@@ -316,10 +316,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
               "Решила проблему доступности и гибкости инструмента: обновила визуальную иерархию внутри компонента, задала минимальные и максимальные размеры текста, кнопок. Графические элементы теперь могут быть как частью контента, так и использоваться как фон",
             ],
           ],
-          image: {
-            src: "/assets/cases/marketing-communications-platform/banners-feedback-widget.png",
-            alt: "Виджет обратной связи «Нашли ошибку?»",
-          },
+          image: { video: "/assets/cases/marketing-communications-platform/bannersvideo.mp4" },
         },
       ],
     },
