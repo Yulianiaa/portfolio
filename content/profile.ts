@@ -15,7 +15,6 @@ export const profile = {
   role: "Middle+ Product Designer",
   bioLines: [
     "Middle+ продуктовый дизайнер с 4+ годами опыта",
-    "Делаю интерфейсы для людей и про людей",
     "Живу в Санкт-Петербурге",
   ],
   avatar: "/assets/home/avatar.png",
