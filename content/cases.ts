@@ -305,7 +305,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
             ],
           ],
           image: {
-            src: "/assets/cases/marketing-communications-platform/banners-formats.png",
+            src: "/assets/cases/marketing-communications-platform/bannersFormat.png",
             alt: "Примеры новых форматов баннеров в приложении",
           },
         },
