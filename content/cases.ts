@@ -118,7 +118,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
             {
               label: "Stories «ДО»",
               image: {
-                src: "/assets/cases/marketing-communications-platform/audit-stories.png",
+                src: "/assets/cases/marketing-communications-platform/storiesBugs.png",
                 alt: "Проблемы Stories до переработки: ручной перенос текста, отсутствие поддержки Dynamic Type, нет автопролистывания, некорректное отображение",
               },
             },
