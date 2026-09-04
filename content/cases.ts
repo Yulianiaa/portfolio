@@ -333,7 +333,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
             ],
           ],
           image: {
-            src: "/assets/cases/marketing-communications-platform/cms-admin.png",
+            src: "/assets/cases/marketing-communications-platform/cms.png",
             alt: "Админ-панель CMS для управления баннерами",
           },
         },
