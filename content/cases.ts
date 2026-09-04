@@ -125,7 +125,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
             {
               label: "Баннеры «ДО»",
               image: {
-                src: "/assets/cases/marketing-communications-platform/audit-banners.png",
+                src: "/assets/cases/marketing-communications-platform/bannersBugs.png",
                 alt: "Проблемы баннеров до переработки: все баннеры выглядят одинаково важными, не соответствуют требованиям доступности",
               },
             },
