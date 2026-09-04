@@ -34,7 +34,7 @@ export function CaseCard({ item }: { item: CaseSummary }) {
       <div className="relative flex w-full flex-col items-start gap-6">
         <BlurredCover src={item.cover.src} alt={item.cover.alt} />
         {text}
-        <CursorCaseButton label="Кейс в процессе" disabled />
+        <CursorCaseButton label="Кейс в процессе" variant="secondary" />
       </div>
     );
   }

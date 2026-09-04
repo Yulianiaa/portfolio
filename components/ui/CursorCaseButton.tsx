@@ -1,9 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { buttonClassName } from "@/components/ui/Button";
+import { buttonClassName, type ButtonVariant } from "@/components/ui/Button";
 
-export function CursorCaseButton({ label, disabled = false }: { label: string; disabled?: boolean }) {
+export function CursorCaseButton({
+  label,
+  variant = "primary",
+}: {
+  label: string;
+  variant?: ButtonVariant;
+}) {
   const [pos, setPos] = useState<{ x: number; y: number } | null>(null);
 
   return (
@@ -17,7 +23,7 @@ export function CursorCaseButton({ label, disabled = false }: { label: string; d
       onMouseLeave={() => setPos(null)}
     >
       <span
-        className={`${buttonClassName("primary", disabled)} pointer-events-none absolute whitespace-nowrap transition-[opacity,transform] duration-150 ease-out`}
+        className={`${buttonClassName(variant)} pointer-events-none absolute whitespace-nowrap transition-[opacity,transform] duration-150 ease-out`}
         style={{
           left: pos?.x ?? 0,
           top: pos?.y ?? 0,
