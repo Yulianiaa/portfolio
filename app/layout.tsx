@@ -9,8 +9,7 @@ const onest = Onest({
 
 export const metadata: Metadata = {
   title: "Ульяна Прощенко — Product Designer",
-  description:
-    "Middle+ Product Designer. Портфолио и кейсы по проектированию продуктов.",
+  description: "Middle+ продуктовый дизайнер с 4+ годами опыта",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
