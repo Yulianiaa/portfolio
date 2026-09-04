@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --use-npm)"
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(mv /tmp/ai-skill-mcp.json.bak .mcp.json && ls -la && echo \"---\" && cat package.json)",
+      "mcp__figma__download_assets",
+      "mcp__figma__get_design_context"
+    ],
+    "additionalDirectories": [
+      "/private/tmp"
     ]
   }
 }
