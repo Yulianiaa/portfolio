@@ -15,9 +15,11 @@ export function CaseImage({ image }: { image: SectionImage }) {
         <video
           src={`${basePath}${image.video}`}
           poster={image.poster ? `${basePath}${image.poster}` : undefined}
-          controls
+          autoPlay
+          loop
+          muted
           playsInline
-          preload="metadata"
+          preload="auto"
           className="size-full object-cover"
         />
       </div>
