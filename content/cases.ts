@@ -272,7 +272,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
             ],
           ],
           image: {
-            src: "/assets/cases/marketing-communications-platform/stories-architecture.png",
+            src: "/assets/cases/marketing-communications-platform/sizes.png",
             alt: "Экраны Stories с адаптивным текстом поверх фонового изображения",
           },
         },
