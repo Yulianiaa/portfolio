@@ -14,8 +14,8 @@ export const profile = {
   name: "Ульяна Прощенко",
   role: "Middle+ Product Designer",
   bioLines: [
-    "Middle+ Product Designer и еще какой-то текст, что я крутышка",
-    "Живу в Санкт-Петербурге",
+    "Middle+ продуктовый дизайнер с 4+ годами опыта",
+    "Делаю интерфейсы для людей и про людей",
   ],
   avatar: "/assets/home/avatar.png",
   resumeUrl: "/resume.pdf",
