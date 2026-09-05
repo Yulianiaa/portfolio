@@ -20,7 +20,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
   },
   author: {
     name: "Ульяна Прощенко",
-    role: "Middle+ Product Designer",
+    role: "Middle+ продуктовый дизайнер",
     avatar: "/assets/home/avatar-full.jpg",
   },
   chapters: [

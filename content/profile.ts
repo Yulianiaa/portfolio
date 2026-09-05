@@ -12,7 +12,7 @@ export type ExperienceItem = {
 
 export const profile = {
   name: "Ульяна Прощенко",
-  role: "Middle+ Product Designer",
+  role: "Middle+ продуктовый дизайнер",
   bioLines: [
     "Middle+ продуктовый дизайнер с 4+ годами опыта",
     "Живу в Санкт-Петербурге",
