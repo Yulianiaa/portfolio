@@ -1,4 +1,4 @@
-export type SocialLink = { label: "Telegram" | "Linkedin" | "Email"; href: string };
+export type SocialLink = { label: "Telegram" | "Email"; href: string };
 
 export type ExperienceItem = {
   company: string;
@@ -22,7 +22,6 @@ export const profile = {
   contactUrl: "https://t.me/yulianiaa",
   socialLinks: [
     { label: "Telegram", href: "https://t.me/yulianiaa" },
-    { label: "Linkedin", href: "https://www.linkedin.com/in/yuliania/" },
     { label: "Email", href: "mailto:yuliania.a@yandex.ru" },
   ] satisfies SocialLink[],
   experience: [
