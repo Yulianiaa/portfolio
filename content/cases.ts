@@ -298,8 +298,8 @@ const marketingCommunicationsPlatform: CaseSummary = {
             ],
           ],
           image: {
-            video: "/assets/cases/marketing-communications-platform/bannersFormat.mp4",
-            poster: "/assets/cases/marketing-communications-platform/bannersFormat-poster.jpg",
+            video: "/assets/cases/marketing-communications-platform/banners.mp4",
+            poster: "/assets/cases/marketing-communications-platform/banners-poster.jpg",
           },
         },
       ],
