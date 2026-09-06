@@ -297,7 +297,10 @@ const marketingCommunicationsPlatform: CaseSummary = {
               "Следующим этапом стала переработка баннеров. Этот инструмент должен быть гибким и адаптивным, а также учитывать требования и ограничения внешнего агрегатора — рекламной системы Яндекс",
             ],
           ],
-          image: "placeholder",
+          image: {
+            video: "/assets/cases/marketing-communications-platform/bannersFormat.mp4",
+            poster: "/assets/cases/marketing-communications-platform/bannersFormat-poster.jpg",
+          },
         },
       ],
     },
