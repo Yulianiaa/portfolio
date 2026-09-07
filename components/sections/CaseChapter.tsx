@@ -11,8 +11,8 @@ import type { Chapter, Gap, Subsection } from "@/lib/content";
 
 function marginClass(gap: Gap = "normal") {
   if (gap === "tight") return "mt-6"; // 24px
-  if (gap === "loose") return "mt-10"; // 40px
-  return "mt-8"; // 32px, default
+  if (gap === "loose") return "mt-9 lg:mt-10"; // 36px tablet / 40px desktop
+  return "mt-7 lg:mt-8"; // 28px tablet / 32px desktop, default
 }
 
 function SubsectionText({ sub }: { sub: Subsection }) {
@@ -64,7 +64,7 @@ export function CaseChapter({ chapter }: { chapter: Chapter }) {
   // 16px gap - unless that first subsection already has its own subtitle
   // (e.g. "Погружение" -> "Компания"), in which case it's a full 32px gap,
   // matching the regular rhythm between subsections.
-  const headingGap = first?.subtitle ? "gap-8" : "gap-4";
+  const headingGap = first?.subtitle ? "gap-7 lg:gap-8" : "gap-4";
 
   const blocks: Block[] = [
     {
@@ -86,7 +86,7 @@ export function CaseChapter({ chapter }: { chapter: Chapter }) {
     blocks.push({
       gap: first.contentGap ?? "normal",
       node: (
-        <div className="flex w-full flex-col items-start gap-8">
+        <div className="flex w-full flex-col items-start gap-7 lg:gap-8">
           <SubsectionContent sub={first} />
         </div>
       ),
@@ -110,7 +110,7 @@ export function CaseChapter({ chapter }: { chapter: Chapter }) {
       blocks.push({
         gap: hasText ? (sub.contentGap ?? "normal") : (sub.gapBefore ?? "normal"),
         node: (
-          <div key={`content-${i}`} className="flex w-full flex-col items-start gap-8">
+          <div key={`content-${i}`} className="flex w-full flex-col items-start gap-7 lg:gap-8">
             <SubsectionContent sub={sub} />
           </div>
         ),

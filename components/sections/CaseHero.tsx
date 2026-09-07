@@ -14,7 +14,7 @@ export function CaseHero({
   contactHref: string;
 }) {
   return (
-    <div className="flex w-full flex-col items-start gap-10">
+    <div className="flex w-full flex-col items-start gap-9 lg:gap-10">
       <CaseNavActions backHref={backHref} contactHref={contactHref} />
       <div className="flex w-full max-w-[936px] flex-col items-start gap-4">
         <div className="flex w-full flex-col items-start gap-2">
