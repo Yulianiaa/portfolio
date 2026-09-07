@@ -36,7 +36,7 @@ export const profile = {
     },
     {
       company: "Фонтера",
-      position: "UX/UI дизайнер",
+      position: "Продуктовый дизайнер",
       period: "октябрь 2023 – декабрь 2024",
       logo: "/assets/logos/fontera.svg",
       logoWidth: 29,
@@ -45,7 +45,7 @@ export const profile = {
     },
     {
       company: "Krew Guru",
-      position: "UX/UI дизайнер",
+      position: "Продуктовый дизайнер",
       period: "декабрь 2021 – апрель 2024",
       logo: "/assets/logos/krewguru.svg",
       logoWidth: 22,
