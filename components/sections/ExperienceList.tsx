@@ -7,7 +7,7 @@ export function ExperienceList({ items }: { items: ExperienceItem[] }) {
       <h2 className="text-xl font-medium text-neutral-800 lg:text-2xl">Опыт работы</h2>
       <div className="flex w-full flex-col items-start gap-4">
         {items.map((item) => (
-          <div key={item.company} className="flex w-full max-w-[800px] items-start gap-3 lg:items-center lg:gap-4">
+          <div key={item.company} className="flex w-full max-w-[800px] items-start gap-3 tablet:items-center lg:gap-4">
             <div
               className="relative flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-[10px] tablet:size-12 tablet:rounded-2xl"
               style={{ backgroundColor: item.logoBg }}
