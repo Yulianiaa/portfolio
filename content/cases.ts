@@ -15,7 +15,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
     { value: "x4", label: "Реакции\nна Stories" },
   ],
   cover: {
-    src: "/assets/cases/marketing-communications-platform/cover.png",
+    src: "/assets/cases/marketing-communications-platform/cover.jpg",
     alt: "Экраны мобильного приложения Мигрант Сервис",
   },
   author: {
@@ -118,14 +118,14 @@ const marketingCommunicationsPlatform: CaseSummary = {
             {
               label: "Stories «ДО»",
               image: {
-                src: "/assets/cases/marketing-communications-platform/storiesEmpty.png",
+                src: "/assets/cases/marketing-communications-platform/storiesEmpty.jpg",
                 alt: "Проблемы Stories до переработки: ручной перенос текста, отсутствие поддержки Dynamic Type, нет автопролистывания, некорректное отображение",
               },
             },
             {
               label: "Баннеры «ДО»",
               image: {
-                src: "/assets/cases/marketing-communications-platform/bannersEmpty.png",
+                src: "/assets/cases/marketing-communications-platform/bannersEmpty.jpg",
                 alt: "Проблемы баннеров до переработки: все баннеры выглядят одинаково важными, не соответствуют требованиям доступности",
               },
             },
@@ -227,6 +227,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
             src: "/assets/cases/marketing-communications-platform/defence.jpg",
             alt: "Командная встреча по обсуждению принципов работы с инструментами продуктовых коммуникаций",
             fit: true,
+            bgColor: "#100A18",
           },
         },
         {
@@ -271,7 +272,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
             ],
           ],
           image: {
-            src: "/assets/cases/marketing-communications-platform/sizes.png",
+            src: "/assets/cases/marketing-communications-platform/sizes.jpg",
             alt: "Экраны Stories с адаптивным текстом поверх фонового изображения",
           },
         },
@@ -315,7 +316,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
             ],
           ],
           image: {
-            src: "/assets/cases/marketing-communications-platform/cms.png",
+            src: "/assets/cases/marketing-communications-platform/cms.jpg",
             alt: "Админ-панель CMS для управления баннерами",
           },
         },

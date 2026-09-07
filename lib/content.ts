@@ -5,7 +5,7 @@ export type Link = { label: string; href: string };
 export type Chip = { label: string; active?: boolean };
 export type Card = { title: string; description: string };
 export type SectionImage =
-  | { src: string; alt: string; fit?: boolean }
+  | { src: string; alt: string; fit?: boolean; bgColor?: string }
   | { video: string; poster?: string }
   | "placeholder";
 

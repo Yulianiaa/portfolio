@@ -1,5 +1,5 @@
 import Image from "@/components/ui/AppImage";
-import { basePath } from "@/lib/basePath";
+import { CaseVideo } from "@/components/ui/CaseVideo";
 import type { SectionImage } from "@/lib/content";
 
 export function CaseImage({ image }: { image: SectionImage }) {
@@ -12,22 +12,16 @@ export function CaseImage({ image }: { image: SectionImage }) {
   if ("video" in image) {
     return (
       <div className="relative aspect-square w-full tablet:aspect-[1024/630] overflow-hidden rounded-3xl border border-neutral-100 bg-neutral-50">
-        <video
-          src={`${basePath}${image.video}`}
-          poster={image.poster ? `${basePath}${image.poster}` : undefined}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="size-full object-cover"
-        />
+        <CaseVideo src={image.video} poster={image.poster} />
       </div>
     );
   }
 
   return (
-    <div className="relative aspect-square w-full tablet:aspect-[1024/630] overflow-hidden rounded-3xl border border-neutral-100 bg-neutral-50">
+    <div
+      className="relative aspect-square w-full tablet:aspect-[1024/630] overflow-hidden rounded-3xl border border-neutral-100 bg-neutral-50"
+      style={image.bgColor ? { backgroundColor: image.bgColor } : undefined}
+    >
       <Image
         src={image.src}
         alt={image.alt}
