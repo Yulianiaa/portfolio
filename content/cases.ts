@@ -118,14 +118,14 @@ const marketingCommunicationsPlatform: CaseSummary = {
             {
               label: "Stories «ДО»",
               image: {
-                src: "/assets/cases/marketing-communications-platform/storiesBugs.png",
+                src: "/assets/cases/marketing-communications-platform/storiesEmpty.png",
                 alt: "Проблемы Stories до переработки: ручной перенос текста, отсутствие поддержки Dynamic Type, нет автопролистывания, некорректное отображение",
               },
             },
             {
               label: "Баннеры «ДО»",
               image: {
-                src: "/assets/cases/marketing-communications-platform/bannersBugs.png",
+                src: "/assets/cases/marketing-communications-platform/bannersEmpty.png",
                 alt: "Проблемы баннеров до переработки: все баннеры выглядят одинаково важными, не соответствуют требованиям доступности",
               },
             },
