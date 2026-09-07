@@ -258,8 +258,8 @@ const marketingCommunicationsPlatform: CaseSummary = {
             ],
           ],
           image: {
-            video: "/assets/cases/marketing-communications-platform/emotional.mp4",
-            poster: "/assets/cases/marketing-communications-platform/emotional-poster.jpg",
+            video: "/assets/cases/marketing-communications-platform/emotionalfix.mp4",
+            poster: "/assets/cases/marketing-communications-platform/emotionalfix-poster.jpg",
           },
         },
         {
