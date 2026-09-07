@@ -16,9 +16,20 @@ function marginClass(gap: Gap = "normal") {
 }
 
 function SubsectionText({ sub }: { sub: Subsection }) {
+  // Chip/card-driven subsections ("Анализ продуктовых метрик", "UX-аудит
+  // текущего решения", "Проблемы команд") use a medium-weight label subtitle
+  // at every size; plain text subsections use a bold heading subtitle that
+  // only matches the label weight once the desktop breakpoint kicks in.
+  const isLabelSubtitle = !!(sub.cards || sub.toggle);
   return (
     <>
-      {sub.subtitle && <h3 className="text-xl font-medium text-neutral-800 lg:text-2xl">{nbsp(sub.subtitle)}</h3>}
+      {sub.subtitle && (
+        <h3
+          className={`text-xl text-neutral-800 lg:text-2xl lg:font-medium ${isLabelSubtitle ? "font-medium" : "font-bold"}`}
+        >
+          {nbsp(sub.subtitle)}
+        </h3>
+      )}
       {sub.body && sub.links && sub.linksAfterParagraph !== undefined ? (
         <>
           <RichText paragraphs={sub.body.slice(0, sub.linksAfterParagraph + 1)} />

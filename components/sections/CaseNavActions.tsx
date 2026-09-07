@@ -10,7 +10,7 @@ function BackButton({ href }: { href: string }) {
     <Link
       href={href}
       aria-label="Назад"
-      className="inline-flex h-10 items-center justify-center gap-1 rounded-xl border border-neutral-100 bg-neutral-50 px-2.5 transition-colors hover:bg-neutral-100 lg:h-12 lg:rounded-2xl lg:px-3"
+      className="inline-flex h-10 items-center justify-center gap-1 rounded-xl border border-neutral-100 bg-neutral-50 px-2 py-2 transition-colors hover:bg-neutral-100 lg:h-12 lg:rounded-2xl lg:px-3 lg:py-0"
     >
       <BiArrowBack className="size-6 lg:size-[28px]" aria-hidden />
       <span className="hidden px-1 text-lg font-medium text-neutral-800 lg:inline">Назад</span>
