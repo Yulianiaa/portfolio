@@ -22,7 +22,7 @@ export function CaseHero({
             {item.tags.map((tag, i) => (
               <span key={tag} className="flex items-center gap-4">
                 {i > 0 && (
-                  <span className="flex items-center py-2" aria-hidden>
+                  <span className="flex items-center py-1.5 lg:py-2" aria-hidden>
                     <Image src="/assets/icons/bullet.svg" alt="" width={12} height={12} />
                   </span>
                 )}
