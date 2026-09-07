@@ -33,7 +33,7 @@ export function CaseImage({ image }: { image: SectionImage }) {
         alt={image.alt}
         fill
         sizes="(min-width: 1024px) 1024px, 100vw"
-        className="object-cover"
+        className={image.fit ? "object-contain tablet:object-cover" : "object-cover"}
       />
     </div>
   );

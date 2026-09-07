@@ -226,6 +226,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
           image: {
             src: "/assets/cases/marketing-communications-platform/defence.jpg",
             alt: "Командная встреча по обсуждению принципов работы с инструментами продуктовых коммуникаций",
+            fit: true,
           },
         },
         {

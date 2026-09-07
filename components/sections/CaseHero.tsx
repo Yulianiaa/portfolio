@@ -18,7 +18,7 @@ export function CaseHero({
       <CaseNavActions backHref={backHref} contactHref={contactHref} />
       <div className="flex w-full max-w-[936px] flex-col items-start gap-4">
         <div className="flex w-full flex-col items-start gap-2">
-          <div className="flex flex-wrap items-center gap-4 text-base text-neutral-500 lg:text-lg">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-base text-neutral-500 lg:text-lg">
             {item.tags.map((tag, i) => (
               <span key={tag} className="flex items-center gap-4">
                 {i > 0 && (
