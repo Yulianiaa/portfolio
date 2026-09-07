@@ -19,7 +19,7 @@ export function SiteHeader({ profile }: { profile: typeof ProfileType }) {
             variant="primary"
           />
         </div>
-        <HeaderNav resumeUrl={profile.resumeUrl} />
+        <HeaderNav />
       </div>
     </header>
   );

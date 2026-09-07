@@ -5,12 +5,14 @@ export function LinkButton({
   label,
   href,
   icon = true,
+  newTab = false,
 }: {
   label: string;
   href: string;
   icon?: boolean;
+  newTab?: boolean;
 }) {
-  const external = href.startsWith("http");
+  const external = newTab || href.startsWith("http");
   return (
     <Link
       href={href}
@@ -29,7 +31,7 @@ export function LinkRow({
   icon = true,
   large = false,
 }: {
-  links: { label: string; href: string }[];
+  links: { label: string; href: string; newTab?: boolean }[];
   icon?: boolean;
   large?: boolean;
 }) {
@@ -42,7 +44,7 @@ export function LinkRow({
               •
             </span>
           )}
-          <LinkButton label={link.label} href={link.href} icon={icon} />
+          <LinkButton label={link.label} href={link.href} icon={icon} newTab={link.newTab} />
         </span>
       ))}
     </div>
