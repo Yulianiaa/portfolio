@@ -53,7 +53,7 @@ export function CaseCard({ item }: { item: CaseSummary }) {
           {item.tags.map((tag) => (
             <span
               key={tag}
-              className="flex h-8 items-center justify-center rounded-xl border border-neutral-100 bg-white px-2 text-sm font-medium text-neutral-800 tablet:h-10 tablet:px-2.5 tablet:text-base lg:h-12 lg:rounded-2xl lg:px-3 lg:text-lg"
+              className="flex h-8 items-center justify-center rounded-[10px] border border-neutral-100 bg-white px-2 text-sm font-medium text-neutral-800 tablet:h-10 tablet:rounded-xl tablet:px-2.5 tablet:text-base lg:h-12 lg:rounded-2xl lg:px-3 lg:text-lg"
             >
               {tag}
             </span>
