@@ -5,7 +5,7 @@ const noiseBg =
 
 export function BlurredCover({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="relative aspect-[1024/630] w-full overflow-hidden rounded-3xl border border-neutral-100 bg-neutral-50">
+    <div className="relative aspect-square w-full overflow-hidden rounded-3xl border border-neutral-100 bg-neutral-50 tablet:aspect-[1024/630]">
       <Image
         src={src}
         alt={alt}

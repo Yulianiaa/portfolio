@@ -4,9 +4,11 @@ import type { SocialLink } from "@/content/profile";
 
 export function SiteFooter({ links }: { links: SocialLink[] }) {
   return (
-    <footer className="flex w-full items-center justify-between">
+    <footer className="flex w-full items-center justify-center tablet:justify-between">
       <LinkRow icon={false} links={links} />
-      <ScrollTopButton label="Наверх" />
+      <div className="hidden tablet:block">
+        <ScrollTopButton label="Наверх" />
+      </div>
     </footer>
   );
 }

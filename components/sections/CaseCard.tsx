@@ -31,7 +31,7 @@ export function CaseCard({ item }: { item: CaseSummary }) {
 
   if (item.status === "preview") {
     return (
-      <div className="relative flex w-full flex-col items-start gap-6">
+      <div className="relative flex w-full flex-col items-start gap-5 tablet:gap-6">
         <BlurredCover src={item.cover.src} alt={item.cover.alt} />
         {text}
         <CursorCaseButton label="Кейс в процессе" variant="secondary" />
@@ -40,8 +40,8 @@ export function CaseCard({ item }: { item: CaseSummary }) {
   }
 
   return (
-    <Link href={`/cases/${item.slug}`} className="relative flex w-full cursor-pointer flex-col items-start gap-6">
-      <div className="relative aspect-[1024/630] w-full overflow-hidden rounded-3xl border border-neutral-100 bg-neutral-50">
+    <Link href={`/cases/${item.slug}`} className="relative flex w-full cursor-pointer flex-col items-start gap-5 tablet:gap-6">
+      <div className="relative aspect-square w-full overflow-hidden rounded-3xl border border-neutral-100 bg-neutral-50 tablet:aspect-[1024/630]">
         <Image
           src={item.cover.src}
           alt={item.cover.alt}
