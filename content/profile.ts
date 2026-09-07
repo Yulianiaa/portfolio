@@ -5,8 +5,6 @@ export type ExperienceItem = {
   position: string;
   period: string;
   logo: string;
-  logoWidth: number;
-  logoHeight: number;
   logoBg?: string;
 };
 
@@ -30,8 +28,6 @@ export const profile = {
       position: "Продуктовый дизайнер",
       period: "декабрь 2024 – июнь 2026",
       logo: "/assets/logos/migrant-service.svg",
-      logoWidth: 34,
-      logoHeight: 13,
       logoBg: "#00a749",
     },
     {
@@ -39,8 +35,6 @@ export const profile = {
       position: "Продуктовый дизайнер",
       period: "октябрь 2023 – декабрь 2024",
       logo: "/assets/logos/fontera.svg",
-      logoWidth: 29,
-      logoHeight: 29,
       logoBg: "var(--color-neutral-50)",
     },
     {
@@ -48,8 +42,6 @@ export const profile = {
       position: "Продуктовый дизайнер",
       period: "декабрь 2021 – апрель 2024",
       logo: "/assets/logos/krewguru.svg",
-      logoWidth: 22,
-      logoHeight: 34,
       logoBg: "#ffebe6",
     },
   ] satisfies ExperienceItem[],
