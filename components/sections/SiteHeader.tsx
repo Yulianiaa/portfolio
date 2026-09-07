@@ -15,11 +15,18 @@ export function SiteHeader({ profile }: { profile: typeof ProfileType }) {
             className="inline-flex items-center justify-center rounded-xl border border-neutral-100 bg-neutral-50 p-2 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0"
           >
             <Image
+              src="/assets/icons/logo-icon.svg"
+              alt="Ульяна Прощенко"
+              width={24}
+              height={24}
+              className="size-6 lg:hidden"
+            />
+            <Image
               src="/assets/icons/logo-mark.svg"
               alt="Ульяна Прощенко"
               width={28}
               height={28}
-              className="size-6 lg:size-[28px]"
+              className="hidden lg:block"
             />
           </Link>
           <Button
