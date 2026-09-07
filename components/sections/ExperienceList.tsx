@@ -9,7 +9,7 @@ export function ExperienceList({ items }: { items: ExperienceItem[] }) {
         {items.map((item) => (
           <div key={item.company} className="flex w-full max-w-[800px] items-start gap-3 tablet:items-center lg:gap-4">
             <div
-              className="relative flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-[10px] tablet:size-12 tablet:rounded-2xl"
+              className="relative flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-[10px] tablet:size-11 tablet:rounded-xl lg:size-12 lg:rounded-2xl"
               style={{ backgroundColor: item.logoBg }}
             >
               <Image src={item.logo} alt="" width={item.logoWidth} height={item.logoHeight} className="object-contain" />
