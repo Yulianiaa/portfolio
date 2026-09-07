@@ -18,7 +18,7 @@ function marginClass(gap: Gap = "normal") {
 function SubsectionText({ sub }: { sub: Subsection }) {
   return (
     <>
-      {sub.subtitle && <h3 className="text-2xl font-medium text-neutral-800">{nbsp(sub.subtitle)}</h3>}
+      {sub.subtitle && <h3 className="text-xl font-medium text-neutral-800 lg:text-2xl">{nbsp(sub.subtitle)}</h3>}
       {sub.body && sub.links && sub.linksAfterParagraph !== undefined ? (
         <>
           <RichText paragraphs={sub.body.slice(0, sub.linksAfterParagraph + 1)} />
@@ -43,7 +43,7 @@ function SubsectionContent({ sub }: { sub: Subsection }) {
     <>
       {sub.quote && (
         <div className="w-full rounded-3xl bg-neutral-50 p-7">
-          <p className="text-xl font-medium text-neutral-800">{nbsp(sub.quote)}</p>
+          <p className="text-lg font-medium text-neutral-800 lg:text-xl">{nbsp(sub.quote)}</p>
         </div>
       )}
       {sub.toggle && <ToggleBlock options={sub.toggle} />}
@@ -71,7 +71,7 @@ export function CaseChapter({ chapter }: { chapter: Chapter }) {
       gap: "normal",
       node: (
         <div className={`flex w-full max-w-[936px] flex-col items-start ${headingGap}`}>
-          <h2 className="w-full text-h2 font-bold text-neutral-800">{nbsp(chapter.heading)}</h2>
+          <h2 className="w-full text-h25 font-bold text-neutral-800 lg:text-h2">{nbsp(chapter.heading)}</h2>
           {firstHasText && (
             <div className="flex w-full flex-col items-start gap-2">
               <SubsectionText sub={first} />

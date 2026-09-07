@@ -6,8 +6,8 @@ export function MetricCards({ cards, layout = "row" }: { cards: Card[]; layout?:
     <div
       className={
         layout === "grid2"
-          ? "grid w-full grid-cols-1 gap-4 sm:grid-cols-2"
-          : "flex w-full flex-col items-start gap-4 sm:flex-row"
+          ? "grid w-full grid-cols-1 gap-4 lg:grid-cols-2"
+          : "flex w-full flex-col items-start gap-4 lg:flex-row"
       }
     >
       {cards.map((card) => (
@@ -15,8 +15,8 @@ export function MetricCards({ cards, layout = "row" }: { cards: Card[]; layout?:
           key={card.title}
           className="flex flex-1 flex-col items-start gap-2 rounded-3xl border border-neutral-100 bg-neutral-50 p-7"
         >
-          <p className="text-xl font-medium text-neutral-800">{nbsp(card.title)}</p>
-          <p className="text-lg text-neutral-500">{nbsp(card.description)}</p>
+          <p className="text-lg font-medium text-neutral-800 lg:text-xl">{nbsp(card.title)}</p>
+          <p className="text-base text-neutral-500 lg:text-lg">{nbsp(card.description)}</p>
         </div>
       ))}
     </div>

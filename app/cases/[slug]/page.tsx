@@ -17,7 +17,7 @@ export default async function CasePage({ params }: PageProps<"/cases/[slug]">) {
 
   return (
     <div className="flex flex-1 justify-center">
-      <main className="flex w-full max-w-[1024px] flex-col items-start gap-16 px-4 py-12 sm:px-0">
+      <main className="flex w-full max-w-[1024px] flex-col items-start gap-14 px-6 py-12 lg:gap-16 lg:px-0">
         <CaseHero item={item} backHref="/" contactHref={profile.contactUrl} />
         {item.chapters.map((chapter) => (
           <CaseChapter key={chapter.heading} chapter={chapter} />

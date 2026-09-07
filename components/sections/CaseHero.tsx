@@ -18,7 +18,7 @@ export function CaseHero({
       <CaseNavActions backHref={backHref} contactHref={contactHref} />
       <div className="flex w-full max-w-[936px] flex-col items-start gap-4">
         <div className="flex w-full flex-col items-start gap-2">
-          <div className="flex flex-wrap items-center gap-4 text-lg text-neutral-500">
+          <div className="flex flex-wrap items-center gap-4 text-base text-neutral-500 lg:text-lg">
             {item.tags.map((tag, i) => (
               <span key={tag} className="flex items-center gap-4">
                 {i > 0 && (
@@ -30,15 +30,15 @@ export function CaseHero({
               </span>
             ))}
           </div>
-          <h1 className="text-h1 font-bold text-neutral-800">{nbsp(item.title)}</h1>
+          <h1 className="text-h2 font-bold text-neutral-800 lg:text-h1">{nbsp(item.title)}</h1>
         </div>
-        <p className="text-lg text-neutral-800">{nbsp(item.description)}</p>
+        <p className="text-base text-neutral-800 lg:text-lg">{nbsp(item.description)}</p>
       </div>
-      <div className="grid w-full grid-cols-2 gap-x-4 gap-y-6 text-center sm:grid-cols-3 lg:grid-cols-5">
+      <div className="grid w-full grid-cols-2 gap-x-4 gap-y-6 text-center min-[744px]:grid-cols-5">
         {item.keyFacts.map((fact) => (
           <div key={fact.label} className="flex flex-col items-center gap-2">
-            <p className="text-h2 font-bold text-neutral-800">{fact.value}</p>
-            <p className="whitespace-pre-line text-lg text-neutral-500">{fact.label}</p>
+            <p className="text-h25 font-bold text-neutral-800 lg:text-h2">{fact.value}</p>
+            <p className="whitespace-pre-line text-base text-neutral-500 lg:text-lg">{fact.label}</p>
           </div>
         ))}
       </div>

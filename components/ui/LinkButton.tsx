@@ -18,10 +18,19 @@ export function LinkButton({
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
-      className="inline-flex items-center gap-1 text-lg font-medium text-brand-500 hover:underline"
+      className="inline-flex items-center gap-1 text-base font-medium text-brand-500 hover:underline lg:text-lg"
     >
       {label}
-      {icon && <Image src="/assets/icons/link-external.svg" alt="" width={28} height={28} aria-hidden />}
+      {icon && (
+        <Image
+          src="/assets/icons/link-external.svg"
+          alt=""
+          width={28}
+          height={28}
+          className="size-6 lg:size-[28px]"
+          aria-hidden
+        />
+      )}
     </Link>
   );
 }

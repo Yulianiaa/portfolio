@@ -11,7 +11,7 @@ export function CaseFooter({ author, links }: { author: CaseStudy["author"]; lin
           <Image src={author.avatar} alt={author.name} fill sizes="40px" className="object-cover" />
         </div>
         <div className="flex flex-col">
-          <p className="text-lg font-medium text-neutral-800">{author.name}</p>
+          <p className="text-base font-medium text-neutral-800 lg:text-lg">{author.name}</p>
           <p className="text-sm text-neutral-500">{author.role}</p>
         </div>
       </div>
