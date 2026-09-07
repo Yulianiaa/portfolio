@@ -14,7 +14,7 @@ function scrollToSection(e: React.MouseEvent<HTMLAnchorElement>, id: string) {
 
 export function HeaderNav() {
   return (
-    <nav className="flex items-center gap-1 self-center rounded-2xl px-1 sm:absolute sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2">
+    <nav className="hidden items-center gap-1 self-center rounded-2xl px-1 tablet:absolute tablet:left-1/2 tablet:top-1/2 tablet:flex tablet:-translate-x-1/2 tablet:-translate-y-1/2">
       <a href="#cases" className={tabClass} onClick={(e) => scrollToSection(e, "cases")}>
         Кейсы
       </a>

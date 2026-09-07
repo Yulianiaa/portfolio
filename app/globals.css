@@ -32,6 +32,8 @@
   --text-h2--line-height: 2.5rem;
   --text-h25: 1.75rem;
   --text-h25--line-height: 2rem;
+
+  --breakpoint-tablet: 46.5rem; /* 744px - matches the Figma tablet frame width */
 }
 
 body {

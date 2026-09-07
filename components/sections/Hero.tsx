@@ -5,7 +5,7 @@ import type { profile as ProfileType } from "@/content/profile";
 
 export function Hero({ profile }: { profile: typeof ProfileType }) {
   return (
-    <section className="flex w-full flex-col items-center gap-7 lg:gap-8">
+    <section className="flex w-full flex-col items-center gap-8 tablet:gap-7 lg:gap-8">
       <div className="relative h-[300px] w-full">
         <div className="absolute left-1/2 top-1/2 size-[300px] -translate-x-1/2 -translate-y-1/2 overflow-hidden">
           <Image
