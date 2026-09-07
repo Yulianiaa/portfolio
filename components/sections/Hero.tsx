@@ -6,13 +6,13 @@ import type { profile as ProfileType } from "@/content/profile";
 export function Hero({ profile }: { profile: typeof ProfileType }) {
   return (
     <section className="flex w-full flex-col items-center gap-6 tablet:gap-7 lg:gap-8">
-      <div className="relative h-[300px] w-full">
-        <div className="absolute left-1/2 top-1/2 size-[300px] -translate-x-1/2 -translate-y-1/2 overflow-hidden">
+      <div className="relative h-[250px] w-full tablet:h-[300px]">
+        <div className="absolute left-1/2 top-1/2 size-[250px] -translate-x-1/2 -translate-y-1/2 overflow-hidden tablet:size-[300px]">
           <Image
             src={profile.avatar}
             alt={profile.name}
             fill
-            sizes="300px"
+            sizes="(min-width: 744px) 300px, 250px"
             priority
             className="object-cover"
           />
