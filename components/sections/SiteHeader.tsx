@@ -12,7 +12,7 @@ export function SiteHeader({ profile }: { profile: typeof ProfileType }) {
           <Link
             href="/"
             aria-label="На главную"
-            className="inline-flex items-center justify-center rounded-xl border border-neutral-100 bg-neutral-50 p-2 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0"
+            className="inline-flex items-center justify-center rounded-xl p-2 lg:rounded-none lg:p-0"
           >
             <Image
               src="/assets/icons/logo-icon.svg"
