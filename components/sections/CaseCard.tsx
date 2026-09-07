@@ -49,11 +49,11 @@ export function CaseCard({ item }: { item: CaseSummary }) {
           sizes="(min-width: 1024px) 1024px, 100vw"
           className="object-cover"
         />
-        <div className="absolute bottom-4 left-4 flex flex-wrap items-center gap-4">
+        <div className="absolute bottom-4 left-4 flex flex-wrap items-center gap-2 tablet:gap-4">
           {item.tags.map((tag) => (
             <span
               key={tag}
-              className="flex h-10 items-center justify-center rounded-xl border border-neutral-100 bg-white px-2.5 text-base font-medium text-neutral-800 lg:h-12 lg:rounded-2xl lg:px-3 lg:text-lg"
+              className="flex h-8 items-center justify-center rounded-xl border border-neutral-100 bg-white px-2 text-sm font-medium text-neutral-800 tablet:h-10 tablet:px-2.5 tablet:text-base lg:h-12 lg:rounded-2xl lg:px-3 lg:text-lg"
             >
               {tag}
             </span>

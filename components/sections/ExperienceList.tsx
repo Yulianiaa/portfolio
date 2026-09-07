@@ -15,8 +15,8 @@ export function ExperienceList({ items }: { items: ExperienceItem[] }) {
               <Image src={item.logo} alt="" width={item.logoWidth} height={item.logoHeight} className="object-contain" />
             </div>
             <div className="flex min-w-0 flex-1 flex-col">
-              <p className="text-lg font-medium text-neutral-800 lg:text-xl">{item.company}</p>
-              <p className="text-base text-neutral-500 lg:text-lg">
+              <p className="text-base font-medium text-neutral-800 tablet:text-lg lg:text-xl">{item.company}</p>
+              <p className="text-sm text-neutral-500 tablet:text-base lg:text-lg">
                 {item.position} • {item.period}
               </p>
             </div>
