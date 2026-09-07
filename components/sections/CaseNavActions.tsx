@@ -24,7 +24,7 @@ function ContactButton({ href }: { href: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex h-10 items-center justify-center gap-1 rounded-xl bg-neutral-800 px-2.5 text-base font-medium text-white transition-colors hover:bg-neutral-700 lg:h-12 lg:rounded-2xl lg:px-3 lg:text-lg"
+      className="hidden h-10 items-center justify-center gap-1 rounded-xl bg-neutral-800 px-2.5 text-base font-medium text-white transition-colors hover:bg-neutral-700 tablet:inline-flex lg:h-12 lg:rounded-2xl lg:px-3 lg:text-lg"
     >
       <Image src="/assets/icons/telegram.svg" alt="" width={28} height={28} className="size-6 lg:size-[28px]" aria-hidden />
       <span className="px-1 lg:hidden">Контакты</span>
@@ -58,7 +58,7 @@ export function CaseNavActions({ backHref, contactHref }: { backHref: string; co
           stuck ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="mx-auto flex h-20 w-full max-w-[1024px] items-center justify-between px-6 lg:px-0">
+        <div className="mx-auto flex h-20 w-full max-w-[1024px] items-center justify-between px-4 tablet:px-6 lg:px-0">
           <BackButton href={backHref} />
           <ContactButton href={contactHref} />
         </div>

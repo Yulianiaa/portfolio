@@ -14,7 +14,7 @@ export function CaseHero({
   contactHref: string;
 }) {
   return (
-    <div className="flex w-full flex-col items-start gap-9 lg:gap-10">
+    <div className="flex w-full flex-col items-start gap-8 tablet:gap-9 lg:gap-10">
       <CaseNavActions backHref={backHref} contactHref={contactHref} />
       <div className="flex w-full max-w-[936px] flex-col items-start gap-4">
         <div className="flex w-full flex-col items-start gap-2">
@@ -34,7 +34,7 @@ export function CaseHero({
         </div>
         <p className="text-base text-neutral-800 lg:text-lg">{nbsp(item.description)}</p>
       </div>
-      <div className="grid w-full grid-cols-2 gap-x-4 gap-y-6 text-center min-[744px]:grid-cols-5">
+      <div className="grid w-full grid-cols-2 gap-x-4 gap-y-4 text-center tablet:grid-cols-5">
         {item.keyFacts.map((fact) => (
           <div key={fact.label} className="flex flex-col items-center gap-2">
             <p className="text-h25 font-bold text-neutral-800 lg:text-h2">{fact.value}</p>

@@ -10,9 +10,9 @@ import { nbsp } from "@/lib/typography";
 import type { Chapter, Gap, Subsection } from "@/lib/content";
 
 function marginClass(gap: Gap = "normal") {
-  if (gap === "tight") return "mt-6"; // 24px
-  if (gap === "loose") return "mt-9 lg:mt-10"; // 36px tablet / 40px desktop
-  return "mt-7 lg:mt-8"; // 28px tablet / 32px desktop, default
+  if (gap === "tight") return "mt-5 tablet:mt-6"; // 20px mobile / 24px tablet+
+  if (gap === "loose") return "mt-8 tablet:mt-9 lg:mt-10"; // 32px mobile / 36px tablet / 40px desktop
+  return "mt-6 tablet:mt-7 lg:mt-8"; // 24px mobile / 28px tablet / 32px desktop, default
 }
 
 function SubsectionText({ sub }: { sub: Subsection }) {
@@ -64,7 +64,7 @@ export function CaseChapter({ chapter }: { chapter: Chapter }) {
   // 16px gap - unless that first subsection already has its own subtitle
   // (e.g. "Погружение" -> "Компания"), in which case it's a full 32px gap,
   // matching the regular rhythm between subsections.
-  const headingGap = first?.subtitle ? "gap-7 lg:gap-8" : "gap-4";
+  const headingGap = first?.subtitle ? "gap-6 tablet:gap-7 lg:gap-8" : "gap-4";
 
   const blocks: Block[] = [
     {

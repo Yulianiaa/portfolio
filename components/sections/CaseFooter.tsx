@@ -5,8 +5,8 @@ import type { SocialLink } from "@/content/profile";
 
 export function CaseFooter({ author, links }: { author: CaseStudy["author"]; links: SocialLink[] }) {
   return (
-    <footer className="flex w-full flex-col items-center justify-between gap-4 sm:flex-row">
-      <div className="flex items-center gap-3">
+    <footer className="flex w-full items-center justify-center tablet:justify-between">
+      <div className="hidden items-center gap-3 tablet:flex">
         <div className="relative size-10 shrink-0 overflow-hidden rounded-xl">
           <Image src={author.avatar} alt={author.name} fill sizes="40px" className="object-cover" />
         </div>
