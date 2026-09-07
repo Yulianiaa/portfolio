@@ -5,7 +5,7 @@ import type { profile as ProfileType } from "@/content/profile";
 
 export function Hero({ profile }: { profile: typeof ProfileType }) {
   return (
-    <section className="flex w-full flex-col items-center gap-8">
+    <section className="flex w-full flex-col items-center gap-7 lg:gap-8">
       <div className="relative h-[300px] w-full">
         <div className="absolute left-1/2 top-1/2 size-[300px] -translate-x-1/2 -translate-y-1/2 overflow-hidden">
           <Image
@@ -20,8 +20,8 @@ export function Hero({ profile }: { profile: typeof ProfileType }) {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[90px] bg-gradient-to-b from-white/0 via-white/75 to-white" />
       </div>
       <div className="flex w-full flex-col items-center gap-2">
-        <h1 className="text-h2 font-bold text-neutral-800">{profile.name}</h1>
-        <div className="flex flex-col items-center text-lg text-neutral-500">
+        <h1 className="text-h25 font-bold text-neutral-800 lg:text-h2">{profile.name}</h1>
+        <div className="flex flex-col items-center text-base text-neutral-500 lg:text-lg">
           {profile.bioLines.map((line) => (
             <p key={line}>{nbsp(line)}</p>
           ))}

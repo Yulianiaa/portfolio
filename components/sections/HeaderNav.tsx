@@ -3,7 +3,7 @@
 import { smoothScrollToElement } from "@/lib/smoothScroll";
 
 const tabClass =
-  "flex h-12 shrink-0 items-center justify-center rounded-xl px-3 text-lg font-medium text-neutral-800 hover:bg-neutral-50 transition-colors";
+  "flex h-10 shrink-0 items-center justify-center rounded-xl px-2.5 text-base font-medium text-neutral-800 hover:bg-neutral-50 transition-colors lg:h-12 lg:px-3 lg:text-lg";
 
 function scrollToSection(e: React.MouseEvent<HTMLAnchorElement>, id: string) {
   const el = document.getElementById(id);

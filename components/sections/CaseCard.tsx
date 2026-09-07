@@ -12,11 +12,11 @@ export function CaseCard({ item }: { item: CaseSummary }) {
       <div className="flex w-full flex-col items-start gap-6">
         <div className="flex h-[300px] w-full flex-col items-center justify-center gap-3 rounded-3xl border border-neutral-100 bg-neutral-50 sm:h-[400px] md:h-[630px]">
           <BiTime className="size-8 text-neutral-800" aria-hidden />
-          <p className="text-2xl font-medium text-neutral-800">Кейс в процессе</p>
+          <p className="text-xl font-medium text-neutral-800 lg:text-2xl">Кейс в процессе</p>
         </div>
         <div className="flex flex-col items-start gap-2">
-          <h3 className="text-2xl font-medium text-neutral-800">{nbsp(item.title)}</h3>
-          <p className="text-lg text-neutral-800">{nbsp(item.description)}</p>
+          <h3 className="text-xl font-medium text-neutral-800 lg:text-2xl">{nbsp(item.title)}</h3>
+          <p className="text-base text-neutral-800 lg:text-lg">{nbsp(item.description)}</p>
         </div>
       </div>
     );
@@ -24,8 +24,8 @@ export function CaseCard({ item }: { item: CaseSummary }) {
 
   const text = (
     <div className="flex max-w-[936px] flex-col items-start gap-2 text-left">
-      <h3 className="text-2xl font-medium text-neutral-800">{item.title}</h3>
-      <p className="text-lg text-neutral-800">{item.description}</p>
+      <h3 className="text-xl font-medium text-neutral-800 lg:text-2xl">{item.title}</h3>
+      <p className="text-base text-neutral-800 lg:text-lg">{item.description}</p>
     </div>
   );
 
@@ -53,7 +53,7 @@ export function CaseCard({ item }: { item: CaseSummary }) {
           {item.tags.map((tag) => (
             <span
               key={tag}
-              className="flex h-12 items-center justify-center rounded-2xl border border-neutral-100 bg-white px-3 text-lg font-medium text-neutral-800"
+              className="flex h-10 items-center justify-center rounded-xl border border-neutral-100 bg-white px-2.5 text-base font-medium text-neutral-800 lg:h-12 lg:rounded-2xl lg:px-3 lg:text-lg"
             >
               {tag}
             </span>
