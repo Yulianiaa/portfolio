@@ -12,9 +12,9 @@ export function ToggleBlock({ options }: { options: ToggleOption[] }) {
 
   return (
     <div className="flex w-full flex-col items-start gap-6">
-      <div className="flex flex-wrap items-start gap-4">
+      <div className="no-scrollbar flex items-start gap-4 overflow-x-auto">
         {options.map((option, i) => (
-          <button key={option.label} type="button" onClick={() => setActive(i)}>
+          <button key={option.label} type="button" className="shrink-0" onClick={() => setActive(i)}>
             <Chip label={option.label} active={i === active} />
           </button>
         ))}
