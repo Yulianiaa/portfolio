@@ -51,7 +51,7 @@ export function MobileMenu({ contactHref }: { contactHref: string }) {
               <Image src="/assets/icons/close.svg" alt="" width={24} height={24} className="size-6" aria-hidden />
             </button>
           </div>
-          <nav className="flex flex-col items-start gap-3 px-6 pt-2">
+          <nav className="flex flex-col items-start gap-2 px-6 pt-2">
             <a href="#cases" className={linkClass} onClick={(e) => scrollToSection(e, "cases")}>
               Кейсы
             </a>

@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div id="top" className="flex flex-1 flex-col items-center">
       <SiteHeader profile={profile} />
-      <main className="flex w-full max-w-[1024px] flex-col items-start gap-12 px-6 py-12 pb-24 tablet:gap-14 tablet:pb-12 lg:gap-16 lg:px-0">
+      <main className="flex w-full max-w-[1024px] flex-col items-start gap-12 px-6 pt-10 pb-24 tablet:gap-14 tablet:pt-12 tablet:pb-12 lg:gap-16 lg:px-0">
         <Hero profile={profile} />
         <section id="cases" className="flex w-full scroll-mt-24 flex-col items-start gap-8 tablet:gap-9 lg:gap-10">
           {cases.map((item) => (
