@@ -23,6 +23,15 @@ export function CaseVideo({ src, poster }: { src: string; poster?: string }) {
     return () => observer.disconnect();
   }, []);
 
+  // Changing `src` updates the same <video> element rather than remounting it
+  // (e.g. switching toggle options), so the intersection observer above won't
+  // re-fire - explicitly (re)start playback whenever the source changes.
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    el.play().catch(() => {});
+  }, [src]);
+
   return (
     <video
       ref={ref}
