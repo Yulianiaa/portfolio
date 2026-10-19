@@ -6,6 +6,7 @@ import { ChipRow } from "@/components/ui/Chip";
 import { MetricCards } from "@/components/ui/MetricCards";
 import { CaseImage } from "@/components/ui/CaseImage";
 import { ToggleBlock } from "@/components/ui/ToggleBlock";
+import { DropCard } from "@/components/ui/DropCard";
 import { nbsp } from "@/lib/typography";
 import type { Chapter, Gap, Subsection } from "@/lib/content";
 
@@ -49,6 +50,9 @@ function SubsectionContent({ sub }: { sub: Subsection }) {
       {sub.toggle && <ToggleBlock options={sub.toggle} />}
       {!sub.toggle && sub.chips && <ChipRow chips={sub.chips} />}
       {!sub.toggle && sub.cards && <MetricCards cards={sub.cards} layout={sub.cardsLayout} />}
+      {!sub.toggle &&
+        sub.dropCards &&
+        sub.dropCards.map((card) => <DropCard key={card.title} card={card} />)}
       {!sub.toggle && sub.image && <CaseImage image={sub.image} />}
     </>
   );
@@ -59,7 +63,10 @@ type Block = { gap: Gap; node: ReactNode };
 export function CaseChapter({ chapter }: { chapter: Chapter }) {
   const [first, ...rest] = chapter.subsections;
   const firstHasText = !!(first && (first.subtitle || first.body || first.links || first.list));
-  const firstHasContent = !!(first && (first.quote || first.toggle || first.chips || first.cards || first.image));
+  const firstHasContent = !!(
+    first &&
+    (first.quote || first.toggle || first.chips || first.cards || first.dropCards || first.image)
+  );
   // The chapter heading sits directly above its intro paragraph with a tight
   // 16px gap - unless that first subsection already has its own subtitle
   // (e.g. "Погружение" -> "Компания"), in which case it's a full 32px gap,
@@ -95,7 +102,7 @@ export function CaseChapter({ chapter }: { chapter: Chapter }) {
 
   rest.forEach((sub, i) => {
     const hasText = sub.subtitle || sub.body || sub.links || sub.list;
-    const hasContent = sub.quote || sub.toggle || sub.chips || sub.cards || sub.image;
+    const hasContent = sub.quote || sub.toggle || sub.chips || sub.cards || sub.dropCards || sub.image;
     if (hasText) {
       blocks.push({
         gap: sub.gapBefore ?? "normal",

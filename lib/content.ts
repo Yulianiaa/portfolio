@@ -4,10 +4,11 @@ export type Paragraph = Segment[];
 export type Link = { label: string; href: string };
 export type Chip = { label: string; active?: boolean };
 export type Card = { title: string; description: string };
-export type SectionImage =
-  | { src: string; alt: string; fit?: boolean; bgColor?: string }
-  | { video: string; poster?: string }
-  | "placeholder";
+export type ImageSrc = { src: string; alt: string; fit?: boolean; bgColor?: string };
+export type SectionImage = ImageSrc | { video: string; poster?: string } | "placeholder";
+
+/** A bordered, self-contained card with its own heading/body/list and a static "Читать" affordance. */
+export type DropCard = { title: string; body: Paragraph[]; list?: string[] };
 
 export type ToggleOption = {
   label: string;
@@ -27,6 +28,7 @@ export type Subsection = {
   chips?: Chip[];
   cards?: Card[];
   cardsLayout?: "row" | "grid2";
+  dropCards?: DropCard[];
   image?: SectionImage;
   quote?: string;
   toggle?: ToggleOption[];
@@ -51,7 +53,7 @@ export type CaseStudy = {
   title: string;
   description: string;
   keyFacts: KeyFact[];
-  cover: { src: string; alt: string };
+  cover: ImageSrc;
   chapters: Chapter[];
   author: { name: string; role: string; avatar: string };
 };
@@ -68,7 +70,7 @@ export type CasePreview = {
   status: "preview";
   title: string;
   description: string;
-  cover: { src: string; alt: string };
+  cover: ImageSrc;
 };
 
 export type CaseSummary = CaseStudy | CasePlaceholder | CasePreview;

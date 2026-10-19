@@ -34,7 +34,11 @@ export function CaseHero({
         </div>
         <p className="text-base text-neutral-800 lg:text-lg">{nbsp(item.description)}</p>
       </div>
-      <div className="grid w-full grid-cols-2 gap-x-4 gap-y-4 text-center tablet:grid-cols-5">
+      <div
+        className={`grid w-full grid-cols-2 gap-x-4 gap-y-4 text-center ${
+          item.keyFacts.length === 5 ? "tablet:grid-cols-5" : "tablet:grid-cols-4"
+        }`}
+      >
         {item.keyFacts.map((fact) => (
           <div key={fact.label} className="flex flex-col items-center gap-2">
             <p className="text-h25 font-bold text-neutral-800 lg:text-h2">{fact.value}</p>
