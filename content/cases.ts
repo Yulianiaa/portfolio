@@ -569,7 +569,10 @@ const subscriptionCase: CaseSummary = {
               "Все экраны и сценарии я старалась сделать простыми и прозрачными. Например, на paywall подробно описала все функции и преимущества, а оформление подписки уложила в два шага, не считая оплаты",
             ],
           ],
-          image: "placeholder",
+          image: {
+            video: "/assets/cases/subscription-migrant-plus/sub.mp4",
+            poster: "/assets/cases/subscription-migrant-plus/sub-poster.jpg",
+          },
         },
         {
           gapBefore: "normal",
