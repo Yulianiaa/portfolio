@@ -667,8 +667,22 @@ const subscriptionCase: CaseSummary = {
               "Это повлияло на то, как мы интерпретируем полученный результат: слова «Легально» и «Нелегально» могли ввести человека в заблуждение, поэтому я не стала их использовать",
             ],
           ],
-          chips: [{ label: "Позитивный результат", active: true }, { label: "Негативный результат" }],
-          image: "placeholder",
+          toggle: [
+            {
+              label: "Позитивный результат",
+              image: {
+                video: "/assets/cases/subscription-migrant-plus/positive.mp4",
+                poster: "/assets/cases/subscription-migrant-plus/positive-poster.jpg",
+              },
+            },
+            {
+              label: "Негативный результат",
+              image: {
+                video: "/assets/cases/subscription-migrant-plus/negative.mp4",
+                poster: "/assets/cases/subscription-migrant-plus/negative-poster.jpg",
+              },
+            },
+          ],
         },
         {
           gapBefore: "tight",
