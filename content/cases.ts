@@ -555,7 +555,10 @@ const subscriptionCase: CaseSummary = {
               ": ссылки на реестры внутри блока «Советы о жизни и работе в России»",
             ],
           ],
-          image: "placeholder",
+          image: {
+            src: "/assets/cases/subscription-migrant-plus/office.gif",
+            alt: "Реакция на срыв срока запуска автоматической проверки документов",
+          },
         },
         {
           subtitle: "Дизайн",
