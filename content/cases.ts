@@ -545,8 +545,8 @@ const subscriptionCase: CaseSummary = {
                     { text: "9 конкурентов", strong: true },
                   ],
                 ],
-                // TODO: add the real href once it's provided — "Таблица с комментариями" (comparison doc)
-                // links: [{ label: "Таблица с комментариями", href: "" }],
+                // TODO: replace with the real deeplink once provided
+                links: [{ label: "Таблица с комментариями", href: "#" }],
                 image: {
                   src: "/assets/cases/subscription-migrant-plus/competitors.jpg",
                   alt: "Экраны трёх приложений-конкурентов: РосМигрант, Юрист/Адвокат и Мигрант СНГ",
