@@ -582,8 +582,22 @@ const subscriptionCase: CaseSummary = {
               "Чтобы собрать подборку вакансий или жилья, достаточно настроить фильтры. Дальше предложения ищутся без участия пользователя, а если появится что‑то новое, ему придёт уведомление",
             ],
           ],
-          chips: [{ label: "Подборка вакансий", active: true }, { label: "Подборка жилья" }],
-          image: "placeholder",
+          toggle: [
+            {
+              label: "Подборка вакансий",
+              image: {
+                video: "/assets/cases/subscription-migrant-plus/work.mp4",
+                poster: "/assets/cases/subscription-migrant-plus/work-poster.jpg",
+              },
+            },
+            {
+              label: "Подборка жилья",
+              image: {
+                video: "/assets/cases/subscription-migrant-plus/housing.mp4",
+                poster: "/assets/cases/subscription-migrant-plus/housing-poster.jpg",
+              },
+            },
+          ],
         },
         {
           gapBefore: "normal",
