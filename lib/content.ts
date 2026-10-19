@@ -11,8 +11,11 @@ export type SectionImage = ImageSrc | { video: string; poster?: string } | "plac
 /** Revealed when a DropCard's "Читать" button is expanded. */
 export type DropCardExpanded = {
   body: Paragraph[];
+  links?: Link[];
+  image?: SectionImage;
   keyFacts?: KeyFact[];
   afterFacts?: Paragraph[];
+  list?: string[];
   cards?: Card[];
   closing?: Paragraph[];
 };

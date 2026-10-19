@@ -5,6 +5,8 @@ import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { RichText } from "@/components/ui/RichText";
 import { BulletList } from "@/components/ui/BulletList";
 import { MetricCards } from "@/components/ui/MetricCards";
+import { CaseImage } from "@/components/ui/CaseImage";
+import { LinkRow } from "@/components/ui/LinkButton";
 import { buttonClassName } from "@/components/ui/Button";
 import { nbsp } from "@/lib/typography";
 import type { DropCard as DropCardType } from "@/lib/content";
@@ -21,7 +23,9 @@ export function DropCard({ card }: { card: DropCardType }) {
           <div className="flex w-full flex-col items-start gap-6">
             <div className="flex w-full flex-col items-start gap-2">
               <RichText paragraphs={expanded.body} />
+              {expanded.links && <LinkRow links={expanded.links} large />}
             </div>
+            {expanded.image && <CaseImage image={expanded.image} />}
             {expanded.keyFacts && (
               <div className="grid w-full grid-cols-2 gap-x-4 gap-y-4 py-2 text-center tablet:grid-cols-4">
                 {expanded.keyFacts.map((fact) => (
@@ -32,7 +36,12 @@ export function DropCard({ card }: { card: DropCardType }) {
                 ))}
               </div>
             )}
-            {expanded.afterFacts && <RichText paragraphs={expanded.afterFacts} />}
+            {expanded.afterFacts && (
+              <div className="flex w-full flex-col items-start gap-2">
+                <RichText paragraphs={expanded.afterFacts} />
+                {expanded.list && <BulletList items={expanded.list} />}
+              </div>
+            )}
             {expanded.cards && <MetricCards cards={expanded.cards} layout="grid2" />}
             {expanded.closing && <RichText paragraphs={expanded.closing} />}
           </div>
