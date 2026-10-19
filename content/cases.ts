@@ -725,7 +725,10 @@ const subscriptionCase: CaseSummary = {
               "По результатам тестирования я сократила количество текста в карточках функций, так пользователям будет проще и быстрее понять, что входит в подписку",
             ],
           ],
-          image: "placeholder",
+          image: {
+            video: "/assets/cases/subscription-migrant-plus/new-paywall.mp4",
+            poster: "/assets/cases/subscription-migrant-plus/new-paywall-poster.jpg",
+          },
         },
         {
           gapBefore: "normal",
