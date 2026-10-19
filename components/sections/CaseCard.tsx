@@ -47,7 +47,7 @@ export function CaseCard({ item }: { item: CaseSummary }) {
           alt={item.cover.alt}
           fill
           sizes="(min-width: 1024px) 1024px, 100vw"
-          className="object-cover"
+          className={item.cover.fit ? "object-contain" : "object-cover"}
         />
         <div className="absolute bottom-4 left-4 flex flex-wrap items-center gap-2 tablet:gap-4">
           {item.tags.map((tag) => (
