@@ -8,8 +8,17 @@ export type Card = { title: string; description: string };
 export type ImageSrc = { src: string; alt: string; fit?: boolean | "always"; bgColor?: string };
 export type SectionImage = ImageSrc | { video: string; poster?: string } | "placeholder";
 
-/** A bordered, self-contained card with its own heading/body/list and a static "Читать" affordance. */
-export type DropCard = { title: string; body: Paragraph[]; list?: string[] };
+/** Revealed when a DropCard's "Читать" button is expanded. */
+export type DropCardExpanded = {
+  body: Paragraph[];
+  keyFacts?: KeyFact[];
+  afterFacts?: Paragraph[];
+  cards?: Card[];
+  closing?: Paragraph[];
+};
+
+/** A bordered, self-contained card with its own heading/body/list and a "Читать"/"Свернуть" toggle. */
+export type DropCard = { title: string; body: Paragraph[]; list?: string[]; expanded?: DropCardExpanded };
 
 export type ToggleOption = {
   label: string;
