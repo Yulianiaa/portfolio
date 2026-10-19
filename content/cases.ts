@@ -394,7 +394,7 @@ const subscriptionCase: CaseSummary = {
   cover: {
     src: "/assets/cases/subscription-migrant-plus/cover.jpg",
     alt: "Экраны подписки «Мигрант+»: оформление подписки и статус проверки документов",
-    fit: true,
+    fit: "always",
   },
   author: {
     name: "Ульяна Прощенко",
