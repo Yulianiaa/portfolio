@@ -545,8 +545,12 @@ const subscriptionCase: CaseSummary = {
                     { text: "9 конкурентов", strong: true },
                   ],
                 ],
-                // TODO: replace with the real deeplink once provided
-                links: [{ label: "Таблица с комментариями", href: "#" }],
+                links: [
+                  {
+                    label: "Таблица с комментариями",
+                    href: "https://docs.google.com/spreadsheets/d/1Tmg8PAPMiy7NkRI-lr3EqxVq-FKh9J8WjiSEJQW1MBc/edit?usp=sharing",
+                  },
+                ],
                 image: {
                   src: "/assets/cases/subscription-migrant-plus/competitors.jpg",
                   alt: "Экраны трёх приложений-конкурентов: РосМигрант, Юрист/Адвокат и Мигрант СНГ",
