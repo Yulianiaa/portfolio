@@ -412,7 +412,7 @@ const subscriptionCase: CaseSummary = {
   cover: {
     src: "/assets/cases/subscription-migrant-plus/cover.jpg",
     alt: "Экраны подписки «Мигрант+»: оформление подписки и статус проверки документов",
-    fit: "always",
+    fit: "tabletUp",
   },
   author: {
     name: "Ульяна Прощенко",
@@ -669,7 +669,6 @@ const subscriptionCase: CaseSummary = {
           mobileImage: {
             video: "/assets/cases/subscription-migrant-plus/paywallEmpty.mp4",
             poster: "/assets/cases/subscription-migrant-plus/paywallEmpty-poster.jpg",
-            fit: "always",
           },
         },
         {

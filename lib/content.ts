@@ -4,9 +4,14 @@ export type Paragraph = Segment[];
 export type Link = { label: string; href: string };
 export type Chip = { label: string; active?: boolean };
 export type Card = { title: string; description: string };
-/** true = object-contain on mobile only, object-cover from tablet up. "always" = object-contain at every breakpoint. */
-export type ImageSrc = { src: string; alt: string; fit?: boolean | "always"; bgColor?: string };
-export type SectionImage = ImageSrc | { video: string; poster?: string; fit?: boolean | "always" } | "placeholder";
+/**
+ * true = object-contain on mobile only, object-cover from tablet up.
+ * "always" = object-contain at every breakpoint.
+ * "tabletUp" = object-cover on mobile only, object-contain from tablet up (the inverse of `true`).
+ */
+export type Fit = boolean | "always" | "tabletUp";
+export type ImageSrc = { src: string; alt: string; fit?: Fit; bgColor?: string };
+export type SectionImage = ImageSrc | { video: string; poster?: string; fit?: Fit } | "placeholder";
 
 /** Revealed when a DropCard's "Читать" button is expanded. */
 export type DropCardExpanded = {

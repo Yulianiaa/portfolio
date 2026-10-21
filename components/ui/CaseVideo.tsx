@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import { basePath } from "@/lib/basePath";
+import { fitClassName } from "@/lib/fit";
+import type { Fit } from "@/lib/content";
 
 export function CaseVideo({
   src,
@@ -10,7 +12,7 @@ export function CaseVideo({
 }: {
   src: string;
   poster?: string;
-  fit?: boolean | "always";
+  fit?: Fit;
 }) {
   const ref = useRef<HTMLVideoElement>(null);
 
@@ -49,9 +51,7 @@ export function CaseVideo({
       muted
       playsInline
       preload="metadata"
-      className={
-        fit === "always" ? "size-full object-contain" : fit ? "size-full object-contain tablet:object-cover" : "size-full object-cover"
-      }
+      className={fitClassName(fit, "size-full")}
     />
   );
 }

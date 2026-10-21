@@ -1,5 +1,6 @@
 import Image from "@/components/ui/AppImage";
 import { CaseVideo } from "@/components/ui/CaseVideo";
+import { fitClassName } from "@/lib/fit";
 import type { SectionImage } from "@/lib/content";
 
 export function CaseImage({ image }: { image: SectionImage }) {
@@ -27,9 +28,7 @@ export function CaseImage({ image }: { image: SectionImage }) {
         alt={image.alt}
         fill
         sizes="(min-width: 1024px) 1024px, 100vw"
-        className={
-          image.fit === "always" ? "object-contain" : image.fit ? "object-contain tablet:object-cover" : "object-cover"
-        }
+        className={fitClassName(image.fit, "")}
       />
     </div>
   );
