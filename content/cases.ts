@@ -666,6 +666,10 @@ const subscriptionCase: CaseSummary = {
             video: "/assets/cases/subscription-migrant-plus/sub.mp4",
             poster: "/assets/cases/subscription-migrant-plus/sub-poster.jpg",
           },
+          mobileImage: {
+            video: "/assets/cases/subscription-migrant-plus/paywallEmpty.mp4",
+            poster: "/assets/cases/subscription-migrant-plus/paywallEmpty-poster.jpg",
+          },
         },
         {
           gapBefore: "normal",
@@ -702,6 +706,10 @@ const subscriptionCase: CaseSummary = {
           ],
           image: {
             src: "/assets/cases/subscription-migrant-plus/home-banner.jpg",
+            alt: "Главный экран с баннером в Telegram-бот, службой заботы и статьями в формате Stories",
+          },
+          mobileImage: {
+            src: "/assets/cases/subscription-migrant-plus/tooltipsEmpty.jpg",
             alt: "Главный экран с баннером в Telegram-бот, службой заботы и статьями в формате Stories",
           },
         },

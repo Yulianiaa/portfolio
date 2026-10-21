@@ -50,6 +50,8 @@ export type Subsection = {
   cardsLayout?: "row" | "grid2";
   dropCards?: DropCard[];
   image?: SectionImage;
+  /** Shown instead of `image` below the tablet breakpoint, when the two need to differ. */
+  mobileImage?: SectionImage;
   quote?: string;
   toggle?: ToggleOption[];
   /** Gap between the previous block and this subsection's own start. Default "normal" (32px). */

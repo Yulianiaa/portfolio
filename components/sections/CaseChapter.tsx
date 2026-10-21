@@ -55,7 +55,18 @@ function SubsectionContent({ sub }: { sub: Subsection }) {
       {!sub.toggle &&
         sub.dropCards &&
         sub.dropCards.map((card) => <DropCard key={card.title} card={card} />)}
-      {!sub.toggle && sub.image && <CaseImage image={sub.image} />}
+      {!sub.toggle && sub.image && sub.mobileImage ? (
+        <>
+          <div className="w-full tablet:hidden">
+            <CaseImage image={sub.mobileImage} />
+          </div>
+          <div className="hidden w-full tablet:block">
+            <CaseImage image={sub.image} />
+          </div>
+        </>
+      ) : (
+        !sub.toggle && sub.image && <CaseImage image={sub.image} />
+      )}
     </>
   );
 }
