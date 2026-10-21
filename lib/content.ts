@@ -26,6 +26,8 @@ export type DropCard = { title: string; body: Paragraph[]; list?: string[]; expa
 export type ToggleOption = {
   label: string;
   image?: SectionImage;
+  /** Shown instead of `image` below the tablet breakpoint, when the two need to differ. */
+  mobileImage?: SectionImage;
   cards?: Card[];
 };
 

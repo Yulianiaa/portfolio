@@ -121,11 +121,19 @@ const marketingCommunicationsPlatform: CaseSummary = {
                 src: "/assets/cases/marketing-communications-platform/storiesBugs.jpg",
                 alt: "Проблемы Stories до переработки: ручной перенос текста, отсутствие поддержки Dynamic Type, нет автопролистывания, некорректное отображение",
               },
+              mobileImage: {
+                src: "/assets/cases/marketing-communications-platform/storiesEmpty.jpg",
+                alt: "Проблемы Stories до переработки: ручной перенос текста, отсутствие поддержки Dynamic Type, нет автопролистывания, некорректное отображение",
+              },
             },
             {
               label: "Баннеры «ДО»",
               image: {
                 src: "/assets/cases/marketing-communications-platform/bannersBugs.jpg",
+                alt: "Проблемы баннеров до переработки: все баннеры выглядят одинаково важными, не соответствуют требованиям доступности",
+              },
+              mobileImage: {
+                src: "/assets/cases/marketing-communications-platform/bannersEmpty.jpg",
                 alt: "Проблемы баннеров до переработки: все баннеры выглядят одинаково важными, не соответствуют требованиям доступности",
               },
             },

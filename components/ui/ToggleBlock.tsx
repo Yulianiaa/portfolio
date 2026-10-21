@@ -19,7 +19,18 @@ export function ToggleBlock({ options }: { options: ToggleOption[] }) {
           </button>
         ))}
       </div>
-      {current.image && <CaseImage image={current.image} />}
+      {current.image && current.mobileImage ? (
+        <>
+          <div className="w-full tablet:hidden">
+            <CaseImage image={current.mobileImage} />
+          </div>
+          <div className="hidden w-full tablet:block">
+            <CaseImage image={current.image} />
+          </div>
+        </>
+      ) : (
+        current.image && <CaseImage image={current.image} />
+      )}
       {current.cards && <MetricCards cards={current.cards} />}
     </div>
   );
