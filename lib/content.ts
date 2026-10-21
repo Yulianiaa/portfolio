@@ -81,6 +81,8 @@ export type CaseStudy = {
   description: string;
   keyFacts: KeyFact[];
   cover: ImageSrc;
+  /** Shown instead of `cover` below the tablet breakpoint, when the two need to differ (e.g. a pre-cropped mobile composite). */
+  coverMobile?: ImageSrc;
   chapters: Chapter[];
   author: { name: string; role: string; avatar: string };
 };

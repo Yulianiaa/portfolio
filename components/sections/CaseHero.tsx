@@ -46,7 +46,18 @@ export function CaseHero({
           </div>
         ))}
       </div>
-      <CaseImage image={item.cover} />
+      {item.coverMobile ? (
+        <>
+          <div className="w-full tablet:hidden">
+            <CaseImage image={item.coverMobile} />
+          </div>
+          <div className="hidden w-full tablet:block">
+            <CaseImage image={item.cover} />
+          </div>
+        </>
+      ) : (
+        <CaseImage image={item.cover} />
+      )}
     </div>
   );
 }
