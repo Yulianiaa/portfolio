@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Chip } from "@/components/ui/Chip";
 import { MetricCards } from "@/components/ui/MetricCards";
 import { CaseImage } from "@/components/ui/CaseImage";
+import { BulletList } from "@/components/ui/BulletList";
 import type { ToggleOption } from "@/lib/content";
 
 export function ToggleBlock({ options }: { options: ToggleOption[] }) {
@@ -30,6 +31,11 @@ export function ToggleBlock({ options }: { options: ToggleOption[] }) {
         </>
       ) : (
         current.image && <CaseImage image={current.image} />
+      )}
+      {current.mobileList && (
+        <div className="w-full tablet:hidden">
+          <BulletList items={current.mobileList} />
+        </div>
       )}
       {current.cards && <MetricCards cards={current.cards} />}
     </div>

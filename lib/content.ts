@@ -28,6 +28,8 @@ export type ToggleOption = {
   image?: SectionImage;
   /** Shown instead of `image` below the tablet breakpoint, when the two need to differ. */
   mobileImage?: SectionImage;
+  /** Extra bullet list shown below the image only below the tablet breakpoint (e.g. spelling out what a desktop-only image annotation shows). */
+  mobileList?: string[];
   cards?: Card[];
 };
 
