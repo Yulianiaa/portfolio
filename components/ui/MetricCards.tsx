@@ -6,7 +6,7 @@ export function MetricCards({ cards, layout = "row" }: { cards: Card[]; layout?:
     <div
       className={
         layout === "grid2"
-          ? "grid w-full grid-cols-1 gap-4 lg:grid-cols-2"
+          ? "grid w-full grid-cols-1 gap-4 tablet:grid-cols-2"
           : "flex w-full flex-col items-start gap-4 lg:flex-row"
       }
     >
