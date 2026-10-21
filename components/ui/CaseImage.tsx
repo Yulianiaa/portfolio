@@ -12,7 +12,7 @@ export function CaseImage({ image }: { image: SectionImage }) {
   if ("video" in image) {
     return (
       <div className="relative aspect-square w-full tablet:aspect-[1024/630] overflow-hidden rounded-3xl border border-neutral-100 bg-neutral-50">
-        <CaseVideo src={image.video} poster={image.poster} />
+        <CaseVideo src={image.video} poster={image.poster} fit={image.fit} />
       </div>
     );
   }

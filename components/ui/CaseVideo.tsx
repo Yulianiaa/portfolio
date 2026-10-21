@@ -3,7 +3,15 @@
 import { useEffect, useRef } from "react";
 import { basePath } from "@/lib/basePath";
 
-export function CaseVideo({ src, poster }: { src: string; poster?: string }) {
+export function CaseVideo({
+  src,
+  poster,
+  fit,
+}: {
+  src: string;
+  poster?: string;
+  fit?: boolean | "always";
+}) {
   const ref = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -41,7 +49,9 @@ export function CaseVideo({ src, poster }: { src: string; poster?: string }) {
       muted
       playsInline
       preload="metadata"
-      className="size-full object-cover"
+      className={
+        fit === "always" ? "size-full object-contain" : fit ? "size-full object-contain tablet:object-cover" : "size-full object-cover"
+      }
     />
   );
 }
