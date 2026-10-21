@@ -29,7 +29,8 @@ export type ToggleOption = {
   cards?: Card[];
 };
 
-export type Gap = "tight" | "normal" | "loose";
+/** "xtight" is a fixed 16px at every breakpoint (inner/grouped), unlike the other tiers which scale per breakpoint. */
+export type Gap = "xtight" | "tight" | "normal" | "loose";
 
 export type Subsection = {
   subtitle?: string;
@@ -38,6 +39,8 @@ export type Subsection = {
   /** Renders `links` right after this paragraph (0-based index) instead of after all of `body`. */
   linksAfterParagraph?: number;
   list?: string[];
+  /** Renders after `list` instead of after all of `body`, when both a list and trailing paragraphs are needed. */
+  afterList?: Paragraph[];
   chips?: Chip[];
   cards?: Card[];
   cardsLayout?: "row" | "grid2";

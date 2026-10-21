@@ -11,6 +11,7 @@ import { nbsp } from "@/lib/typography";
 import type { Chapter, Gap, Subsection } from "@/lib/content";
 
 function marginClass(gap: Gap = "normal") {
+  if (gap === "xtight") return "mt-4"; // 16px at every breakpoint
   if (gap === "tight") return "mt-5 tablet:mt-6"; // 20px mobile / 24px tablet+
   if (gap === "loose") return "mt-8 tablet:mt-9 lg:mt-10"; // 32px mobile / 36px tablet / 40px desktop
   return "mt-6 tablet:mt-7 lg:mt-8"; // 24px mobile / 28px tablet / 32px desktop, default
@@ -35,6 +36,7 @@ function SubsectionText({ sub }: { sub: Subsection }) {
         </>
       )}
       {sub.list && <BulletList items={sub.list} />}
+      {sub.afterList && <RichText paragraphs={sub.afterList} />}
     </>
   );
 }
