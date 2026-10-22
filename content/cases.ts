@@ -846,6 +846,10 @@ const subscriptionCase: CaseSummary = {
             src: "/assets/cases/subscription-migrant-plus/filters-optimized.jpg",
             alt: "Экран настройки фильтров подборки вакансий с объединённым полем «Компания предоставляет»",
           },
+          mobileImage: {
+            src: "/assets/cases/subscription-migrant-plus/filters-optimized-mobile.jpg",
+            alt: "Экран настройки фильтров подборки вакансий с объединённым полем «Компания предоставляет»",
+          },
         },
       ],
     },
