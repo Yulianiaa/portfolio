@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "@/components/ui/AppImage";
+import { reachGoal } from "@/lib/metrika";
 import type { IconType } from "react-icons";
 
 export type ButtonVariant = "primary" | "secondary";
@@ -24,11 +27,17 @@ type ButtonProps = {
   iconSrc?: string;
   variant?: ButtonVariant;
   className?: string;
+  /** Yandex Metrika goal id to report on click, if any. */
+  goal?: string;
 };
 
-export function Button({ href, label, icon: Icon, iconSrc, variant = "secondary", className = "" }: ButtonProps) {
+export function Button({ href, label, icon: Icon, iconSrc, variant = "secondary", className = "", goal }: ButtonProps) {
   return (
-    <Link href={href} className={`${buttonClassName(variant)} ${className}`}>
+    <Link
+      href={href}
+      onClick={goal ? () => reachGoal(goal) : undefined}
+      className={`${buttonClassName(variant)} ${className}`}
+    >
       {Icon && <Icon className="size-6 lg:size-[28px]" aria-hidden />}
       {iconSrc && <Image src={iconSrc} alt="" width={28} height={28} className="size-6 lg:size-[28px]" aria-hidden />}
       <span className="px-1">{label}</span>

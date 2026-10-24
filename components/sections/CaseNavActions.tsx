@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { BiArrowBack } from "react-icons/bi";
 import Image from "@/components/ui/AppImage";
+import { reachGoal } from "@/lib/metrika";
 
 function BackButton({ href }: { href: string }) {
   return (
@@ -24,6 +25,7 @@ function ContactButton({ href }: { href: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => reachGoal("contact_click")}
       className="hidden h-10 items-center justify-center gap-1 rounded-xl bg-neutral-800 px-2.5 text-base font-medium text-white transition-colors hover:bg-neutral-700 tablet:inline-flex lg:h-12 lg:rounded-2xl lg:px-3 lg:text-lg"
     >
       <Image src="/assets/icons/telegram.svg" alt="" width={28} height={28} className="size-6 lg:size-[28px]" aria-hidden />

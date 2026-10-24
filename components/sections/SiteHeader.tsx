@@ -38,6 +38,7 @@ export function SiteHeader({ profile }: { profile: typeof ProfileType }) {
             label="Написать"
             iconSrc="/assets/icons/telegram.svg"
             variant="primary"
+            goal="contact_click"
           />
         </div>
       </div>
