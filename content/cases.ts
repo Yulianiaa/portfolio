@@ -574,7 +574,7 @@ const subscriptionCase: CaseSummary = {
                   },
                 ],
                 image: {
-                  src: "/assets/cases/subscription-migrant-plus/competitors.jpg",
+                  src: "/assets/cases/subscription-migrant-plus/enemies.jpg",
                   alt: "Экраны трёх приложений-конкурентов: РосМигрант, Юрист/Адвокат и Мигрант СНГ",
                 },
                 afterFacts: [["Сравнив все решения, я сделала три вывода:"]],
