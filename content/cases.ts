@@ -709,7 +709,7 @@ const subscriptionCase: CaseSummary = {
             ],
           ],
           image: {
-            src: "/assets/cases/subscription-migrant-plus/home-banner.jpg",
+            src: "/assets/cases/subscription-migrant-plus/tooltips.jpg",
             alt: "Главный экран с баннером в Telegram-бот, службой заботы и статьями в формате Stories",
           },
           mobileImage: {
