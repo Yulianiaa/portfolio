@@ -667,8 +667,8 @@ const subscriptionCase: CaseSummary = {
             ],
           ],
           image: {
-            video: "/assets/cases/subscription-migrant-plus/sub.mp4",
-            poster: "/assets/cases/subscription-migrant-plus/sub-poster.jpg",
+            video: "/assets/cases/subscription-migrant-plus/paywall.mp4",
+            poster: "/assets/cases/subscription-migrant-plus/paywall-poster.jpg",
           },
           mobileImage: {
             video: "/assets/cases/subscription-migrant-plus/paywallEmpty.mp4",
