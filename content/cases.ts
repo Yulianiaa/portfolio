@@ -302,8 +302,8 @@ const marketingCommunicationsPlatform: CaseSummary = {
             ],
           ],
           image: {
-            video: "/assets/cases/marketing-communications-platform/mecfix.mp4",
-            poster: "/assets/cases/marketing-communications-platform/mecfix-poster.jpg",
+            video: "/assets/cases/marketing-communications-platform/marketing-mechanics.mp4",
+            poster: "/assets/cases/marketing-communications-platform/marketing-mechanics-poster.jpg",
           },
         },
       ],
