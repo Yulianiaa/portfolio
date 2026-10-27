@@ -402,7 +402,7 @@ const subscriptionCase: CaseSummary = {
   tags: ["2025–2026", "B2C", "Mobile App"],
   title: "Подписка Мигрант+",
   description:
-    "Развивала сервис, который автоматизирует ежедневные задачи пользователей, связанные с документами, работой и проживанием в России",
+    "Спроектировала с нуля и развивала сервис, который автоматизирует ежедневные задачи мигрантов, связанные с документами, работой и проживанием в России",
   keyFacts: [
     { value: ">2400", label: "Активные подписчики" },
     { value: "75%", label: "Повторные покупки" },
@@ -912,4 +912,4 @@ const subscriptionCase: CaseSummary = {
   ],
 };
 
-export const cases: CaseSummary[] = [marketingCommunicationsPlatform, subscriptionCase];
+export const cases: CaseSummary[] = [subscriptionCase, marketingCommunicationsPlatform];
