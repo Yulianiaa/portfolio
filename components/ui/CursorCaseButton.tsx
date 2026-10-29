@@ -23,7 +23,7 @@ export function CursorCaseButton({
       onMouseLeave={() => setPos(null)}
     >
       <span
-        className={`${buttonClassName(variant)} pointer-events-none absolute whitespace-nowrap transition-[opacity,transform] duration-150 ease-out`}
+        className={`${buttonClassName(variant)} !h-11 !rounded-2xl !px-3 !text-base pointer-events-none absolute whitespace-nowrap transition-[opacity,transform] duration-150 ease-out`}
         style={{
           left: pos?.x ?? 0,
           top: pos?.y ?? 0,

@@ -1,32 +1,28 @@
 import Image from "@/components/ui/AppImage";
-import { LinkRow } from "@/components/ui/LinkButton";
 import { nbsp } from "@/lib/typography";
 import type { profile as ProfileType } from "@/content/profile";
 
 export function Hero({ profile }: { profile: typeof ProfileType }) {
   return (
-    <section className="flex w-full flex-col items-center gap-6 tablet:gap-7 lg:gap-8">
-      <div className="relative h-[250px] w-full tablet:h-[300px]">
-        <div className="absolute left-1/2 top-1/2 size-[250px] -translate-x-1/2 -translate-y-1/2 overflow-hidden tablet:size-[300px]">
-          <Image
-            src={profile.avatar}
-            alt={profile.name}
-            fill
-            sizes="(min-width: 744px) 300px, 250px"
-            priority
-            className="object-cover"
-          />
-        </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[90px] bg-gradient-to-b from-white/0 via-white/75 to-white" />
+    <section className="flex w-full flex-col items-center gap-6 px-3 tablet:px-0">
+      <div className="relative size-[104px] shrink-0 overflow-hidden rounded-full bg-neutral-100">
+        {/* Crop matches the Figma frame: photo is offset so the face sits centered in the circle. */}
+        <Image
+          src={profile.avatar}
+          alt={profile.name}
+          width={400}
+          height={600}
+          priority
+          className="absolute top-[-17.71%] left-[-0.47%] h-[142.7%] w-[95.14%] max-w-none"
+        />
       </div>
-      <div className="flex w-full flex-col items-center gap-2">
-        <h1 className="text-center text-h25 font-bold text-neutral-800 lg:text-h2">{profile.name}</h1>
-        <div className="flex flex-col items-center text-center text-base text-neutral-500 lg:text-lg">
+      <div className="flex w-full flex-col items-center gap-1 text-center">
+        <h1 className="text-h25 font-semibold text-neutral-800">{profile.name}</h1>
+        <div className="flex flex-col items-center text-base text-neutral-500">
           {profile.bioLines.map((line) => (
             <p key={line}>{nbsp(line)}</p>
           ))}
         </div>
-        <LinkRow icon={false} links={profile.socialLinks} />
       </div>
     </section>
   );

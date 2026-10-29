@@ -21,6 +21,10 @@ export function nbsp(text: string): string {
     if (GLUE_WORDS.has(bare.toLowerCase())) {
       tokens[i + 1] = NBSP;
     }
+    // Dashes and bullets stay with the word before them, never start a line.
+    if (/^[–—•]$/.test(tokens[i + 2] ?? "")) {
+      tokens[i + 1] = NBSP;
+    }
   }
   return tokens.join("");
 }

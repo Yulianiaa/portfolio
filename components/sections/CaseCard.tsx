@@ -1,66 +1,46 @@
 import Image from "@/components/ui/AppImage";
 import Link from "next/link";
 import { BiTime } from "react-icons/bi";
-import { BlurredCover } from "@/components/ui/BlurredCover";
 import { CursorCaseButton } from "@/components/ui/CursorCaseButton";
 import { nbsp } from "@/lib/typography";
 import type { CaseSummary } from "@/lib/content";
 
-export function CaseCard({ item }: { item: CaseSummary }) {
-  if (item.status === "in-progress") {
-    return (
-      <div className="flex w-full flex-col items-start gap-6">
-        <div className="flex h-[300px] w-full flex-col items-center justify-center gap-3 rounded-3xl border border-neutral-100 bg-neutral-50 sm:h-[400px] md:h-[630px]">
-          <BiTime className="size-8 text-neutral-800" aria-hidden />
-          <p className="text-xl font-medium text-neutral-800 lg:text-2xl">Кейс в процессе</p>
-        </div>
-        <div className="flex flex-col items-start gap-2">
-          <h3 className="text-xl font-medium text-neutral-800 lg:text-2xl">{nbsp(item.title)}</h3>
-          <p className="text-base text-neutral-800 lg:text-lg">{nbsp(item.description)}</p>
-        </div>
-      </div>
-    );
-  }
+const coverClass = "relative h-[250px] w-full overflow-hidden bg-neutral-50 tablet:h-[416px] tablet:rounded-2xl";
 
-  const text = (
-    <div className="flex max-w-[936px] flex-col items-start gap-2 text-left">
-      <h3 className="text-xl font-medium text-neutral-800 lg:text-2xl">{item.title}</h3>
-      <p className="text-base text-neutral-800 lg:text-lg">{item.description}</p>
+function CardText({ title, description }: { title: string; description: string }) {
+  return (
+    <div className="flex w-full flex-col items-start px-3 text-left text-base tablet:px-0">
+      <h3 className="font-medium text-neutral-800">{nbsp(title)}</h3>
+      <p className="text-neutral-500">{nbsp(description)}</p>
     </div>
   );
+}
 
-  if (item.status === "preview") {
+export function CaseCard({ item }: { item: CaseSummary }) {
+  if (item.status !== "ready") {
     return (
-      <div className="relative flex w-full flex-col items-start gap-5 tablet:gap-6">
-        <BlurredCover src={item.cover.src} alt={item.cover.alt} />
-        {text}
-        <CursorCaseButton label="Кейс в процессе" variant="secondary" />
+      <div className="relative flex w-full flex-col items-start gap-3">
+        <div className={`${coverClass} flex flex-col items-center justify-center gap-3`}>
+          <BiTime className="size-8 text-neutral-800" aria-hidden />
+          <p className="text-base font-medium text-neutral-800">Кейс в процессе</p>
+        </div>
+        <CardText title={item.title} description={item.description} />
       </div>
     );
   }
 
   return (
-    <Link href={`/cases/${item.slug}`} className="relative flex w-full cursor-pointer flex-col items-start gap-5 tablet:gap-6">
-      <div className="relative aspect-square w-full overflow-hidden rounded-3xl border border-neutral-100 bg-neutral-50 tablet:aspect-[1024/630]">
+    <Link href={`/cases/${item.slug}`} className="relative flex w-full cursor-pointer flex-col items-start gap-3">
+      <div className={coverClass}>
         <Image
           src={item.cover.src}
           alt={item.cover.alt}
           fill
-          sizes="(min-width: 1024px) 1024px, 100vw"
-          className={item.cover.fit ? "object-contain" : "object-cover"}
+          sizes="(min-width: 1024px) 800px, 100vw"
+          className="object-contain"
         />
-        <div className="absolute bottom-4 left-4 flex flex-wrap items-center gap-2 tablet:gap-4">
-          {item.tags.map((tag) => (
-            <span
-              key={tag}
-              className="flex h-8 items-center justify-center rounded-[10px] border border-neutral-100 bg-white px-2 text-sm font-medium text-neutral-800 tablet:h-10 tablet:rounded-xl tablet:px-2.5 tablet:text-base lg:h-12 lg:rounded-2xl lg:px-3 lg:text-lg"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
       </div>
-      {text}
+      <CardText title={item.title} description={item.description} />
       <CursorCaseButton label="Смотреть кейс" />
     </Link>
   );

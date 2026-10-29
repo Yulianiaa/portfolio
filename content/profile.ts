@@ -12,11 +12,13 @@ export const profile = {
   name: "Ульяна Прощенко",
   role: "Middle+ продуктовый дизайнер",
   bioLines: [
-    "Middle+ продуктовый дизайнер с 4+ годами опыта",
+    "Продуктовый дизайнер с 4+ годами опыта",
+    "Превращаю сложные сценарии в понятный цифровой опыт",
     "Живу в Санкт-Петербурге",
   ],
-  avatar: "/assets/home/avatar.png",
+  avatar: "/assets/home/avatar-circle.png",
   contactUrl: "https://t.me/yulianiaa",
+  resumeUrl: "/resume.pdf",
   socialLinks: [
     { label: "Telegram", href: "https://t.me/yulianiaa" },
     { label: "Email", href: "mailto:yuliania.a@yandex.ru" },

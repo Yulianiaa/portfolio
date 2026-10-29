@@ -1,4 +1,5 @@
 import Image from "@/components/ui/AppImage";
+import { nbsp } from "@/lib/typography";
 import type { ExperienceItem } from "@/content/profile";
 
 export function ExperienceList({ items }: { items: ExperienceItem[] }) {
@@ -19,7 +20,7 @@ export function ExperienceList({ items }: { items: ExperienceItem[] }) {
             <div className="flex min-w-0 flex-1 flex-col">
               <p className="text-base font-medium text-neutral-800 tablet:text-lg lg:text-xl">{item.company}</p>
               <p className="text-sm text-neutral-500 tablet:text-base lg:text-lg">
-                {item.position} • {item.period}
+                {nbsp(`${item.position} • ${item.period}`)}
               </p>
             </div>
           </div>
