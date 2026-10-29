@@ -2,7 +2,8 @@
 
 import { useState, type ReactNode } from "react";
 
-type Tab = { id: string; label: string; content: ReactNode };
+/** `hidden` keeps a tab in code but out of the page, e.g. until its content is ready. */
+type Tab = { id: string; label: string; content: ReactNode; hidden?: boolean };
 
 const TAB_WIDTH = 104;
 const INSET = 2;
@@ -12,7 +13,8 @@ const EASE = "cubic-bezier(0.65, 0, 0.35, 1)";
 const LEAD = `340ms ${EASE}`;
 const TRAIL = `375ms ${EASE} 75ms`;
 
-export function HomeTabs({ tabs }: { tabs: Tab[] }) {
+export function HomeTabs({ tabs: allTabs }: { tabs: Tab[] }) {
+  const tabs = allTabs.filter((tab) => !tab.hidden);
   const [active, setActive] = useState(tabs[0].id);
   const [movingRight, setMovingRight] = useState(true);
   const activeIndex = tabs.findIndex((tab) => tab.id === active);
