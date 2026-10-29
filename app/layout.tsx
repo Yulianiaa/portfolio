@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
+import { ClickSound } from "@/components/ui/ClickSound";
 import "./globals.css";
 
 const medeoSans = localFont({
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <img src="https://mc.yandex.ru/watch/113772653" style={{ position: "absolute", left: "-9999px" }} alt="" />
           </div>
         </noscript>
+        <ClickSound />
         {children}
       </body>
     </html>
