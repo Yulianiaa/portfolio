@@ -49,6 +49,11 @@ body {
   color: var(--foreground);
 }
 
+/* 10px neutral-800 dot, hotspot at its center. Unlayered, so it also beats Tailwind's cursor-pointer; inline cursor styles (e.g. CursorCaseButton's "none") still win. */
+* {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Ccircle cx='5' cy='5' r='5' fill='%2325282d'/%3E%3C/svg%3E") 5 5, auto;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
