@@ -79,6 +79,8 @@ export type CaseStudy = {
   tags: string[];
   title: string;
   description: string;
+  /** Shorter texts for the homepage card, when they differ from the case page hero. */
+  card?: { title?: string; description?: string };
   keyFacts: KeyFact[];
   cover: ImageSrc;
   /** Shown instead of `cover` below the tablet breakpoint, when the two need to differ (e.g. a pre-cropped mobile composite). */

@@ -40,7 +40,10 @@ export function CaseCard({ item }: { item: CaseSummary }) {
           className="object-contain"
         />
       </div>
-      <CardText title={item.title} description={item.description} />
+      <CardText
+        title={item.card?.title ?? item.title}
+        description={item.card?.description ?? item.description}
+      />
       <CursorCaseButton label="Смотреть кейс" />
     </Link>
   );

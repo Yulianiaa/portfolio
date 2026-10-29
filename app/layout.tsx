@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Onest } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
 
-const onest = Onest({
-  variable: "--font-onest",
-  subsets: ["latin", "cyrillic"],
+const medeoSans = localFont({
+  src: "./fonts/MedeoSansVariable.woff2",
+  variable: "--font-medeo-sans",
+  weight: "100 900",
 });
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ru" className={`${onest.variable} h-full antialiased`}>
+    <html lang="ru" className={`${medeoSans.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-white text-neutral-800 font-sans">
         <Script id="yandex-metrika" strategy="afterInteractive">
           {`
