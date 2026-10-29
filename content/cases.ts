@@ -19,7 +19,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
     { value: "x4", label: "Реакции\nна Stories" },
   ],
   cover: {
-    src: "/assets/cases/marketing-communications-platform/cover.jpg",
+    src: "/assets/cases/marketing-communications-platform/cover.webp",
     alt: "Экраны мобильного приложения Мигрант Сервис",
   },
   author: {
@@ -418,7 +418,7 @@ const subscriptionCase: CaseSummary = {
     { value: "X млн ₽", label: "Выручка" },
   ],
   cover: {
-    src: "/assets/cases/subscription-migrant-plus/cover.jpg",
+    src: "/assets/cases/subscription-migrant-plus/cover.webp",
     alt: "Экраны подписки «Мигрант+»: оформление подписки и статус проверки документов",
     fit: "always",
   },

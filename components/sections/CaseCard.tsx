@@ -5,13 +5,13 @@ import { CursorCaseButton } from "@/components/ui/CursorCaseButton";
 import { nbsp } from "@/lib/typography";
 import type { CaseSummary } from "@/lib/content";
 
-const coverClass = "relative h-[250px] w-full overflow-hidden bg-neutral-50 tablet:h-[416px] tablet:rounded-2xl";
+const coverClass = "relative h-[250px] w-full overflow-hidden bg-neutral-50 tablet:h-[416px] dark:bg-neutral-800 tablet:rounded-2xl";
 
 function CardText({ title, description }: { title: string; description: string }) {
   return (
     <div className="flex w-full flex-col items-start px-3 text-left text-base tablet:px-0">
-      <h3 className="font-medium text-neutral-800">{nbsp(title)}</h3>
-      <p className="text-neutral-500">{nbsp(description)}</p>
+      <h3 className="font-medium text-neutral-800 dark:text-neutral-50">{nbsp(title)}</h3>
+      <p className="text-neutral-500 dark:text-neutral-300">{nbsp(description)}</p>
     </div>
   );
 }
@@ -21,8 +21,8 @@ export function CaseCard({ item }: { item: CaseSummary }) {
     return (
       <div className="relative flex w-full flex-col items-start gap-3">
         <div className={`${coverClass} flex flex-col items-center justify-center gap-3`}>
-          <BiTime className="size-8 text-neutral-800" aria-hidden />
-          <p className="text-base font-medium text-neutral-800">Кейс в процессе</p>
+          <BiTime className="size-8 text-neutral-800 dark:text-neutral-50" aria-hidden />
+          <p className="text-base font-medium text-neutral-800 dark:text-neutral-50">Кейс в процессе</p>
         </div>
         <CardText title={item.title} description={item.description} />
       </div>

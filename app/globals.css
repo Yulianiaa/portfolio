@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Dark theme is opt-in per page: ThemeToggle sets data-theme="dark" on <html>. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 .no-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -17,9 +20,17 @@
   --color-neutral-50: #f5f6f6;
   --color-neutral-100: #eff0f1;
   --color-neutral-150: #dee0e2;
+  --color-neutral-300: #9da3a9;
   --color-neutral-500: #5c6570;
   --color-neutral-700: #373d43;
   --color-neutral-800: #25282d;
+  --color-neutral-900: #121416;
+}
+
+[data-theme="dark"] {
+  --background: #121416;
+  --foreground: #f5f6f6;
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -29,9 +40,11 @@
   --color-neutral-50: var(--color-neutral-50);
   --color-neutral-100: var(--color-neutral-100);
   --color-neutral-150: var(--color-neutral-150);
+  --color-neutral-300: var(--color-neutral-300);
   --color-neutral-500: var(--color-neutral-500);
   --color-neutral-700: var(--color-neutral-700);
   --color-neutral-800: var(--color-neutral-800);
+  --color-neutral-900: var(--color-neutral-900);
   --font-sans: var(--font-medeo-sans);
 
   --text-h1: 2.5rem;
@@ -52,6 +65,10 @@ body {
 /* 10px neutral-800 dot, hotspot at its center. Unlayered, so it also beats Tailwind's cursor-pointer; inline cursor styles (e.g. CursorCaseButton's "none") still win. */
 * {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Ccircle cx='5' cy='5' r='5' fill='%2325282d'/%3E%3C/svg%3E") 5 5, auto;
+}
+/* Same dot in neutral-50, so it stays visible on the dark background. */
+[data-theme="dark"] * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Ccircle cx='5' cy='5' r='5' fill='%23f5f6f6'/%3E%3C/svg%3E") 5 5, auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {
