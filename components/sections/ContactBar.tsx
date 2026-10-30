@@ -9,11 +9,11 @@ const buttonClass =
 
 /**
  * Dark pill with the contact actions. Sticky: it sits at the end of the page as in Figma,
- * and stays pinned 40px above the viewport bottom while the page scrolls under it.
+ * and stays pinned 32px (40px from tablet up) above the viewport bottom while the page scrolls under it.
  */
 export function ContactBar({ profile }: { profile: typeof ProfileType }) {
   return (
-    <nav aria-label="Контакты" className="sticky bottom-10 z-30 flex rounded-2xl bg-neutral-800 px-2.5">
+    <nav aria-label="Контакты" className="sticky bottom-8 z-30 flex tablet:bottom-10 rounded-2xl bg-neutral-800 px-2.5">
       <Link href={profile.resumeUrl} target="_blank" rel="noopener noreferrer" className={buttonClass}>
         Резюме
       </Link>

@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div id="top" className="flex flex-1 flex-col items-center">
       <DotTrail />
-      <main className="flex w-full max-w-[800px] flex-col items-center gap-8 pt-16 pb-10 tablet:px-6 lg:px-0">
+      <main className="flex w-full max-w-[800px] flex-col items-center gap-8 pt-16 pb-8 tablet:px-6 tablet:pb-10 lg:px-0">
         <Hero profile={profile} />
         <HomeTabs
           tabs={[
