@@ -29,12 +29,14 @@ export function HomeTabs({ tabs: allTabs }: { tabs: Tab[] }) {
     <div className="flex w-full flex-col items-center gap-10">
       <div
         role="tablist"
-        className="relative flex h-11 items-start overflow-hidden rounded-2xl bg-neutral-50 p-0.5 dark:bg-neutral-800"
+        // clip-path, not just overflow-hidden: Safari stops clipping animated children to a rounded overflow box.
+        className="relative flex h-11 items-start overflow-hidden rounded-2xl bg-neutral-50 p-0.5 [clip-path:inset(0_round_16px)] dark:bg-neutral-800"
       >
-        {/* Shared fill behind the active tab; its edges are animated separately (see LEAD/TRAIL). */}
+        {/* Shared fill behind the active tab; its edges are animated separately (see LEAD/TRAIL).
+            box-shadow, not a drop-shadow filter: it follows the radius exactly while the width animates. */}
         <span
           aria-hidden
-          className="absolute top-0.5 bottom-0.5 rounded-[14px] bg-white drop-shadow-[0_0_9px_rgba(37,40,45,0.08)] motion-reduce:!transition-none dark:bg-neutral-900 dark:drop-shadow-[0_0_9px_rgba(245,245,245,0.08)]"
+          className="absolute top-0.5 bottom-0.5 rounded-[14px] bg-white shadow-[0_0_9px_rgba(37,40,45,0.08)] motion-reduce:!transition-none dark:bg-neutral-900 dark:shadow-[0_0_9px_rgba(245,245,245,0.08)]"
           style={{
             left: INSET + activeIndex * TAB_WIDTH,
             right: INSET + (tabs.length - 1 - activeIndex) * TAB_WIDTH,
