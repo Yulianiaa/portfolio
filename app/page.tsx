@@ -3,6 +3,7 @@ import { getCases, getProfile } from "@/lib/content";
 import { HomeHeader } from "@/components/sections/HomeHeader";
 import { themeInitScript } from "@/components/ui/ThemeToggle";
 import { Hero } from "@/components/sections/Hero";
+import { DotTrail } from "@/components/ui/DotTrail";
 import { HomeTabs } from "@/components/sections/HomeTabs";
 import { CaseCard } from "@/components/sections/CaseCard";
 import { ExperienceList } from "@/components/sections/ExperienceList";
@@ -13,6 +14,7 @@ export default function Home() {
 
   return (
     <div id="top" className="flex flex-1 flex-col items-center">
+      <DotTrail />
       <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       <HomeHeader profile={profile} />
       <main className="flex w-full max-w-[800px] flex-col items-center gap-8 pt-[52px] pb-10 tablet:px-6 tablet:pt-14 lg:px-0 lg:pt-[52px]">

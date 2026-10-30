@@ -30,7 +30,7 @@ export function CaseCard({ item }: { item: CaseSummary }) {
   }
 
   return (
-    <Link href={`/cases/${item.slug}`} className="relative flex w-full cursor-pointer flex-col items-start gap-3">
+    <Link href={`/cases/${item.slug}`} data-no-trail className="relative flex w-full cursor-pointer flex-col items-start gap-3">
       <div className={coverClass}>
         <Image
           src={item.cover.src}

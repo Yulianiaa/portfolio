@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "@/components/ui/AppImage";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
@@ -10,8 +11,22 @@ const iconButtonClass =
   "inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-neutral-50 text-base font-medium text-neutral-700 transition-colors hover:bg-neutral-100 dark:bg-neutral-800 dark:text-neutral-100 dark:hover:bg-neutral-700";
 
 export function HomeHeader({ profile }: { profile: typeof ProfileType }) {
+  // Transparent at the very top, filled once the page scrolls under the header.
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const update = () => setScrolled(window.scrollY > 0);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-40 w-full bg-white dark:bg-neutral-900">
+    <header
+      className={`sticky top-0 z-40 w-full transition-colors duration-200 ${
+        scrolled ? "bg-white dark:bg-neutral-900" : "bg-transparent"
+      }`}
+    >
       <div className="mx-auto flex w-full max-w-[800px] items-center justify-between px-3 py-3 tablet:px-6 lg:px-0">
         <ThemeToggle className={iconButtonClass} />
         <div className="flex items-center gap-3">
