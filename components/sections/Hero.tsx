@@ -13,7 +13,7 @@ export function Hero({ profile }: { profile: typeof ProfileType }) {
           width={400}
           height={600}
           priority
-          className="absolute top-[-17.71%] left-[-0.47%] h-[142.7%] w-[95.14%] max-w-none"
+          className="absolute top-[9.96%] left-[0.03%] h-full w-full max-w-none"
         />
       </div>
       <div className="flex w-full flex-col items-center gap-1 text-center">
