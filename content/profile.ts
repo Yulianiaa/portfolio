@@ -16,7 +16,7 @@ export const profile = {
     "Превращаю сложные сценарии в понятный цифровой опыт",
     "Живу в Санкт-Петербурге",
   ],
-  avatar: "/assets/home/avatar-circle.png",
+  avatar: "/assets/home/avatar-circle-v2.png",
   contactUrl: "https://t.me/yulianiaa",
   resumeUrl: "/resume.pdf",
   socialLinks: [
