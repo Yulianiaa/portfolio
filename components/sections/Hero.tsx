@@ -5,7 +5,7 @@ import type { profile as ProfileType } from "@/content/profile";
 export function Hero({ profile }: { profile: typeof ProfileType }) {
   return (
     <section className="flex w-full flex-col items-center gap-6 px-3 tablet:px-0">
-      <div className="relative size-[104px] shrink-0 overflow-hidden rounded-full bg-neutral-100">
+      <div className="relative size-[112px] shrink-0 overflow-hidden rounded-full bg-neutral-100">
         {/* Crop matches the Figma frame: photo is offset so the face sits centered in the circle. */}
         <Image
           src={profile.avatar}

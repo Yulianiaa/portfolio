@@ -5,7 +5,7 @@ import { useState, type ReactNode } from "react";
 /** `hidden` keeps a tab in code but out of the page, e.g. until its content is ready. */
 type Tab = { id: string; label: string; content: ReactNode; hidden?: boolean };
 
-const TAB_WIDTH = 104;
+const TAB_WIDTH = 112;
 const INSET = 2;
 // Leading edge moves first, trailing edge catches up later: the pill stretches and flows into place.
 // Same easing as the ThemeToggle moon/sun morph, 450ms total.
@@ -54,7 +54,7 @@ export function HomeTabs({ tabs: allTabs }: { tabs: Tab[] }) {
               aria-selected={selected}
               aria-controls={`panel-${tab.id}`}
               onClick={() => select(index)}
-              className={`relative flex h-full w-[104px] items-center justify-center p-2 text-base font-medium transition-colors duration-300 ${
+              className={`relative flex h-full w-[112px] items-center justify-center p-2 text-base font-medium transition-colors duration-300 ${
                 selected
                   ? "text-neutral-800"
                   : "text-neutral-500 hover:text-neutral-800"

@@ -35,7 +35,7 @@ export function HomeHeader({ profile }: { profile: typeof ProfileType }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Резюме"
-            className={iconButtonClass}
+            className={`${iconButtonClass} font-medium`}
           >
             CV
           </Link>
