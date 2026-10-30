@@ -1,6 +1,6 @@
 import { BiTime } from "react-icons/bi";
 import { getCases, getProfile } from "@/lib/content";
-import { ContactBar } from "@/components/sections/ContactBar";
+import { HomeHeader } from "@/components/sections/HomeHeader";
 import { Hero } from "@/components/sections/Hero";
 import { DotTrail } from "@/components/ui/DotTrail";
 import { HomeTabs } from "@/components/sections/HomeTabs";
@@ -14,7 +14,8 @@ export default function Home() {
   return (
     <div id="top" className="flex flex-1 flex-col items-center">
       <DotTrail />
-      <main className="flex w-full max-w-[800px] flex-col items-center gap-8 pt-16 pb-8 tablet:px-6 tablet:pb-10 lg:px-0">
+      <HomeHeader profile={profile} />
+      <main className="flex w-full max-w-[800px] flex-col items-center gap-8 px-px pt-[52px] pb-10 tablet:px-6 tablet:pt-14 tablet:pb-10 lg:px-0 lg:pt-[52px] lg:pb-[60px]">
         <Hero profile={profile} />
         <HomeTabs
           tabs={[
@@ -51,7 +52,6 @@ export default function Home() {
             },
           ]}
         />
-        <ContactBar profile={profile} />
       </main>
     </div>
   );

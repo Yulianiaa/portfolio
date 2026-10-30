@@ -5,7 +5,7 @@ import { CursorCaseButton } from "@/components/ui/CursorCaseButton";
 import { nbsp } from "@/lib/typography";
 import type { CaseSummary } from "@/lib/content";
 
-const coverClass = "relative aspect-[7/4] w-full overflow-hidden bg-neutral-50 tablet:rounded-2xl";
+const coverClass = "relative h-[250px] w-full overflow-hidden bg-neutral-50 tablet:h-[416px] tablet:rounded-2xl";
 
 function CardText({ title, description }: { title: string; description: string }) {
   return (
