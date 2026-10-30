@@ -80,7 +80,7 @@ export function DotTrail() {
 
       const { width, height } = canvas!.getBoundingClientRect();
       ctx!.clearRect(0, 0, width, height);
-      // Theme-aware: the canvas' CSS color is set per theme in the className below.
+      // The canvas' CSS color (set in the className below) is the dot color.
       ctx!.fillStyle = getComputedStyle(canvas!).color;
       const offset = (CELL - DOT) / 2;
       for (let i = 0; i < strength.length; i++) {
@@ -131,7 +131,7 @@ export function DotTrail() {
     <canvas
       ref={canvasRef}
       aria-hidden
-      className="pointer-events-none fixed inset-0 -z-10 size-full text-neutral-800 dark:text-neutral-50"
+      className="pointer-events-none fixed inset-0 -z-10 size-full text-neutral-800"
     />
   );
 }

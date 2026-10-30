@@ -1,7 +1,6 @@
 import { BiTime } from "react-icons/bi";
 import { getCases, getProfile } from "@/lib/content";
-import { HomeHeader } from "@/components/sections/HomeHeader";
-import { themeInitScript } from "@/components/ui/ThemeToggle";
+import { ContactBar } from "@/components/sections/ContactBar";
 import { Hero } from "@/components/sections/Hero";
 import { DotTrail } from "@/components/ui/DotTrail";
 import { HomeTabs } from "@/components/sections/HomeTabs";
@@ -15,9 +14,7 @@ export default function Home() {
   return (
     <div id="top" className="flex flex-1 flex-col items-center">
       <DotTrail />
-      <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-      <HomeHeader profile={profile} />
-      <main className="flex w-full max-w-[800px] flex-col items-center gap-8 pt-[52px] pb-10 tablet:px-6 tablet:pt-14 lg:px-0 lg:pt-[52px]">
+      <main className="flex w-full max-w-[800px] flex-col items-center gap-8 pt-16 pb-10 tablet:px-6 lg:px-0">
         <Hero profile={profile} />
         <HomeTabs
           tabs={[
@@ -37,9 +34,9 @@ export default function Home() {
               label: "Концепты",
               hidden: true,
               content: (
-                <div className="flex aspect-[7/4] w-full flex-col items-center justify-center gap-3 bg-neutral-50 tablet:rounded-2xl dark:bg-neutral-800">
-                  <BiTime className="size-8 text-neutral-800 dark:text-neutral-50" aria-hidden />
-                  <p className="text-base font-medium text-neutral-800 dark:text-neutral-50">Концепты скоро появятся</p>
+                <div className="flex aspect-[7/4] w-full flex-col items-center justify-center gap-3 bg-neutral-50 tablet:rounded-2xl">
+                  <BiTime className="size-8 text-neutral-800" aria-hidden />
+                  <p className="text-base font-medium text-neutral-800">Концепты скоро появятся</p>
                 </div>
               ),
             },
@@ -54,6 +51,7 @@ export default function Home() {
             },
           ]}
         />
+        <ContactBar profile={profile} />
       </main>
     </div>
   );

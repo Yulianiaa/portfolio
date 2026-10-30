@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { buttonClassName, type ButtonVariant } from "@/components/ui/Button";
 
-// Matches the 10px dot cursor in globals.css (same color per theme), so the button grows out of it.
+// Matches the 10px dot cursor in globals.css, so the button grows out of it.
 const DOT_CLIP = "inset(calc(50% - 5px) calc(50% - 5px) round 5px)";
 const FULL_CLIP = "inset(0 round 16px)";
 
@@ -30,7 +30,7 @@ export function CursorCaseButton({
       onMouseLeave={() => setActive(false)}
     >
       <span
-        className={`${buttonClassName(variant)} !h-11 !rounded-2xl !px-3 !text-base dark:!bg-neutral-50 dark:!text-neutral-800 pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 whitespace-nowrap`}
+        className={`${buttonClassName(variant)} !h-11 !rounded-2xl !px-3 !text-base pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 whitespace-nowrap`}
         style={{
           left: pos.x,
           top: pos.y,

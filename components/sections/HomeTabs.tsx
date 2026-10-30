@@ -30,13 +30,13 @@ export function HomeTabs({ tabs: allTabs }: { tabs: Tab[] }) {
       <div
         role="tablist"
         // clip-path, not just overflow-hidden: Safari stops clipping animated children to a rounded overflow box.
-        className="relative flex h-11 items-start overflow-hidden rounded-2xl bg-neutral-50 p-0.5 [clip-path:inset(0_round_16px)] dark:bg-neutral-800"
+        className="relative flex h-11 items-start overflow-hidden rounded-2xl bg-neutral-50 p-0.5 [clip-path:inset(0_round_16px)]"
       >
         {/* Shared fill behind the active tab; its edges are animated separately (see LEAD/TRAIL).
             box-shadow, not a drop-shadow filter: it follows the radius exactly while the width animates. */}
         <span
           aria-hidden
-          className="absolute top-0.5 bottom-0.5 rounded-[14px] bg-white shadow-[0_0_9px_rgba(37,40,45,0.08)] motion-reduce:!transition-none dark:bg-neutral-900 dark:shadow-[0_0_9px_rgba(245,245,245,0.08)]"
+          className="absolute top-0.5 bottom-0.5 rounded-[14px] bg-white shadow-[0_0_9px_rgba(37,40,45,0.08)] motion-reduce:!transition-none"
           style={{
             left: INSET + activeIndex * TAB_WIDTH,
             right: INSET + (tabs.length - 1 - activeIndex) * TAB_WIDTH,
@@ -56,8 +56,8 @@ export function HomeTabs({ tabs: allTabs }: { tabs: Tab[] }) {
               onClick={() => select(index)}
               className={`relative flex h-full w-[104px] items-center justify-center p-2 text-base font-medium transition-colors duration-300 ${
                 selected
-                  ? "text-neutral-800 dark:text-neutral-50"
-                  : "text-neutral-500 hover:text-neutral-800 dark:text-neutral-300 dark:hover:text-neutral-50"
+                  ? "text-neutral-800"
+                  : "text-neutral-500 hover:text-neutral-800"
               }`}
             >
               {tab.label}
