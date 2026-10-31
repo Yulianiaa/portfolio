@@ -39,7 +39,18 @@ export function HomeHeader({ profile }: { profile: typeof ProfileType }) {
       }`}
     >
       <div className="mx-auto flex h-full w-full max-w-[800px] items-center justify-between px-3 py-3 tablet:px-6 lg:px-0">
-        <Link href="#top" aria-label="На главную" className={iconButtonClass}>
+        <Link
+          href="#top"
+          onClick={(event) => {
+            event.preventDefault();
+            const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+              ? "auto"
+              : "smooth";
+            window.scrollTo({ top: 0, behavior });
+          }}
+          aria-label="На главную"
+          className={iconButtonClass}
+        >
           <Image src="/assets/icons/logo-sign.svg" alt="" width={24} height={24} aria-hidden />
         </Link>
         <div className="flex items-center gap-3">
