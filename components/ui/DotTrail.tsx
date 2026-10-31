@@ -97,7 +97,8 @@ export function DotTrail() {
       const rect = canvas!.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      const excluded = e.target instanceof Element && e.target.closest(EXCLUDE);
+      const hovered = document.elementFromPoint(e.clientX, e.clientY);
+      const excluded = hovered instanceof Element && hovered.closest(EXCLUDE);
       if (excluded || x < 0 || y < 0 || x > rect.width || y > rect.height) {
         last = null;
         return;
@@ -118,10 +119,10 @@ export function DotTrail() {
     resize();
     const observer = new ResizeObserver(resize);
     observer.observe(canvas);
-    window.addEventListener("pointermove", onMove, { passive: true });
+    window.addEventListener("pointermove", onMove, { passive: true, capture: true });
     return () => {
       observer.disconnect();
-      window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("pointermove", onMove, true);
       cancelAnimationFrame(frame);
     };
   }, []);

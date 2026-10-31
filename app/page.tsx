@@ -5,7 +5,7 @@ import { Hero } from "@/components/sections/Hero";
 import { DotTrail } from "@/components/ui/DotTrail";
 import { HomeTabs } from "@/components/sections/HomeTabs";
 import { CaseCard } from "@/components/sections/CaseCard";
-import { ExperienceList } from "@/components/sections/ExperienceList";
+import { AboutSection } from "@/components/sections/AboutSection";
 
 export default function Home() {
   const profile = getProfile();
@@ -45,9 +45,7 @@ export default function Home() {
               id: "about",
               label: "Обо мне",
               content: (
-                <div className="px-3 tablet:px-0">
-                  <ExperienceList items={profile.experience} />
-                </div>
+                <AboutSection about={profile.about} />
               ),
             },
           ]}

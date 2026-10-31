@@ -17,6 +17,7 @@
   --color-neutral-50: #f5f6f6;
   --color-neutral-100: #eff0f1;
   --color-neutral-150: #dee0e2;
+  --color-neutral-250: #bec1c6;
   --color-neutral-500: #5c6570;
   --color-neutral-700: #373d43;
   --color-neutral-800: #25282d;
@@ -29,6 +30,7 @@
   --color-neutral-50: var(--color-neutral-50);
   --color-neutral-100: var(--color-neutral-100);
   --color-neutral-150: var(--color-neutral-150);
+  --color-neutral-250: var(--color-neutral-250);
   --color-neutral-500: var(--color-neutral-500);
   --color-neutral-700: var(--color-neutral-700);
   --color-neutral-800: var(--color-neutral-800);

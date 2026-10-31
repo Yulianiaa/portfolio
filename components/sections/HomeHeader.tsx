@@ -13,10 +13,23 @@ export function HomeHeader({ profile }: { profile: typeof ProfileType }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const update = () => setScrolled(window.scrollY > 0);
+    const update = () => {
+      const scrollTop = Math.max(
+        window.scrollY,
+        document.documentElement.scrollTop,
+        document.body.scrollTop,
+      );
+      setScrolled(scrollTop > 0);
+    };
     update();
     window.addEventListener("scroll", update, { passive: true });
-    return () => window.removeEventListener("scroll", update);
+    document.addEventListener("scroll", update, { passive: true, capture: true });
+    window.addEventListener("pageshow", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      document.removeEventListener("scroll", update, true);
+      window.removeEventListener("pageshow", update);
+    };
   }, []);
 
   return (
