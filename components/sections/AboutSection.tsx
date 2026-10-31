@@ -74,7 +74,7 @@ export function AboutSection({ about }: { about: typeof ProfileType.about }) {
                     {item.position}
                   </p>
                 </div>
-                <p className="text-sm leading-5 text-neutral-500">{nbsp(item.description)}</p>
+                <p className="text-base leading-6 text-neutral-500">{nbsp(item.description)}</p>
               </div>
             ))}
           </div>
@@ -90,7 +90,7 @@ export function AboutSection({ about }: { about: typeof ProfileType.about }) {
                 <p className="text-base font-medium leading-6 text-neutral-800">
                   {nbsp(item.name)}
                 </p>
-                <p className="text-sm leading-5 text-neutral-500">{nbsp(item.detail)}</p>
+                <p className="text-base leading-6 text-neutral-500">{nbsp(item.detail)}</p>
               </div>
             ))}
           </div>
