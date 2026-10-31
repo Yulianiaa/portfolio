@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "@/components/ui/AppImage";
 import { CaseImage } from "@/components/ui/CaseImage";
 import { CaseNavActions } from "@/components/sections/CaseNavActions";
@@ -8,10 +9,12 @@ export function CaseHero({
   item,
   backHref,
   contactHref,
+  children,
 }: {
   item: CaseStudy;
   backHref: string;
   contactHref: string;
+  children: ReactNode;
 }) {
   return (
     <div className="flex w-full flex-col items-start gap-8 tablet:gap-9 lg:gap-10">
@@ -46,18 +49,21 @@ export function CaseHero({
           </div>
         ))}
       </div>
-      {item.coverMobile ? (
-        <>
-          <div className="w-full tablet:hidden">
-            <CaseImage image={item.coverMobile} />
-          </div>
-          <div className="hidden w-full tablet:block">
-            <CaseImage image={item.cover} />
-          </div>
-        </>
-      ) : (
-        <CaseImage image={item.cover} />
-      )}
+      <div data-no-trail data-no-trail-below className="flex w-full flex-col gap-12 tablet:gap-14 lg:gap-16">
+        {item.coverMobile ? (
+          <>
+            <div className="w-full tablet:hidden">
+              <CaseImage image={item.coverMobile} />
+            </div>
+            <div className="hidden w-full tablet:block">
+              <CaseImage image={item.cover} />
+            </div>
+          </>
+        ) : (
+          <CaseImage image={item.cover} />
+        )}
+        {children}
+      </div>
     </div>
   );
 }

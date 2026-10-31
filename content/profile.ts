@@ -26,10 +26,10 @@ export const profile = {
   ] satisfies SocialLink[],
   about: {
     photos: [
-      { src: "/assets/home/about-photo-1.jpg", alt: "", crop: "portrait", width: 1706, height: 2560, monochrome: true },
-      { src: "/assets/home/about-photo-2.jpg", alt: "", crop: "poster", width: 960, height: 1280, monochrome: false },
-      { src: "/assets/home/about-photo-3.jpg", alt: "", crop: "cover", width: 3765, height: 3455, monochrome: true },
-      { src: "/assets/home/about-photo-4.jpg", alt: "", crop: "cover", width: 1280, height: 909, monochrome: true },
+      { src: "/assets/home/about-photo-1.webp", alt: "", crop: "portrait", width: 600, height: 900, monochrome: true },
+      { src: "/assets/home/about-photo-2.webp", alt: "", crop: "poster", width: 675, height: 900, monochrome: false },
+      { src: "/assets/home/about-photo-3.webp", alt: "", crop: "cover", width: 900, height: 826, monochrome: true },
+      { src: "/assets/home/about-photo-4.webp", alt: "", crop: "cover", width: 900, height: 639, monochrome: true },
     ],
     paragraphs: [
       "Дизайн и технологии со мной с детства. После школы я ходила в студию дизайна, а дома папа учил меня верстать сайты на HTML и CSS. До сих пор люблю воплощать креативные идеи и находить взаимосвязи внутри сложных систем",

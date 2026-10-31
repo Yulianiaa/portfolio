@@ -15,6 +15,8 @@ type Point = { x: number; y: number; t: number };
 
 /** Elements marked with this attribute (e.g. case cards, which have their own cursor) cut the trail. */
 const EXCLUDE = "[data-no-trail]";
+const EXCLUDE_FADE = "[data-no-trail-fade]";
+const EXCLUDE_BELOW = "[data-no-trail-below]";
 
 /**
  * A dithered dot trail that follows the mouse across the page and dissolves pixel by pixel.
@@ -99,7 +101,30 @@ export function DotTrail() {
       const y = e.clientY - rect.top;
       const hovered = document.elementFromPoint(e.clientX, e.clientY);
       const excluded = hovered instanceof Element && hovered.closest(EXCLUDE);
-      if (excluded || x < 0 || y < 0 || x > rect.width || y > rect.height) {
+      const fadeExcluded = hovered instanceof Element && hovered.closest(EXCLUDE_FADE);
+      const boundaryElement = Array.from(document.querySelectorAll(EXCLUDE_BELOW)).find(
+        (element) => element.getClientRects().length > 0,
+      );
+      const boundary = boundaryElement?.getBoundingClientRect();
+      const belowBoundary =
+        boundary !== undefined &&
+        e.clientY >= boundary.top &&
+        e.clientX >= boundary.left &&
+        e.clientX <= boundary.right;
+      if (excluded || belowBoundary) {
+        points = [];
+        last = null;
+        if (frame) cancelAnimationFrame(frame);
+        frame = 0;
+        ctx!.clearRect(0, 0, rect.width, rect.height);
+        return;
+      }
+      if (fadeExcluded) {
+        last = null;
+        if (points.length && !frame) frame = requestAnimationFrame(draw);
+        return;
+      }
+      if (x < 0 || y < 0 || x > rect.width || y > rect.height) {
         last = null;
         return;
       }

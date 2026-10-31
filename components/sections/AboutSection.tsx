@@ -27,6 +27,7 @@ export function AboutSection({ about }: { about: typeof ProfileType.about }) {
                   src={photo.src}
                   alt={photo.alt}
                   fill
+                  loading="eager"
                   sizes="(max-width: 743px) 45vw, (max-width: 1023px) 23vw, 191px"
                   className={cropClass}
                 />
@@ -36,6 +37,7 @@ export function AboutSection({ about }: { about: typeof ProfileType.about }) {
                   alt={photo.alt}
                   width={photo.width}
                   height={photo.height}
+                  loading="eager"
                   sizes="(max-width: 743px) 45vw, (max-width: 1023px) 23vw, 191px"
                   className={cropClass}
                 />
@@ -45,53 +47,55 @@ export function AboutSection({ about }: { about: typeof ProfileType.about }) {
         })}
       </div>
 
-      <div className="flex w-full flex-col gap-5 text-base leading-6 text-neutral-800">
-        {about.paragraphs.map((paragraph) => (
-          <p key={paragraph}>{nbsp(paragraph)}</p>
-        ))}
-      </div>
+      <div data-no-trail className="flex w-full flex-col gap-10">
+        <div className="flex w-full flex-col gap-5 text-base leading-6 text-neutral-800">
+          {about.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{nbsp(paragraph)}</p>
+          ))}
+        </div>
 
-      <section id="experience" className="flex w-full flex-col gap-3 scroll-mt-24">
-        <h2 className="w-full text-sm font-medium uppercase leading-5 text-neutral-250">
-          Опыт работы
-        </h2>
-        <div className="flex w-full flex-col gap-3">
-          {about.experience.map((item) => (
-            <div key={item.company} data-no-trail className="flex w-full flex-col">
-              <div className="flex w-full items-center gap-2">
-                <a
-                  href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="shrink-0 text-base font-medium leading-6 text-brand-500 hover:underline"
-                >
-                  {item.company}
-                </a>
-                <p className="min-w-0 flex-1 text-sm leading-5 text-neutral-250">
-                  {item.position}
-                </p>
+        <section id="experience" className="flex w-full flex-col gap-3 scroll-mt-24">
+          <h2 className="w-full text-sm font-medium uppercase leading-5 text-neutral-250">
+            Опыт работы
+          </h2>
+          <div className="flex w-full flex-col gap-3">
+            {about.experience.map((item) => (
+              <div key={item.company} className="flex w-full flex-col">
+                <div className="flex w-full items-center gap-2">
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="shrink-0 text-base font-medium leading-6 text-brand-500 hover:underline"
+                  >
+                    {item.company}
+                  </a>
+                  <p className="min-w-0 flex-1 text-sm leading-5 text-neutral-250">
+                    {item.position}
+                  </p>
+                </div>
+                <p className="text-sm leading-5 text-neutral-500">{nbsp(item.description)}</p>
               </div>
-              <p className="text-sm leading-5 text-neutral-500">{nbsp(item.description)}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
 
-      <section className="flex w-full flex-col gap-3">
-        <h2 className="w-full text-sm font-medium uppercase leading-5 text-neutral-250">
-          Образование
-        </h2>
-        <div className="flex w-full flex-col gap-3">
-          {about.education.map((item) => (
-            <div key={item.name} className="flex w-full flex-col">
-              <p className="text-base font-medium leading-6 text-neutral-800">
-                {nbsp(item.name)}
-              </p>
-              <p className="text-sm leading-5 text-neutral-500">{nbsp(item.detail)}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+        <section className="flex w-full flex-col gap-3">
+          <h2 className="w-full text-sm font-medium uppercase leading-5 text-neutral-250">
+            Образование
+          </h2>
+          <div className="flex w-full flex-col gap-3">
+            {about.education.map((item) => (
+              <div key={item.name} className="flex w-full flex-col">
+                <p className="text-base font-medium leading-6 text-neutral-800">
+                  {nbsp(item.name)}
+                </p>
+                <p className="text-sm leading-5 text-neutral-500">{nbsp(item.detail)}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

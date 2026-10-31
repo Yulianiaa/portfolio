@@ -19,11 +19,12 @@ export default async function CasePage({ params }: PageProps<"/cases/[slug]">) {
   return (
     <div className="flex flex-1 justify-center">
       <main className="flex w-full max-w-[1024px] flex-col items-start gap-12 px-4 pt-10 pb-24 tablet:gap-14 tablet:px-6 tablet:pt-12 tablet:pb-12 lg:gap-16 lg:px-0">
-        <CaseHero item={item} backHref="/" contactHref={profile.contactUrl} />
-        {item.chapters.map((chapter) => (
-          <CaseChapter key={chapter.heading} chapter={chapter} />
-        ))}
-        <CaseFooter author={item.author} links={profile.socialLinks} />
+        <CaseHero item={item} backHref="/" contactHref={profile.contactUrl}>
+          {item.chapters.map((chapter) => (
+            <CaseChapter key={chapter.heading} chapter={chapter} />
+          ))}
+          <CaseFooter author={item.author} links={profile.socialLinks} />
+        </CaseHero>
       </main>
       <FixedWriteButton href={profile.contactUrl} />
     </div>

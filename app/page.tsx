@@ -24,8 +24,8 @@ export default function Home() {
               label: "Кейсы",
               content: (
                 <section className="flex w-full flex-col items-start gap-10">
-                  {cases.map((item) => (
-                    <CaseCard key={item.slug} item={item} />
+                  {cases.map((item, index) => (
+                    <CaseCard key={item.slug} item={item} noTrailBelow={index === 0} />
                   ))}
                 </section>
               ),

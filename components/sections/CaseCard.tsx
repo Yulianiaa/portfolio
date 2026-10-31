@@ -16,10 +16,14 @@ function CardText({ title, description }: { title: string; description: string }
   );
 }
 
-export function CaseCard({ item }: { item: CaseSummary }) {
+export function CaseCard({ item, noTrailBelow = false }: { item: CaseSummary; noTrailBelow?: boolean }) {
   if (item.status !== "ready") {
     return (
-      <div className="relative flex w-full flex-col items-start gap-3">
+      <div
+        data-no-trail={noTrailBelow || undefined}
+        data-no-trail-below={noTrailBelow || undefined}
+        className="relative flex w-full flex-col items-start gap-3"
+      >
         <div className={`${coverClass} flex flex-col items-center justify-center gap-3`}>
           <BiTime className="size-8 text-neutral-800" aria-hidden />
           <p className="text-base font-medium text-neutral-800">Кейс в процессе</p>
@@ -30,7 +34,12 @@ export function CaseCard({ item }: { item: CaseSummary }) {
   }
 
   return (
-    <Link href={`/cases/${item.slug}`} data-no-trail className="relative flex w-full cursor-pointer flex-col items-start gap-3">
+    <Link
+      href={`/cases/${item.slug}`}
+      data-no-trail
+      data-no-trail-below={noTrailBelow || undefined}
+      className="relative flex w-full cursor-pointer flex-col items-start gap-3"
+    >
       <div className={coverClass}>
         <Image
           src={item.cover.src}
