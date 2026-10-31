@@ -34,7 +34,7 @@ export function HomeHeader({ profile }: { profile: typeof ProfileType }) {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-40 h-[68px] w-full transition-colors duration-200 ${
+      className={`sticky top-0 z-40 h-[68px] w-full transition-colors duration-200 ${
         scrolled ? "bg-white" : "bg-transparent"
       }`}
     >
