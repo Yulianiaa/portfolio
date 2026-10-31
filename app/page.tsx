@@ -15,6 +15,7 @@ export default function Home() {
     <div id="top" className="flex flex-1 flex-col items-center">
       <DotTrail />
       <HomeHeader profile={profile} />
+      <div aria-hidden className="h-[68px] w-full shrink-0" />
       <main className="flex w-full max-w-[800px] flex-col items-center gap-8 px-px pt-[52px] pb-10 tablet:px-6 tablet:pt-14 tablet:pb-10 lg:px-0 lg:pt-[52px] lg:pb-[60px]">
         <Hero profile={profile} />
         <HomeTabs
