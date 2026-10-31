@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 
 /** `hidden` keeps a tab in code but out of the page, e.g. until its content is ready. */
 type Tab = { id: string; label: string; content: ReactNode; hidden?: boolean };
@@ -12,17 +12,32 @@ const INSET = 2;
 const EASE = "cubic-bezier(0.65, 0, 0.35, 1)";
 const LEAD = `340ms ${EASE}`;
 const TRAIL = `375ms ${EASE} 75ms`;
+const ACTIVE_TAB_STORAGE_KEY = "portfolio-home-active-tab";
 
 export function HomeTabs({ tabs: allTabs }: { tabs: Tab[] }) {
-  const tabs = allTabs.filter((tab) => !tab.hidden);
+  const tabs = useMemo(() => allTabs.filter((tab) => !tab.hidden), [allTabs]);
   const [active, setActive] = useState(tabs[0].id);
   const [movingRight, setMovingRight] = useState(true);
   const activeIndex = tabs.findIndex((tab) => tab.id === active);
+
+  useEffect(() => {
+    try {
+      const saved = window.sessionStorage.getItem(ACTIVE_TAB_STORAGE_KEY);
+      if (saved && tabs.some((tab) => tab.id === saved)) setActive(saved);
+    } catch {
+      // Keep the default tab if browser storage is unavailable.
+    }
+  }, [tabs]);
 
   function select(index: number) {
     if (index === activeIndex) return;
     setMovingRight(index > activeIndex);
     setActive(tabs[index].id);
+    try {
+      window.sessionStorage.setItem(ACTIVE_TAB_STORAGE_KEY, tabs[index].id);
+    } catch {
+      // The selected tab still works for this page view if storage is unavailable.
+    }
   }
 
   return (
