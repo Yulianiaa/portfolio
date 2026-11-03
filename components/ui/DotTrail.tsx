@@ -111,7 +111,7 @@ export function DotTrail() {
         e.clientY >= boundary.top &&
         e.clientX >= boundary.left &&
         e.clientX <= boundary.right;
-      if (excluded || belowBoundary) {
+      if (excluded || (belowBoundary && !fadeExcluded)) {
         points = [];
         last = null;
         if (frame) cancelAnimationFrame(frame);

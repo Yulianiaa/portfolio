@@ -36,7 +36,7 @@ export function CaseCard({ item, noTrailBelow = false }: { item: CaseSummary; no
   return (
     <Link
       href={`/cases/${item.slug}`}
-      data-no-trail
+      data-no-trail-fade
       data-no-trail-below={noTrailBelow || undefined}
       className="relative flex w-full cursor-pointer flex-col items-start gap-3"
     >

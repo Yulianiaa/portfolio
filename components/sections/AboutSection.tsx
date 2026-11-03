@@ -47,7 +47,7 @@ export function AboutSection({ about }: { about: typeof ProfileType.about }) {
         })}
       </div>
 
-      <div data-no-trail className="flex w-full flex-col gap-10">
+      <div data-no-trail-fade className="flex w-full flex-col gap-10">
         <div className="flex w-full flex-col gap-5 text-base leading-6 text-neutral-800">
           {about.paragraphs.map((paragraph) => (
             <p key={paragraph}>{nbsp(paragraph)}</p>
