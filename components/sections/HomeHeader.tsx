@@ -10,7 +10,7 @@ import type { profile as ProfileType } from "@/content/profile";
 const iconButtonClass =
   "inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-neutral-50 text-neutral-700 transition-colors hover:bg-neutral-100";
 
-export function HomeHeader({ profile }: { profile: typeof ProfileType }) {
+export function HomeHeader({ profile, backHref }: { profile: typeof ProfileType; backHref?: string }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -41,8 +41,9 @@ export function HomeHeader({ profile }: { profile: typeof ProfileType }) {
     >
       <div className="mx-auto flex h-full w-full max-w-none items-center justify-between px-3 py-3 tablet:px-6 lg:max-w-[800px] lg:px-0">
         <Link
-          href="#top"
+          href={backHref ?? "#top"}
           onClick={(event) => {
+            if (backHref) return;
             event.preventDefault();
             const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches
               ? "auto"

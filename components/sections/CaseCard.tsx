@@ -22,7 +22,7 @@ export function CaseCard({ item, noTrailBelow = false }: { item: CaseSummary; no
       <div
         data-no-trail={noTrailBelow || undefined}
         data-no-trail-below={noTrailBelow || undefined}
-        className="relative flex w-full flex-col items-start gap-3"
+        className="relative flex w-full flex-col items-start gap-4"
       >
         <div className={`${coverClass} flex flex-col items-center justify-center gap-3`}>
           <BiTime className="size-8 text-neutral-800" aria-hidden />
@@ -38,7 +38,7 @@ export function CaseCard({ item, noTrailBelow = false }: { item: CaseSummary; no
       href={`/cases/${item.slug}`}
       data-no-trail-fade
       data-no-trail-below={noTrailBelow || undefined}
-      className="relative flex w-full cursor-pointer flex-col items-start gap-3"
+      className="relative flex w-full cursor-pointer flex-col items-start gap-4"
     >
       <div className={coverClass}>
         <Image
