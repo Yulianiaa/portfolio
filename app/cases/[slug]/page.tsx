@@ -3,7 +3,6 @@ import { getCaseBySlug, getReadyCases, getProfile } from "@/lib/content";
 import { CaseHero } from "@/components/sections/CaseHero";
 import { CaseChapter } from "@/components/sections/CaseChapter";
 import { HomeHeader } from "@/components/sections/HomeHeader";
-import { FixedWriteButton } from "@/components/ui/FixedWriteButton";
 
 export function generateStaticParams() {
   return getReadyCases().map((item) => ({ slug: item.slug }));
@@ -26,7 +25,6 @@ export default async function CasePage({ params }: PageProps<"/cases/[slug]">) {
           ))}
         </CaseHero>
       </main>
-      <FixedWriteButton href={profile.contactUrl} />
     </div>
   );
 }
