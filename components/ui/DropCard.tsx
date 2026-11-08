@@ -31,7 +31,7 @@ export function DropCard({ card }: { card: DropCardType }) {
                 {expanded.keyFacts.map((fact) => (
                   <div key={fact.label} className="flex flex-col items-center gap-2">
                     <p className="text-h25 font-bold text-neutral-800 lg:text-h2">{fact.value}</p>
-                    <p className="text-base text-neutral-500 lg:text-lg">{fact.label}</p>
+                    <p className="text-base leading-6 text-neutral-500">{fact.label}</p>
                   </div>
                 ))}
               </div>

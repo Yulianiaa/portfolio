@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="ru" className={`${medeoSans.className} ${medeoSans.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-white text-neutral-800 font-sans">
+      <body className="min-h-full flex flex-col bg-white text-base leading-6 text-neutral-800 font-sans">
         <Script id="yandex-metrika" strategy="afterInteractive">
           {`
             (function(m,e,t,r,i,k,a){

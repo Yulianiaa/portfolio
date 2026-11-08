@@ -19,7 +19,7 @@ export function CaseHero({
           </p>
           <h1 className="text-h25 leading-10 font-semibold text-neutral-800">{nbsp(item.title)}</h1>
         </div>
-        <p className="text-base text-neutral-800 lg:text-lg">{nbsp(item.description)}</p>
+        <p className="text-base leading-6 text-neutral-800">{nbsp(item.description)}</p>
       </div>
       <div
         className={`grid w-full grid-cols-2 gap-x-3 gap-y-3 pb-2 text-center ${

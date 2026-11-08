@@ -26,7 +26,7 @@ function renderSegment(segment: Segment, i: number) {
 
 export function RichParagraph({ segments, className = "" }: { segments: Paragraph; className?: string }) {
   return (
-    <p className={`text-base leading-6 text-neutral-800 lg:text-lg lg:leading-7 ${className}`}>
+    <p className={`text-base leading-6 text-neutral-800 ${className}`}>
       {segments.map((segment, i) => (
         <span key={i}>{renderSegment(segment, i)}</span>
       ))}
