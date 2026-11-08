@@ -2,8 +2,8 @@ import { buttonClassName } from "@/components/ui/Button";
 
 export function Chip({ label, active = false }: { label: string; active?: boolean }) {
   return (
-    <span className={buttonClassName(active ? "primary" : "secondary")}>
-      <span className="px-1 text-base leading-6">{label}</span>
+    <span className={`${buttonClassName(active ? "primary" : "secondary")} !h-11 !px-4`}>
+      <span className="text-base leading-6">{label}</span>
     </span>
   );
 }
