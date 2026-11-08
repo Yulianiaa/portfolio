@@ -16,7 +16,7 @@ export function MetricCards({ cards, layout = "row" }: { cards: Card[]; layout?:
           className="flex flex-1 flex-col items-start gap-1 rounded-2xl bg-neutral-50 p-6"
         >
           <p className="text-base leading-6 font-medium text-neutral-800">{nbsp(card.title)}</p>
-          <p className="text-base leading-6 text-neutral-500">{nbsp(card.description)}</p>
+          <p className="text-sm leading-5 text-neutral-500">{nbsp(card.description)}</p>
         </div>
       ))}
     </div>

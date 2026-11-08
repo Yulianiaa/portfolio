@@ -13,9 +13,9 @@ const marketingCommunicationsPlatform: CaseSummary = {
   keyFacts: [
     { value: "+20%", label: "Охват\nStories" },
     { value: "+30%", label: "Просмотры\nStories" },
-    { value: "x4", label: "Реакции\nна Stories" },
     { value: "-15%", label: "Time-To-Market\nразработки" },
     { value: "-30%", label: "Time-To-Market\nмаркетинга" },
+    { value: "x4", label: "Реакции\nна Stories" },
   ],
   cover: {
     src: "/assets/cases/marketing-communications-platform/cover.webp",
