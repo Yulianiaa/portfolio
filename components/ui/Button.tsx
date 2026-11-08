@@ -15,7 +15,7 @@ export function buttonClassName(variant: ButtonVariant = "secondary", disabled =
   const styles =
     variant === "primary"
       ? "bg-neutral-800 hover:bg-neutral-700 text-white"
-      : "bg-neutral-50 text-neutral-800 border border-neutral-100 hover:bg-neutral-100";
+      : "bg-neutral-50 text-neutral-800 hover:bg-neutral-100";
 
   return `inline-flex h-10 lg:h-12 items-center justify-center gap-1 rounded-xl lg:rounded-2xl px-2.5 lg:px-3 text-base lg:text-lg font-medium transition-colors ${styles}`;
 }

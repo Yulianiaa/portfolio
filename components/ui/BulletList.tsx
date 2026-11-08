@@ -1,14 +1,11 @@
-import Image from "@/components/ui/AppImage";
 import { nbsp } from "@/lib/typography";
 
 export function BulletList({ items }: { items: string[] }) {
   return (
-    <ul className="flex w-full flex-col items-start gap-1">
+    <ul className="flex w-full flex-col items-start gap-1 text-base leading-6 text-neutral-800">
       {items.map((item) => (
-        <li key={item} className="flex w-full items-start gap-2 text-base text-neutral-800 lg:text-lg">
-          <span className="flex shrink-0 items-center py-1.5 lg:py-2">
-            <Image src="/assets/icons/bullet-dark.svg" alt="" width={12} height={12} aria-hidden />
-          </span>
+        <li key={item} className="flex w-full items-start">
+          <span className="shrink-0" aria-hidden>•&nbsp;&nbsp;</span>
           <span>{nbsp(item)}</span>
         </li>
       ))}

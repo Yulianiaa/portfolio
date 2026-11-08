@@ -1,4 +1,4 @@
-export type Segment = string | { text: string; strong?: boolean; tone?: "success" };
+export type Segment = string | { text: string; strong?: boolean; tone?: "success"; href?: string };
 export type Paragraph = Segment[];
 
 export type Link = { label: string; href: string };

@@ -12,7 +12,7 @@ export function IconButton({
   href?: string;
 }) {
   const className =
-    "inline-flex size-12 items-center justify-center rounded-2xl border border-neutral-100 bg-neutral-50 text-neutral-800 hover:bg-neutral-100 transition-colors";
+    "inline-flex size-12 items-center justify-center rounded-2xl bg-neutral-50 text-neutral-800 hover:bg-neutral-100 transition-colors";
 
   if (href) {
     return (

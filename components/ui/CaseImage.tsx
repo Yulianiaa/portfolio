@@ -6,13 +6,13 @@ import type { SectionImage } from "@/lib/content";
 export function CaseImage({ image }: { image: SectionImage }) {
   if (image === "placeholder") {
     return (
-      <div className="aspect-square w-full tablet:aspect-[1024/630] rounded-3xl border border-neutral-100 bg-neutral-50" />
+      <div className="aspect-square w-full tablet:aspect-[744/362] lg:aspect-[800/416] rounded-2xl bg-neutral-50" />
     );
   }
 
   if ("video" in image) {
     return (
-      <div className="relative aspect-square w-full tablet:aspect-[1024/630] overflow-hidden rounded-3xl border border-neutral-100 bg-neutral-50">
+      <div className="relative aspect-square w-full tablet:aspect-[744/362] lg:aspect-[800/416] overflow-hidden rounded-2xl bg-neutral-50">
         <CaseVideo src={image.video} poster={image.poster} fit={image.fit} />
       </div>
     );
@@ -20,7 +20,7 @@ export function CaseImage({ image }: { image: SectionImage }) {
 
   return (
     <div
-      className="relative aspect-square w-full tablet:aspect-[1024/630] overflow-hidden rounded-3xl border border-neutral-100 bg-neutral-50"
+      className="relative aspect-square w-full tablet:aspect-[744/362] lg:aspect-[800/416] overflow-hidden rounded-2xl bg-neutral-50"
       style={image.bgColor ? { backgroundColor: image.bgColor } : undefined}
     >
       <Image

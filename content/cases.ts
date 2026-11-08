@@ -4,9 +4,8 @@ const marketingCommunicationsPlatform: CaseSummary = {
   slug: "marketing-communications-platform",
   status: "ready",
   tags: ["2025–2026", "B2C & B2E", "Mobile App & Web CMS"],
-  title: "Создание платформы маркетинговых коммуникаций",
-  description:
-    "Инициировала и лидировала переработку коммуникационных инструментов по единым принципам, создав основу для их дальнейшего развития и улучшив продуктовые и командные метрики",
+  title: "Платформа маркетинговых коммуникаций",
+  description: "Инициировала и лидировала переработку коммуникационных инструментов по единым принципам",
   card: {
     title: "Платформа маркетинговых коммуникаций",
     description: "Инициировала и лидировала переработку коммуникационных инструментов по единым принципам",
@@ -14,13 +13,14 @@ const marketingCommunicationsPlatform: CaseSummary = {
   keyFacts: [
     { value: "+20%", label: "Охват\nStories" },
     { value: "+30%", label: "Просмотры\nStories" },
-    { value: "-15%", label: "Time-To-Market\nразработки" },
-    { value: "-30%", label: "Time-To-Market маркетинга" },
     { value: "x4", label: "Реакции\nна Stories" },
+    { value: "-15%", label: "Time-To-Market\nразработки" },
+    { value: "-30%", label: "Time-To-Market\nмаркетинга" },
   ],
   cover: {
     src: "/assets/cases/marketing-communications-platform/cover.webp",
     alt: "Экраны мобильного приложения Мигрант Сервис",
+    fit: "always",
   },
   author: {
     name: "Ульяна Прощенко",
@@ -35,16 +35,12 @@ const marketingCommunicationsPlatform: CaseSummary = {
           subtitle: "Компания",
           body: [
             [
-              { text: "Мигрант Сервис ", strong: true },
+              { text: "Мигрант Сервис ", strong: true, href: "https://mmc.help/migrant" },
               "— это мобильное приложение для трудовых мигрантов в России, которое помогает решать задачи легализации и пребывания в стране, поиска работы и жилья, объединяя необходимые сервисы в одном месте. Ежемесячно продуктом пользуются ",
               { text: "150 000+ человек", strong: true },
               ", а средняя оценка в магазинах приложений ",
               { text: "4,9 из 5", strong: true },
             ],
-          ],
-          links: [
-            { label: "Сайт", href: "https://mmc.help/migrant" },
-            { label: "Приложение в RuStore", href: "https://www.rustore.ru/catalog/app/mmc63.ru" },
           ],
         },
         {
@@ -124,10 +120,12 @@ const marketingCommunicationsPlatform: CaseSummary = {
               image: {
                 src: "/assets/cases/marketing-communications-platform/storiesBugs.jpg",
                 alt: "Проблемы Stories до переработки: ручной перенос текста, отсутствие поддержки Dynamic Type, нет автопролистывания, некорректное отображение",
+                fit: "always",
               },
               mobileImage: {
                 src: "/assets/cases/marketing-communications-platform/storiesEmpty.jpg",
                 alt: "Проблемы Stories до переработки: ручной перенос текста, отсутствие поддержки Dynamic Type, нет автопролистывания, некорректное отображение",
+                fit: "always",
               },
               mobileList: [
                 "Элементы интерфейса пересекаются с контентом",
@@ -141,10 +139,12 @@ const marketingCommunicationsPlatform: CaseSummary = {
               image: {
                 src: "/assets/cases/marketing-communications-platform/bannersBugs.jpg",
                 alt: "Проблемы баннеров до переработки: все баннеры выглядят одинаково важными, не соответствуют требованиям доступности",
+                fit: "always",
               },
               mobileImage: {
                 src: "/assets/cases/marketing-communications-platform/bannersEmpty.jpg",
                 alt: "Проблемы баннеров до переработки: все баннеры выглядят одинаково важными, не соответствуют требованиям доступности",
+                fit: "always",
               },
               mobileList: [
                 "Интерфейс не помогает отличать необязательную информацию от сообщений, требующих действия",
@@ -233,6 +233,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
           image: {
             video: "/assets/cases/marketing-communications-platform/dance.mp4",
             poster: "/assets/cases/marketing-communications-platform/dance-poster.jpg",
+            fit: false,
           },
         },
       ],
@@ -243,12 +244,12 @@ const marketingCommunicationsPlatform: CaseSummary = {
         {
           contentGap: "tight",
           body: [
-            ["Все решения учитывали принципы, которые легли в основу нового подхода к работе над инструментами:"],
+            ["Все будущие изменения учитывали принципы, которые легли в основу нового подхода к работе над инструментами:"],
           ],
           image: {
             src: "/assets/cases/marketing-communications-platform/defence.jpg",
             alt: "Командная встреча по обсуждению принципов работы с инструментами продуктовых коммуникаций",
-            fit: true,
+            fit: "always",
             bgColor: "#100A18",
           },
         },
@@ -256,10 +257,10 @@ const marketingCommunicationsPlatform: CaseSummary = {
           gapBefore: "tight",
           body: [["Чтобы закрепить эти принципы, подготовила рабочие артефакты:"]],
           list: [
-            "шаблоны задач;",
-            "шаблоны документации;",
-            "чек-лист для проверки доступности;",
-            "чек-лист для проверки дизайна перед передачей в разработку.",
+            "шаблоны задач",
+            "шаблоны документации",
+            "чек-лист для проверки доступности",
+            "чек-лист для проверки дизайна перед передачей в разработку",
           ],
         },
       ],
@@ -284,6 +285,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
           image: {
             video: "/assets/cases/marketing-communications-platform/emotionalfix.mp4",
             poster: "/assets/cases/marketing-communications-platform/emotionalfix-poster.jpg",
+            fit: "always",
           },
         },
         {
@@ -296,6 +298,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
           image: {
             src: "/assets/cases/marketing-communications-platform/sizes.jpg",
             alt: "Экраны Stories с адаптивным текстом поверх фонового изображения",
+            fit: "always",
           },
         },
         {
@@ -308,6 +311,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
           image: {
             video: "/assets/cases/marketing-communications-platform/marketing-mechanics.mp4",
             poster: "/assets/cases/marketing-communications-platform/marketing-mechanics-poster.jpg",
+            fit: "always",
           },
         },
       ],
@@ -324,6 +328,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
           image: {
             video: "/assets/cases/marketing-communications-platform/banners.mp4",
             poster: "/assets/cases/marketing-communications-platform/banners-poster.jpg",
+            fit: "always",
           },
         },
       ],
@@ -340,6 +345,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
           image: {
             src: "/assets/cases/marketing-communications-platform/cms.jpg",
             alt: "Админ-панель CMS для управления баннерами",
+            fit: "always",
           },
         },
       ],
@@ -366,7 +372,7 @@ const marketingCommunicationsPlatform: CaseSummary = {
               { text: "на 30% ", strong: true },
               { text: "↓", strong: true, tone: "success" },
               ". У разработчиков этот показатель снизился ",
-              { text: "на 15% ", strong: true },
+              { text: "на 15%\u00A0", strong: true },
               { text: "↓", strong: true, tone: "success" },
               ", так как требования и ограничения были зафиксированы заранее и учитывались при проектировании",
             ],

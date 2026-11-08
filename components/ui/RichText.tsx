@@ -1,4 +1,5 @@
 import type { Paragraph, Segment } from "@/lib/content";
+import Link from "next/link";
 import { nbsp } from "@/lib/typography";
 
 function renderSegment(segment: Segment, i: number) {
@@ -6,13 +7,20 @@ function renderSegment(segment: Segment, i: number) {
   const className = [
     segment.strong ? "font-medium" : "",
     segment.tone === "success" ? "text-[#01b437]" : "",
+    segment.href ? "text-brand-500 hover:underline" : "",
   ]
     .filter(Boolean)
     .join(" ");
   return (
-    <span key={i} className={className || undefined}>
-      {nbsp(segment.text)}
-    </span>
+    segment.href ? (
+      <Link key={i} href={segment.href} target="_blank" rel="noopener noreferrer" className={className || undefined}>
+        {nbsp(segment.text)}
+      </Link>
+    ) : (
+      <span key={i} className={className || undefined}>
+        {nbsp(segment.text)}
+      </span>
+    )
   );
 }
 

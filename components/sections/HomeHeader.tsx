@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "@/components/ui/AppImage";
+import { BiArrowBack } from "react-icons/bi";
 import { reachGoal } from "@/lib/metrika";
 import type { profile as ProfileType } from "@/content/profile";
 
@@ -38,7 +39,7 @@ export function HomeHeader({ profile }: { profile: typeof ProfileType }) {
         scrolled ? "bg-white" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-full w-full max-w-[800px] items-center justify-between px-3 py-3 tablet:px-6 lg:px-0">
+      <div className="mx-auto flex h-full w-full max-w-none items-center justify-between px-3 py-3 tablet:px-6 lg:max-w-[800px] lg:px-0">
         <Link
           href="#top"
           onClick={(event) => {
@@ -51,7 +52,7 @@ export function HomeHeader({ profile }: { profile: typeof ProfileType }) {
           aria-label="На главную"
           className={iconButtonClass}
         >
-          <Image src="/assets/icons/logo-sign.svg" alt="" width={24} height={24} aria-hidden />
+          <BiArrowBack className="size-5" aria-hidden />
         </Link>
         <div className="flex items-center gap-3">
           <Link

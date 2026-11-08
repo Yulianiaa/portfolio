@@ -12,7 +12,7 @@ import type { Chapter, Gap, Subsection } from "@/lib/content";
 
 function marginClass(gap: Gap = "normal") {
   if (gap === "xtight") return "mt-4"; // 16px at every breakpoint
-  if (gap === "tight") return "mt-5 tablet:mt-6"; // 20px mobile / 24px tablet+
+  if (gap === "tight") return "mt-6"; // 24px at every breakpoint
   if (gap === "loose") return "mt-8 tablet:mt-9 lg:mt-10"; // 32px mobile / 36px tablet / 40px desktop
   return "mt-6 tablet:mt-7 lg:mt-8"; // 24px mobile / 28px tablet / 32px desktop, default
 }
@@ -20,7 +20,7 @@ function marginClass(gap: Gap = "normal") {
 function SubsectionText({ sub }: { sub: Subsection }) {
   return (
     <>
-      {sub.subtitle && <h3 className="text-xl font-medium text-neutral-800 lg:text-2xl">{nbsp(sub.subtitle)}</h3>}
+      {sub.subtitle && <h3 className="text-lg leading-7 font-semibold text-neutral-800">{nbsp(sub.subtitle)}</h3>}
       {sub.body && sub.links && sub.linksAfterParagraph !== undefined ? (
         <>
           <RichText paragraphs={sub.body.slice(0, sub.linksAfterParagraph + 1)} />
@@ -45,8 +45,8 @@ function SubsectionContent({ sub }: { sub: Subsection }) {
   return (
     <>
       {sub.quote && (
-        <div className="w-full rounded-3xl bg-neutral-50 p-7">
-          <p className="text-lg font-medium text-neutral-800 lg:text-xl">{nbsp(sub.quote)}</p>
+        <div className="w-full rounded-2xl bg-neutral-50 p-6">
+          <p className="text-base leading-6 font-medium text-neutral-800">{nbsp(sub.quote)}</p>
         </div>
       )}
       {sub.toggle && <ToggleBlock options={sub.toggle} />}
@@ -84,14 +84,14 @@ export function CaseChapter({ chapter }: { chapter: Chapter }) {
   // 16px gap - unless that first subsection already has its own subtitle
   // (e.g. "Погружение" -> "Компания"), in which case it's a full 32px gap,
   // matching the regular rhythm between subsections.
-  const headingGap = first?.subtitle ? "gap-6 tablet:gap-7 lg:gap-8" : "gap-4";
+  const headingGap = first?.subtitle ? "gap-6 lg:gap-8" : "gap-4";
 
   const blocks: Block[] = [
     {
       gap: "normal",
       node: (
-        <div className={`flex w-full max-w-[936px] flex-col items-start ${headingGap}`}>
-          <h2 className="w-full text-h25 font-bold text-neutral-800 lg:text-h2">{nbsp(chapter.heading)}</h2>
+        <div className={`flex w-full max-w-[800px] flex-col items-start ${headingGap}`}>
+          <h2 className="w-full text-2xl leading-8 font-semibold text-neutral-800">{nbsp(chapter.heading)}</h2>
           {firstHasText && (
             <div className="flex w-full flex-col items-start gap-2">
               <SubsectionText sub={first} />
@@ -120,7 +120,7 @@ export function CaseChapter({ chapter }: { chapter: Chapter }) {
       blocks.push({
         gap: sub.gapBefore ?? "normal",
         node: (
-          <div key={`text-${i}`} className="flex w-full max-w-[936px] flex-col items-start gap-2">
+          <div key={`text-${i}`} className="flex w-full max-w-[800px] flex-col items-start gap-2">
             <SubsectionText sub={sub} />
           </div>
         ),
