@@ -53,7 +53,11 @@ export function HomeHeader({ profile, backHref }: { profile: typeof ProfileType;
           aria-label="На главную"
           className={iconButtonClass}
         >
-          <BiArrowBack className="size-5" aria-hidden />
+          {backHref ? (
+            <BiArrowBack className="size-5" aria-hidden />
+          ) : (
+            <Image src="/assets/icons/logo-sign.svg" alt="" width={24} height={24} aria-hidden />
+          )}
         </Link>
         <div className="flex items-center gap-3">
           <Link
