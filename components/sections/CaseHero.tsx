@@ -13,7 +13,7 @@ export function CaseHero({
   return (
     <div className="flex w-full flex-col items-start gap-8 tablet:gap-8 lg:gap-8">
       <div className="flex w-full max-w-[800px] flex-col items-start gap-2">
-        <div className="flex w-full flex-col items-start gap-2">
+        <div className="flex w-full flex-col items-start gap-1">
           <p className="text-base text-neutral-500">
             {item.tags.join("\u00A0\u00A0•\u00A0\u00A0")}
           </p>
