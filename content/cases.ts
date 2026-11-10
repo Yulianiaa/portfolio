@@ -431,6 +431,7 @@ const subscriptionCase: CaseSummary = {
   coverMobile: {
     src: "/assets/cases/subscription-migrant-plus/cover-mobile.jpg",
     alt: "Экраны подписки «Мигрант+»: оформление подписки и статус проверки документов",
+    fit: "always",
   },
   author: {
     name: "Ульяна Прощенко",
@@ -445,16 +446,12 @@ const subscriptionCase: CaseSummary = {
           subtitle: "Компания",
           body: [
             [
-              { text: "Мигрант Сервис ", strong: true },
+              { text: "Мигрант Сервис ", strong: true, href: "https://mmc.help/migrant" },
               "— это super app для трудовых мигрантов в России, которое помогает решать задачи легализации и пребывания в стране, поиска работы и жилья, объединяя необходимые сервисы в одном месте. Ежемесячно продуктом пользуются ",
               { text: "150 000+ человек", strong: true },
               ", а средняя оценка в магазинах приложений ",
               { text: "4,9 из 5", strong: true },
             ],
-          ],
-          links: [
-            { label: "Сайт", href: "https://mmc.help/migrant" },
-            { label: "Приложение в RuStore", href: "https://www.rustore.ru/catalog/app/mmc63.ru" },
           ],
         },
         {
@@ -590,6 +587,7 @@ const subscriptionCase: CaseSummary = {
                 image: {
                   src: "/assets/cases/subscription-migrant-plus/enemies.jpg",
                   alt: "Экраны трёх приложений-конкурентов: РосМигрант, Юрист/Адвокат и Мигрант СНГ",
+                  fit: "always",
                 },
                 afterFacts: [["Сравнив все решения, я сделала три вывода:"]],
                 list: [
@@ -683,10 +681,12 @@ const subscriptionCase: CaseSummary = {
           image: {
             video: "/assets/cases/subscription-migrant-plus/paywall.mp4",
             poster: "/assets/cases/subscription-migrant-plus/paywall-poster.jpg",
+            fit: "always",
           },
           mobileImage: {
             video: "/assets/cases/subscription-migrant-plus/paywallEmpty.mp4",
             poster: "/assets/cases/subscription-migrant-plus/paywallEmpty-poster.jpg",
+            fit: "always",
           },
         },
         {
@@ -703,6 +703,7 @@ const subscriptionCase: CaseSummary = {
               image: {
                 video: "/assets/cases/subscription-migrant-plus/work.mp4",
                 poster: "/assets/cases/subscription-migrant-plus/work-poster.jpg",
+                fit: "always",
               },
             },
             {
@@ -710,6 +711,7 @@ const subscriptionCase: CaseSummary = {
               image: {
                 video: "/assets/cases/subscription-migrant-plus/housing.mp4",
                 poster: "/assets/cases/subscription-migrant-plus/housing-poster.jpg",
+                fit: "always",
               },
             },
           ],
@@ -725,10 +727,12 @@ const subscriptionCase: CaseSummary = {
           image: {
             src: "/assets/cases/subscription-migrant-plus/tooltips.jpg",
             alt: "Главный экран с баннером в Telegram-бот, службой заботы и статьями в формате Stories",
+            fit: "always",
           },
           mobileImage: {
             src: "/assets/cases/subscription-migrant-plus/tooltipsEmpty.jpg",
             alt: "Главный экран с баннером в Telegram-бот, службой заботы и статьями в формате Stories",
+            fit: "always",
           },
         },
         {
@@ -792,6 +796,7 @@ const subscriptionCase: CaseSummary = {
               image: {
                 video: "/assets/cases/subscription-migrant-plus/positive.mp4",
                 poster: "/assets/cases/subscription-migrant-plus/positive-poster.jpg",
+                fit: "always",
               },
             },
             {
@@ -799,6 +804,7 @@ const subscriptionCase: CaseSummary = {
               image: {
                 video: "/assets/cases/subscription-migrant-plus/negative.mp4",
                 poster: "/assets/cases/subscription-migrant-plus/negative-poster.jpg",
+                fit: "always",
               },
             },
           ],
@@ -846,6 +852,7 @@ const subscriptionCase: CaseSummary = {
           image: {
             video: "/assets/cases/subscription-migrant-plus/new-paywall.mp4",
             poster: "/assets/cases/subscription-migrant-plus/new-paywall-poster.jpg",
+            fit: "always",
           },
         },
         {
@@ -859,10 +866,12 @@ const subscriptionCase: CaseSummary = {
           image: {
             src: "/assets/cases/subscription-migrant-plus/filters-optimized.jpg",
             alt: "Экран настройки фильтров подборки вакансий с объединённым полем «Компания предоставляет»",
+            fit: "always",
           },
           mobileImage: {
             src: "/assets/cases/subscription-migrant-plus/filters-optimized-mobile.jpg",
             alt: "Экран настройки фильтров подборки вакансий с объединённым полем «Компания предоставляет»",
+            fit: "always",
           },
         },
       ],

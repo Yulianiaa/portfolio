@@ -16,9 +16,9 @@ export function DropCard({ card }: { card: DropCardType }) {
   const expanded = card.expanded;
 
   return (
-    <div className="flex w-full flex-col items-start gap-6 rounded-3xl border border-neutral-150 p-6 lg:p-7">
-      <div className="flex w-full flex-col items-start gap-2">
-        <h4 className="text-xl font-medium text-neutral-800 lg:text-2xl">{nbsp(card.title)}</h4>
+    <div className="flex w-full flex-col items-start gap-6 rounded-2xl border border-neutral-150 p-6">
+      <div className="flex w-full flex-col items-start gap-1">
+        <h4 className="text-base leading-6 font-medium text-neutral-800">{nbsp(card.title)}</h4>
         {open && expanded ? (
           <div className="flex w-full flex-col items-start gap-6">
             <div className="flex w-full flex-col items-start gap-2">
@@ -27,10 +27,10 @@ export function DropCard({ card }: { card: DropCardType }) {
             </div>
             {expanded.image && <CaseImage image={expanded.image} />}
             {expanded.keyFacts && (
-              <div className="grid w-full grid-cols-2 gap-x-4 gap-y-4 py-2 text-center tablet:grid-cols-4">
+              <div className="grid w-full grid-cols-2 gap-x-3 gap-y-3 py-2 text-center tablet:grid-cols-4">
                 {expanded.keyFacts.map((fact) => (
-                  <div key={fact.label} className="flex flex-col items-center gap-2">
-                    <p className="text-h25 font-bold text-neutral-800 lg:text-h2">{fact.value}</p>
+                  <div key={fact.label} className="flex flex-col items-center gap-1">
+                    <p className="text-2xl leading-8 font-semibold text-neutral-800">{fact.value}</p>
                     <p className="text-base leading-6 text-neutral-500">{fact.label}</p>
                   </div>
                 ))}
@@ -53,7 +53,7 @@ export function DropCard({ card }: { card: DropCardType }) {
         )}
       </div>
       {expanded && (
-        <button type="button" className={buttonClassName("primary")} onClick={() => setOpen((v) => !v)}>
+        <button type="button" className={`${buttonClassName("primary")} !pl-4 !pr-3`} onClick={() => setOpen((v) => !v)}>
           {open ? "Свернуть" : "Читать"}
           {open ? (
             <BiChevronUp className="size-6 lg:size-[28px]" aria-hidden />
@@ -63,7 +63,7 @@ export function DropCard({ card }: { card: DropCardType }) {
         </button>
       )}
       {!expanded && (
-        <button type="button" className={buttonClassName("primary")}>
+        <button type="button" className={`${buttonClassName("primary")} !pl-4 !pr-3`}>
           Читать
           <BiChevronDown className="size-6 lg:size-[28px]" aria-hidden />
         </button>
