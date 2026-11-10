@@ -4,7 +4,7 @@ import type { profile as ProfileType } from "@/content/profile";
 
 export function AboutSection({ about }: { about: typeof ProfileType.about }) {
   return (
-    <div className="flex w-full flex-col gap-10 px-3 tablet:px-0">
+    <div className="flex w-full flex-col gap-10">
       <div className="grid w-full grid-cols-2 gap-3 tablet:grid-cols-4">
         {about.photos.map((photo) => {
           const cropClass =

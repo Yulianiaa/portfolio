@@ -16,7 +16,7 @@ export function Hero({ profile }: { profile: typeof ProfileType }) {
           className="absolute top-[9.96%] left-[0.03%] h-full w-full max-w-none"
         />
       </div>
-      <div data-no-trail-fade className="flex w-full flex-col items-center gap-1 px-3 text-center tablet:w-[454px] tablet:px-0 tablet:whitespace-nowrap lg:w-[454px] lg:px-0">
+      <div data-no-trail-fade className="flex w-full flex-col items-center gap-1 text-center tablet:w-[454px] tablet:whitespace-nowrap lg:w-[454px]">
         <h1 className="w-full text-h25 font-semibold text-neutral-800 tablet:w-auto lg:w-full">{profile.name}</h1>
         <div className="flex w-full flex-col items-center text-base text-neutral-500 tablet:whitespace-nowrap">
           {profile.bioLines.map((line) => (

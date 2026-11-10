@@ -9,7 +9,7 @@ const coverClass = "relative h-[250px] w-full overflow-hidden bg-neutral-50 tabl
 
 function CardText({ title, description }: { title: string; description: string }) {
   return (
-    <div className="flex w-full flex-col items-start px-3 text-left text-base tablet:px-0">
+    <div className="flex w-full flex-col items-start text-left text-base">
       <h3 className="text-base leading-6 font-medium text-neutral-800">{nbsp(title)}</h3>
       <p className="text-neutral-500">{nbsp(description)}</p>
     </div>

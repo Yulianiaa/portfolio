@@ -39,7 +39,7 @@ export function HomeHeader({ profile, backHref }: { profile: typeof ProfileType;
         scrolled ? "bg-white" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-full w-full max-w-none items-center justify-between px-3 py-3 tablet:px-6 lg:max-w-[800px] lg:px-0">
+      <div className="mx-auto flex h-full w-full max-w-none items-center justify-between px-4 py-3 tablet:px-6 lg:max-w-[800px] lg:px-0">
         <Link
           href={backHref ?? "#top"}
           onClick={(event) => {
