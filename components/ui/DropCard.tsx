@@ -53,19 +53,19 @@ export function DropCard({ card }: { card: DropCardType }) {
         )}
       </div>
       {expanded && (
-        <button type="button" className={`${buttonClassName("primary")} !pl-4 !pr-3`} onClick={() => setOpen((v) => !v)}>
+        <button type="button" className={`${buttonClassName("primary")} !h-11 !pl-4 !pr-3`} onClick={() => setOpen((v) => !v)}>
           {open ? "Свернуть" : "Читать"}
           {open ? (
-            <BiChevronUp className="size-6 lg:size-[28px]" aria-hidden />
+            <BiChevronUp className="size-6" aria-hidden />
           ) : (
-            <BiChevronDown className="size-6 lg:size-[28px]" aria-hidden />
+            <BiChevronDown className="size-6" aria-hidden />
           )}
         </button>
       )}
       {!expanded && (
-        <button type="button" className={`${buttonClassName("primary")} !pl-4 !pr-3`}>
+        <button type="button" className={`${buttonClassName("primary")} !h-11 !pl-4 !pr-3`}>
           Читать
-          <BiChevronDown className="size-6 lg:size-[28px]" aria-hidden />
+          <BiChevronDown className="size-6" aria-hidden />
         </button>
       )}
     </div>
