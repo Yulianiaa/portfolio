@@ -412,15 +412,15 @@ const subscriptionCase: CaseSummary = {
   tags: ["2025–2026", "B2C", "Mobile App"],
   title: "Подписка Мигрант+",
   description:
-    "Спроектировала с нуля и развивала сервис, который автоматизирует ежедневные задачи мигрантов, связанные с документами, работой и проживанием в России",
+    "Развивала сервис, который автоматизирует ежедневные задачи мигрантов, связанные с документами, работой и проживанием в России",
   card: {
     description:
       "Спроектировала с нуля сервис, который автоматизирует ежедневные задачи мигрантов, связанные с документами, работой и проживанием в России",
   },
   keyFacts: [
     { value: ">2400", label: "Активные подписчики" },
-    { value: "75%", label: "Повторные покупки" },
-    { value: "6,5%", label: "Конверсия в покупку" },
+    { value: "75%", label: "Повторные покупки", tabletLabel: "Повторные\nпокупки" },
+    { value: "6,5%", label: "Конверсия в покупку", tabletLabel: "Конверсия\nв покупку" },
     { value: "X млн ₽", label: "Выручка" },
   ],
   cover: {
@@ -429,9 +429,9 @@ const subscriptionCase: CaseSummary = {
     fit: "always",
   },
   coverMobile: {
-    src: "/assets/cases/subscription-migrant-plus/cover-mobile.jpg",
+    src: "/assets/cases/subscription-migrant-plus/cover_2_small.png",
     alt: "Экраны подписки «Мигрант+»: оформление подписки и статус проверки документов",
-    fit: "always",
+    fit: false,
   },
   author: {
     name: "Ульяна Прощенко",
@@ -447,7 +447,7 @@ const subscriptionCase: CaseSummary = {
           body: [
             [
               { text: "Мигрант Сервис ", strong: true, href: "https://mmc.help/migrant" },
-              "— это super app для трудовых мигрантов в России, которое помогает решать задачи легализации и пребывания в стране, поиска работы и жилья, объединяя необходимые сервисы в одном месте. Ежемесячно продуктом пользуются ",
+              "— это мобильное приложение для трудовых мигрантов в России, которое помогает решать задачи легализации и пребывания в стране, поиска работы и жилья, объединяя необходимые сервисы в одном месте. Ежемесячно продуктом пользуются ",
               { text: "150 000+ человек", strong: true },
               ", а средняя оценка в магазинах приложений ",
               { text: "4,9 из 5", strong: true },
@@ -456,10 +456,12 @@ const subscriptionCase: CaseSummary = {
         },
         {
           subtitle: "Задача",
+          tabletGapBefore: "tight",
           body: [["Запустить платную подписку в продукте и проверить готовность аудитории платить за неё"]],
         },
         {
           subtitle: "Зачем подписка бизнесу?",
+          tabletGapBefore: "tight",
           list: [
             "Повысить retention: привлечь новых пользователей и удержать старых",
             "Создать новый источник регулярного дохода",
@@ -468,6 +470,7 @@ const subscriptionCase: CaseSummary = {
         },
         {
           subtitle: "Критерии успеха",
+          tabletGapBefore: "tight",
           list: ["Выручка", "Доля повторных оплат", "Количество активных подписчиков", "Конверсия в покупку"],
         },
       ],
@@ -487,6 +490,56 @@ const subscriptionCase: CaseSummary = {
     },
     {
       heading: "Исследование",
+      desktopResearch: {
+        survey: {
+          body: [["Совместно с командой маркетинга провели опрос через Telegram-канал продукта, чтобы понять, какие направления считаются наиболее востребованными. В опросе были как закрытые вопросы, так и открытые, где пользователи могли в свободной форме рассказать, чего им не хватает"]],
+          followup: [["Поучаствовало ", { text: "197 респондентов", strong: true }, ", вот какие сферы оказались для них наиболее интересны:"]],
+          facts: [
+            { value: "70,6%", label: "Документы" },
+            { value: "34%", label: "Юридическая помощь" },
+            { value: "32%", label: "Поиск работы" },
+            { value: "15,7%", label: "Поиск жилья" },
+          ],
+          insightsIntro: [["Дальше я сгруппировала ответы на вопрос «Чего вам не хватает?» по тематическим кластерам и выделила ключевые инсайты для проектирования подписки:"]],
+          insights: [
+            { title: "01", description: "Подавляющее большинство предложений касается улучшения текущего функционала, информативности и услуг, а не добавления принципиально новых функций" },
+            { title: "02", description: "Все сферы интереса эмоционально завязаны на страхе ошибки и потери легального статуса в России. Это триггер, за который люди готовы платить" },
+            { title: "03", description: "Задачи пользователей не изолированы, а связаны в одну цепочку. Подписку нужно предлагать в контексте конкретной потребности, а не как набор отдельных функций" },
+            { title: "04", description: "Около четверти ответов — не запросы, а позитивные отзывы о текущем функционале. Подписка должна дополнять бесплатные возможности, а не ограничивать их" },
+          ],
+        },
+        competitors: {
+          body: [
+            ["По результатам опроса я выделила 4 сферы интереса. Они отражают ключевые задачи пользователей, и дальше мне нужно было понять, как люди решают их сейчас"],
+            [
+              "Поэтому при ",
+              {
+                text: "анализе конкурентов",
+                strong: true,
+                href: "https://docs.google.com/spreadsheets/d/1Tmg8PAPMiy7NkRI-lr3EqxVq-FKh9J8WjiSEJQW1MBc/edit?usp=sharing",
+              },
+              " я смотрела не только на приложения с похожим функционалом, но и на альтернативные способы решения каждой задачи. Всего получилось ",
+              { text: "9 конкурентов", strong: true },
+            ],
+          ],
+          image: {
+            src: "/assets/cases/subscription-migrant-plus/enemies.png",
+            alt: "Сравнение конкурентов и альтернативных способов решения задач мигрантов",
+            fit: false,
+          },
+          mobileImage: {
+            src: "/assets/cases/subscription-migrant-plus/enemies_small.png",
+            alt: "Сравнение конкурентов и альтернативных способов решения задач мигрантов",
+            fit: false,
+          },
+          intro: [["Сравнив все решения, я сделала три вывода:"]],
+          findings: [
+            "За один узкий сценарий уже платят (Росмигрант зарабатывает 5+ млн ₽ в год только на автопроверке документов)",
+            "У «Мигрант Сервис» самая ранняя точка контакта с пользователем, он взаимодействует с приложением ещё до въезда в страну",
+            "Бесплатный пробный период повысит конверсию из пробного периода в платную подписку, поскольку позволит пользователю оценить сервис до оплаты",
+          ],
+        },
+      },
       subsections: [
         {
           dropCards: [
@@ -574,7 +627,13 @@ const subscriptionCase: CaseSummary = {
                     "По результатам опроса я выделила 4 сферы интереса. Они отражают ключевые задачи пользователей, и дальше мне нужно было понять, как люди решают их сейчас",
                   ],
                   [
-                    "Поэтому при анализе конкурентов я смотрела не только на приложения с похожим функционалом, но и на альтернативные способы решения каждой задачи. Всего получилось ",
+                    "Поэтому при ",
+                    {
+                      text: "анализе конкурентов",
+                      strong: true,
+                      href: "https://docs.google.com/spreadsheets/d/1Tmg8PAPMiy7NkRI-lr3EqxVq-FKh9J8WjiSEJQW1MBc/edit?usp=sharing",
+                    },
+                    " я смотрела не только на приложения с похожим функционалом, но и на альтернативные способы решения каждой задачи. Всего получилось ",
                     { text: "9 конкурентов", strong: true },
                   ],
                 ],
@@ -585,9 +644,9 @@ const subscriptionCase: CaseSummary = {
                   },
                 ],
                 image: {
-                  src: "/assets/cases/subscription-migrant-plus/enemies.jpg",
+                  src: "/assets/cases/subscription-migrant-plus/enemies.png",
                   alt: "Экраны трёх приложений-конкурентов: РосМигрант, Юрист/Адвокат и Мигрант СНГ",
-                  fit: "always",
+                  fit: false,
                 },
                 afterFacts: [["Сравнив все решения, я сделала три вывода:"]],
                 list: [
@@ -653,6 +712,7 @@ const subscriptionCase: CaseSummary = {
         {
           subtitle: "Техническое ограничение",
           gapBefore: "normal",
+          tabletGapBefore: "normal",
           contentGap: "tight",
           body: [
             [
@@ -672,6 +732,7 @@ const subscriptionCase: CaseSummary = {
         {
           subtitle: "Дизайн",
           gapBefore: "normal",
+          tabletGapBefore: "normal",
           contentGap: "tight",
           body: [
             [
@@ -681,16 +742,17 @@ const subscriptionCase: CaseSummary = {
           image: {
             video: "/assets/cases/subscription-migrant-plus/paywall.mp4",
             poster: "/assets/cases/subscription-migrant-plus/paywall-poster.jpg",
-            fit: "always",
+            fit: false,
           },
           mobileImage: {
             video: "/assets/cases/subscription-migrant-plus/paywallEmpty.mp4",
             poster: "/assets/cases/subscription-migrant-plus/paywallEmpty-poster.jpg",
-            fit: "always",
+            fit: false,
           },
         },
         {
           gapBefore: "normal",
+          tabletGapBefore: "normal",
           contentGap: "tight",
           body: [
             [
@@ -703,7 +765,7 @@ const subscriptionCase: CaseSummary = {
               image: {
                 video: "/assets/cases/subscription-migrant-plus/work.mp4",
                 poster: "/assets/cases/subscription-migrant-plus/work-poster.jpg",
-                fit: "always",
+                fit: false,
               },
             },
             {
@@ -711,7 +773,7 @@ const subscriptionCase: CaseSummary = {
               image: {
                 video: "/assets/cases/subscription-migrant-plus/housing.mp4",
                 poster: "/assets/cases/subscription-migrant-plus/housing-poster.jpg",
-                fit: "always",
+                fit: false,
               },
             },
           ],
@@ -725,14 +787,14 @@ const subscriptionCase: CaseSummary = {
             ],
           ],
           image: {
-            src: "/assets/cases/subscription-migrant-plus/tooltips.jpg",
+            src: "/assets/cases/subscription-migrant-plus/tooltips.png",
             alt: "Главный экран с баннером в Telegram-бот, службой заботы и статьями в формате Stories",
-            fit: "always",
+            fit: false,
           },
           mobileImage: {
             src: "/assets/cases/subscription-migrant-plus/tooltipsEmpty.jpg",
             alt: "Главный экран с баннером в Telegram-бот, службой заботы и статьями в формате Stories",
-            fit: "always",
+            fit: false,
           },
         },
         {
@@ -781,6 +843,7 @@ const subscriptionCase: CaseSummary = {
         {
           subtitle: "Проверка документов",
           gapBefore: "normal",
+          tabletGapBefore: "normal",
           contentGap: "tight",
           body: [
             [
@@ -796,7 +859,7 @@ const subscriptionCase: CaseSummary = {
               image: {
                 video: "/assets/cases/subscription-migrant-plus/positive.mp4",
                 poster: "/assets/cases/subscription-migrant-plus/positive-poster.jpg",
-                fit: "always",
+                fit: false,
               },
             },
             {
@@ -804,7 +867,7 @@ const subscriptionCase: CaseSummary = {
               image: {
                 video: "/assets/cases/subscription-migrant-plus/negative.mp4",
                 poster: "/assets/cases/subscription-migrant-plus/negative-poster.jpg",
-                fit: "always",
+                fit: false,
               },
             },
           ],
@@ -820,29 +883,37 @@ const subscriptionCase: CaseSummary = {
         {
           subtitle: "Модерируемое usability-тестирование",
           gapBefore: "normal",
+          tabletGapBefore: "normal",
           body: [
             [
-              "Чтобы проверить, насколько интерфейс решает задачи пользователя, провела тестирование. Всего было ",
+              "Чтобы проверить, насколько интерфейс решает задачи пользователя, провела ",
+              {
+                text: "тестирование",
+                strong: true,
+                tone: "brand",
+                href: "https://docs.google.com/document/d/17468jQYn3yfOmjLX9GCWN0p2T_8h5qYRhdJLuqHAVaI/edit?usp=sharing",
+              },
+              ". Всего было ",
               { text: "5 респондентов", strong: true },
               ", за участие мы дарили один бесплатный месяц подписки",
             ],
             ["Тестирование показало два проблемных места:"],
           ],
-          links: [
-            {
-              label: "Сценарий тестирования",
-              href: "https://docs.google.com/document/d/17468jQYn3yfOmjLX9GCWN0p2T_8h5qYRhdJLuqHAVaI/edit?usp=sharing",
-            },
-          ],
-          linksAfterParagraph: 0,
-          list: [
-            "4 из 5 участников пролистали paywall, не вчитываясь даже в названия функций. После тестирования они не смогли точно сказать, что входит в каждую из них",
-            "5 из 5 участников искали фильтр «знание русского языка» для настройки подборки вакансий дольше 10 секунд. Некоторые быстро скроллили экран, сбивались и начинали поиск заново",
+          richList: [
+            [
+              { text: "4 из 5", strong: true },
+              " участников пролистали paywall, не вчитываясь даже в названия функций. После тестирования они не смогли точно сказать, что входит в каждую из них",
+            ],
+            [
+              { text: "5 из 5", strong: true },
+              " участников искали фильтр «знание русского языка» для настройки подборки вакансий дольше 10 секунд. Некоторые быстро скроллили экран, сбивались и начинали поиск заново",
+            ],
           ],
         },
         {
           subtitle: "Дизайн",
           gapBefore: "normal",
+          tabletGapBefore: "normal",
           contentGap: "tight",
           body: [
             [
@@ -852,11 +923,12 @@ const subscriptionCase: CaseSummary = {
           image: {
             video: "/assets/cases/subscription-migrant-plus/new-paywall.mp4",
             poster: "/assets/cases/subscription-migrant-plus/new-paywall-poster.jpg",
-            fit: "always",
+            fit: false,
           },
         },
         {
           gapBefore: "normal",
+          tabletGapBefore: "normal",
           body: [
             [
               "Также оптимизировала количество фильтров с 22 до 15 для настройки подборки вакансий: объединила преимущества в один фильтр «Компания предоставляет» и убрала варианты, которые были требованиями к вакансиям, так как они путали и удлиняли поиск",
@@ -864,14 +936,14 @@ const subscriptionCase: CaseSummary = {
           ],
           contentGap: "tight",
           image: {
-            src: "/assets/cases/subscription-migrant-plus/filters-optimized.jpg",
+            src: "/assets/cases/subscription-migrant-plus/filter.png",
             alt: "Экран настройки фильтров подборки вакансий с объединённым полем «Компания предоставляет»",
-            fit: "always",
+            fit: false,
           },
           mobileImage: {
-            src: "/assets/cases/subscription-migrant-plus/filters-optimized-mobile.jpg",
+            src: "/assets/cases/subscription-migrant-plus/filter-mobile.png",
             alt: "Экран настройки фильтров подборки вакансий с объединённым полем «Компания предоставляет»",
-            fit: "always",
+            fit: false,
           },
         },
       ],
@@ -906,7 +978,7 @@ const subscriptionCase: CaseSummary = {
       heading: "AI-ассистент",
       subsections: [
         {
-          contentGap: "xtight",
+          contentGap: "tight",
           body: [
             [
               "Следующий шаг развития я вижу во внедрении ",
@@ -925,9 +997,15 @@ const subscriptionCase: CaseSummary = {
               "Предполагаю, что AI-ассистент снизит нагрузку на службу заботы и расходы на операторов, ускорит ответы и повысит ценность подписки",
             ],
           ],
+          afterListCard: true,
           image: {
-            src: "/assets/cases/subscription-migrant-plus/ai-assistant.jpg",
+            src: "/assets/cases/subscription-migrant-plus/ai.jpg",
             alt: "Экран AI-ассистента в статусе «В процессе»",
+          },
+          mobileImage: {
+            src: "/assets/cases/subscription-migrant-plus/ai_mobile.jpg",
+            alt: "Экран AI-ассистента в статусе «В процессе»",
+            fit: false,
           },
         },
       ],

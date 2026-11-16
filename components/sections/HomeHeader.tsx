@@ -54,7 +54,7 @@ export function HomeHeader({ profile, backHref }: { profile: typeof ProfileType;
           className={iconButtonClass}
         >
           {backHref ? (
-            <BiArrowBack className="size-5" aria-hidden />
+            <BiArrowBack className="size-6" aria-hidden />
           ) : (
             <Image src="/assets/icons/logo-sign.svg" alt="" width={24} height={24} aria-hidden />
           )}

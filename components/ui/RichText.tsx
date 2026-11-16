@@ -7,6 +7,7 @@ function renderSegment(segment: Segment, i: number) {
   const className = [
     segment.strong ? "font-medium" : "",
     segment.tone === "success" ? "text-[#01b437]" : "",
+    segment.tone === "brand" ? "text-brand-500" : "",
     segment.href ? "text-brand-500 hover:underline" : "",
   ]
     .filter(Boolean)

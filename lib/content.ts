@@ -1,4 +1,4 @@
-export type Segment = string | { text: string; strong?: boolean; tone?: "success"; href?: string };
+export type Segment = string | { text: string; strong?: boolean; tone?: "success" | "brand"; href?: string };
 export type Paragraph = Segment[];
 
 export type Link = { label: string; href: string };
@@ -48,8 +48,11 @@ export type Subsection = {
   /** Renders `links` right after this paragraph (0-based index) instead of after all of `body`. */
   linksAfterParagraph?: number;
   list?: string[];
+  richList?: Paragraph[];
   /** Renders after `list` instead of after all of `body`, when both a list and trailing paragraphs are needed. */
   afterList?: Paragraph[];
+  /** Render the trailing paragraph in a neutral card on tablet and desktop, before the media. */
+  afterListCard?: boolean;
   chips?: Chip[];
   cards?: Card[];
   cardsLayout?: "row" | "grid2";
@@ -61,6 +64,8 @@ export type Subsection = {
   toggle?: ToggleOption[];
   /** Gap between the previous block and this subsection's own start. Default "normal" (32px). */
   gapBefore?: Gap;
+  /** Tablet-only override for the gap before this subsection. */
+  tabletGapBefore?: Gap;
   /** Gap between this subsection's own text part and its own content part (image/cards/toggle/quote). Default "normal" (32px). */
   contentGap?: Gap;
 };
@@ -68,10 +73,14 @@ export type Subsection = {
 export type Chapter = {
   heading: string;
   intro?: Paragraph[];
+  desktopResearch?: {
+    survey: { body: Paragraph[]; followup: Paragraph[]; facts: KeyFact[]; insightsIntro: Paragraph[]; insights: Card[] };
+    competitors: { body: Paragraph[]; image: SectionImage; mobileImage?: SectionImage; intro: Paragraph[]; findings: string[] };
+  };
   subsections: Subsection[];
 };
 
-export type KeyFact = { value: string; label: string };
+export type KeyFact = { value: string; label: string; tabletLabel?: string };
 
 export type CaseStudy = {
   slug: string;

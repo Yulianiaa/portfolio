@@ -29,7 +29,17 @@ export function CaseHero({
         {item.keyFacts.map((fact) => (
           <div key={`${fact.value}-${fact.label}`} className="flex flex-col items-center gap-1">
             <p className="text-2xl leading-8 font-semibold text-neutral-800">{fact.value}</p>
-            <p className="whitespace-pre-line text-base leading-6 text-neutral-500">{fact.label}</p>
+            <p className="text-base leading-6 text-neutral-500">
+              {fact.tabletLabel ? (
+                <>
+                  <span className="whitespace-pre-line tablet:hidden">{fact.label}</span>
+                  <span className="hidden whitespace-pre-line tablet:inline lg:hidden">{fact.tabletLabel}</span>
+                  <span className="hidden whitespace-pre-line lg:inline">{fact.label}</span>
+                </>
+              ) : (
+                <span className="whitespace-pre-line">{fact.label}</span>
+              )}
+            </p>
           </div>
         ))}
       </div>
