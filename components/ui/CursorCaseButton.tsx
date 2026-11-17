@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { buttonClassName, type ButtonVariant } from "@/components/ui/Button";
 
-// Matches the 10px dot cursor in globals.css, so the button grows out of it.
+// Matches the 10px CSS cursor dot rendered by DotTrail, so the button grows out of it.
 const DOT_CLIP = "inset(calc(50% - 5px) calc(50% - 5px) round 5px)";
 const FULL_CLIP = "inset(0 round 16px)";
 
@@ -21,6 +21,7 @@ export function CursorCaseButton({
   return (
     <div
       className="absolute inset-0 z-10"
+      data-cursor-hidden={active || undefined}
       style={{ cursor: active ? "none" : undefined }}
       onMouseMove={(e) => {
         const rect = e.currentTarget.getBoundingClientRect();

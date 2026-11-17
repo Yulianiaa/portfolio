@@ -10,6 +10,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
+  allowedDevOrigins: ["192.168.1.67"],
   basePath,
   assetPrefix: basePath ? `${basePath}/` : undefined,
   images: {

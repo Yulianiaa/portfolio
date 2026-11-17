@@ -51,9 +51,11 @@ body {
   color: var(--foreground);
 }
 
-/* 10px neutral-800 dot, hotspot at its center. PNG keeps the custom cursor consistent across browsers and operating systems. */
-* {
-  cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAARUlEQVR4nGNQ1dBlgGIfID4MxN+h+DBUDCwPU9QPxP9x4H6YQh88imDYhwFqBSGFhxmg7iGk8DtJCom2mmjPEB08RAU4AGzafdnIYE8aAAAAAElFTkSuQmCC") 5 5, auto;
+/* DotTrail renders the mouse pointer as a CSS circle for consistent sharpness and color. */
+@media (hover: hover) and (pointer: fine) {
+  body[data-custom-cursor="ready"] * {
+    cursor: none;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

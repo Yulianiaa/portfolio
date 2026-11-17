@@ -96,10 +96,10 @@ export function DotTrail() {
 
     function onMove(e: PointerEvent) {
       if (e.pointerType !== "mouse" || reducedMotion.matches) return;
+      const hovered = document.elementFromPoint(e.clientX, e.clientY);
       const rect = canvas!.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      const hovered = document.elementFromPoint(e.clientX, e.clientY);
       const excluded = hovered instanceof Element && hovered.closest(EXCLUDE);
       const fadeExcluded = hovered instanceof Element && hovered.closest(EXCLUDE_FADE);
       const boundaryElement = Array.from(document.querySelectorAll(EXCLUDE_BELOW)).find(
@@ -157,7 +157,8 @@ export function DotTrail() {
     <canvas
       ref={canvasRef}
       aria-hidden
-      className="pointer-events-none fixed inset-0 -z-10 size-full text-neutral-800"
+      className="pointer-events-none fixed inset-0 -z-10 size-full"
+      style={{ color: "#25282d", forcedColorAdjust: "none" }}
     />
   );
 }

@@ -15,7 +15,7 @@ export default function Home() {
     <div id="top" className="flex flex-1 flex-col items-stretch">
       <DotTrail />
       <HomeHeader profile={profile} />
-      <main className="flex w-full max-w-[800px] self-center flex-col items-center gap-8 px-4 pt-[52px] pb-10 tablet:px-6 tablet:pt-14 tablet:pb-10 lg:px-0 lg:pt-[52px] lg:pb-[60px]">
+      <main className="flex w-full max-w-[800px] self-center flex-col items-center gap-8 px-px pt-[52px] pb-10 tablet:px-6 tablet:pt-14 tablet:pb-10 lg:px-0 lg:pt-[52px] lg:pb-[60px]">
         <Hero profile={profile} />
         <HomeTabs
           tabs={[
@@ -27,6 +27,9 @@ export default function Home() {
                   {cases.map((item, index) => (
                     <CaseCard key={item.slug} item={item} noTrailBelow={index === 0} />
                   ))}
+                  <div className="flex w-full items-center justify-center border-x border-t border-dashed border-neutral-100 bg-gradient-to-b from-neutral-50 to-white p-6 text-center text-base font-medium leading-6 text-neutral-800 tablet:rounded-t-2xl">
+                    +4 кейса в работе
+                  </div>
                 </section>
               ),
             },

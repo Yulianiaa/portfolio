@@ -38,7 +38,7 @@ export const profile = {
     ],
     experience: [
       {
-        company: "Мигрант Сервис",
+        company: "EMC",
         href: "https://mmc.help/migrant",
         position: "Продуктовый дизайнер",
         description: "Развивала подписку и booking, платформу маркетинговых коммуникаций и дизайн-систему",
