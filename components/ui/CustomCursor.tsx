@@ -8,11 +8,12 @@ export function CustomCursor() {
   useEffect(() => {
     if (!matchMedia("(hover: hover) and (pointer: fine)").matches) return;
 
-    const cursor = cursorRef.current;
-    if (!cursor) return;
+    if (!cursorRef.current) return;
 
     function onMove(event: PointerEvent) {
       if (event.pointerType !== "mouse") return;
+      const cursor = cursorRef.current;
+      if (!cursor) return;
 
       const hovered = document.elementFromPoint(event.clientX, event.clientY);
       const shouldHide = hovered instanceof Element && hovered.closest("[data-cursor-hidden]");
@@ -22,6 +23,9 @@ export function CustomCursor() {
     }
 
     function hide() {
+      const cursor = cursorRef.current;
+      if (!cursor) return;
+
       cursor.style.opacity = "0";
       delete document.body.dataset.customCursor;
     }
