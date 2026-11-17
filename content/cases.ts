@@ -765,7 +765,7 @@ const subscriptionCase: CaseSummary = {
               image: {
                 video: "/assets/cases/subscription-migrant-plus/work.mp4",
                 poster: "/assets/cases/subscription-migrant-plus/work-poster.jpg",
-                fit: false,
+                fit: "always",
               },
             },
             {
@@ -773,7 +773,7 @@ const subscriptionCase: CaseSummary = {
               image: {
                 video: "/assets/cases/subscription-migrant-plus/housing.mp4",
                 poster: "/assets/cases/subscription-migrant-plus/housing-poster.jpg",
-                fit: false,
+                fit: "always",
               },
             },
           ],
@@ -859,7 +859,7 @@ const subscriptionCase: CaseSummary = {
               image: {
                 video: "/assets/cases/subscription-migrant-plus/positive.mp4",
                 poster: "/assets/cases/subscription-migrant-plus/positive-poster.jpg",
-                fit: false,
+                fit: "always",
               },
             },
             {
@@ -867,7 +867,7 @@ const subscriptionCase: CaseSummary = {
               image: {
                 video: "/assets/cases/subscription-migrant-plus/negative.mp4",
                 poster: "/assets/cases/subscription-migrant-plus/negative-poster.jpg",
-                fit: false,
+                fit: "always",
               },
             },
           ],
