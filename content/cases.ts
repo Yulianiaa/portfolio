@@ -1013,4 +1013,4 @@ const subscriptionCase: CaseSummary = {
   ],
 };
 
-export const cases: CaseSummary[] = [subscriptionCase, marketingCommunicationsPlatform];
+export const cases: CaseSummary[] = [marketingCommunicationsPlatform, subscriptionCase];
